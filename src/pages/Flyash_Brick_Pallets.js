@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import image1 from '../assets/img/flyashbrick.jpg'
-import image2 from '../assets/img/blocks.jpg'
+import image2 from '../assets/img/flyash-brick-1.jpg'
+import image3 from '../assets/img/fly-ash-bricks (1).jpg'
+import image4 from '../assets/img/cement-blocks-3 - 500x500.jpg'
+
 
 const features = [
   { name: "Minimum Order Quantity", description: "1000 Sq ft" },
@@ -65,7 +68,7 @@ const Flyash_Brick_Pallets = () => {
             ))}
           </dl>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8 sm:grid-cols-1 ssm:grid-cols-1 w-22 ">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 m-auto mt-11 sm:gap-6 lg:gap-8 ">
           <img
             src={image1}
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
@@ -76,6 +79,17 @@ const Flyash_Brick_Pallets = () => {
             alt="Top down view of walnut card tray with embedded magnets and card groove."
             className="rounded-lg bg-gray-100 m-auto mt-6.75rem"
           />
+           <img
+            src={image3}
+            alt="Top down view of walnut card tray with embedded magnets and card groove."
+            className="rounded-lg bg-gray-100 m-auto mt-6.75rem"
+          />
+          <img
+            src={image4}
+            alt="Top down view of walnut card tray with embedded magnets and card groove."
+            className="rounded-lg bg-gray-100 m-auto mt-6.75rem"
+          />
+         
          
         </div>
       </div>

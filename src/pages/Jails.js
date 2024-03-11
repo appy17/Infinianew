@@ -1,6 +1,13 @@
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import RelatedProducts from "./RelatedProducts";
+import image1 from '../assets/img/terracotta-jali-tiles-500x500.jpg'
+import image2 from '../assets/img/terracotta-jali-500x500.jpg';
+import image3 from '../assets/img/terracotta-jaali-500x500 (2).jpg'
+import image4 from '../assets/img/clay-jali-helmet-jali-60d2f64017de7.jpg'
+import gsap from "gsap";
 
+const images = [image1, image2, image3, image4];
 const features = [
   { name: "Minimum Order Quantity", description: "500 Piece" },
   { name: "Country of Origin", description: "Made in India" },
@@ -16,6 +23,41 @@ const features = [
 ];
 
 function Jails() {
+  const imageRefs = useRef(images.map(() => React.createRef()));
+
+  useEffect(() => {
+    imageRefs.current.forEach((ref, index) => {
+      const image = ref.current;
+      gsap.from(image, {
+        opacity: 0,
+        y: 20,
+        duration: 1,
+        delay: index * 0.2,
+        ease: "power3.out"
+      });
+
+      image.addEventListener("mouseenter", () => {
+        gsap.to(image, {
+          scale: 1.1,
+          duration: 0.3
+        });
+      });
+
+      image.addEventListener("mouseleave", () => {
+        gsap.to(image, {
+          scale: 1,
+          duration: 0.3
+        });
+      });
+
+      return () => {
+        image.removeEventListener("mouseenter", () => {});
+        image.removeEventListener("mouseleave", () => {});
+        gsap.killTweensOf(image);
+      };
+    });
+  }, []);
+
   return (
     <>
       <div>
@@ -29,11 +71,6 @@ function Jails() {
                 Terracotta Decorative jali 1)Lily:8"x8"x3" Wt:2.5kg
                 2)Geo:8"x8"x3" Wt:2.5kg 3)Jevel:8"x8"x3" Wt:2.5kg
               </p>
-
-              {/* <p className="mt-4 text-gray-500">
-            WPC Door frames (Chaukhat) Size:3x2 ,4x2 , 4x2.5, 5x2.5 Colour :Teak
-            wood and Ivory Lenght: 6 ft , 6.5ft , 7ft, 8ft, 10ft and 11 ft
-          </p> */}
 
               <div className="mt-3 flex gap-4">
                 <a
@@ -80,26 +117,19 @@ function Jails() {
               </dl>
             </div>
             <div className="grid grid-cols-2  grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-              <img
-                src="https://5.imimg.com/data5/ANDROID/Default/2022/12/XN/WI/BU/101519832/product-jpeg-500x500.jpg"
-                alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-                className="rounded-lg bg-gray-100"
-              />
-              <img
-                src="https://5.imimg.com/data5/SELLER/PDFImage/2023/5/307959281/TO/ZD/HQ/101519832/wpc-door-frame-1000x1000.png"
-                alt="Top down view of walnut card tray with embedded magnets and card groove."
-                className="rounded-lg bg-gray-100"
-              />
-              <img
-                src="https://5.imimg.com/data5/SELLER/Default/2020/8/CM/EE/QL/101519832/wpc-door-frame-500x500.jpg"
-                alt="Side of walnut card tray with card groove and recessed card area."
-                className="rounded-lg bg-gray-100"
-              />
-              <img
-                src="https://5.imimg.com/data5/SELLER/PDFImage/2023/5/307959277/MS/IX/OR/101519832/wpc-door-frame-1000x1000.png"
-                alt="Walnut card tray filled with cards and card angled in dedicated groove."
-                className="rounded-lg bg-gray-100"
-              />
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  ref={imageRefs.current[index]}
+                  className="rounded-lg bg-gray-100 overflow-hidden"
+                >
+                  <img
+                    src={image}
+                    className="transition-transform duration-300 transform hover:scale-110"
+                    alt={`Terracotta Jali ${index + 1}`}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
