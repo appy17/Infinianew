@@ -107,6 +107,42 @@ const products = [
   },
 ];
 
+const brands = [
+  {
+    name: "Ecomagix",
+    href: "/ecomagix",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Claymagix",
+    href: "/claymagix",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Woodmagix",
+    href: "/woodmagix",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Skyace",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "ProFuels",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Propanels",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+];
+
+
+
+
 const Header = () => {
   const [bg, setBg] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
@@ -129,13 +165,22 @@ const Header = () => {
 
   return (
     <header
-      className={`${ bg ? "bg-white  lg:py-6 shadow-md" : "bg-none"
+      className={`${ bg ? "bg-white  lg:py-4 shadow-md" : "bg-none"
       } fixed left-0 w-full py-7 z-10 transition-all duration-200 px-10`}>
       <div className="contianer mx-auto">
         <div className="flex justify-between items-center">
           {/* logo */}
           <a href="/">
-            <img className="h-6 lg:h-10 lg:w-full " src={Logo} alt="" />
+           
+            {/* <img className= "lg:h-10 lg:w-full border-2" src={Logo} alt="" /> */}
+            <img
+  className={`lg:w-full ${
+    bg ? "h-12" : "h-20" // Conditionally apply different height classes
+  }`}
+  src={Logo}
+  alt=""
+/>
+           
           </a>
           <div onClick={() => setMobileMenuOpen(true)}
             className="text-2xl  md:hidden lg:text-3xl cursor-pointer"
@@ -160,6 +205,16 @@ const Header = () => {
                 activeClassName="active"
               >
                 Home
+              </NavLink>
+              <NavLink
+                className={`${
+                  bg ? "text:black" : "text-white"
+                } capitalize transition-all`}
+                to={"/about"}
+                exact
+                activeClassName="active"
+              >
+                About Us
               </NavLink>
              
 
@@ -231,6 +286,51 @@ const Header = () => {
                             )}
                           >
                             Woodmagix
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/woodmagix"
+                            className={classNames(
+                              active
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                          Profules
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/woodmagix"
+                            className={classNames(
+                              active
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            Skyace
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/woodmagix"
+                            className={classNames(
+                              active
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            Propanels
                           </a>
                         )}
                       </Menu.Item>
@@ -361,7 +461,7 @@ const Header = () => {
                                 "block px-4 py-2 text-sm"
                               )}
                             >
-                              Jalis
+                              Jali
                             </a>
                           </Link>
                         )}
@@ -530,12 +630,42 @@ const Header = () => {
                     >
                       About
                     </a>
-                    <a
+                    {/* <a
                       href="#"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       Brands
-                    </a>
+                    </a> */}
+<Disclosure as="div" className="-mx-3">
+                      {({ open }) => (
+                        <>
+                          <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                            Brands
+                            <ChevronDownIcon
+                              className={classNames(
+                                open ? "rotate-180" : "",
+                                "h-5 w-5 flex-none"
+                              )}
+                            />
+                          </Disclosure.Button>
+                          <Disclosure.Panel className="mt-2 space-y-2">
+                            {[...brands].map((item) => (
+                              <Disclosure.Button
+                                key={item.name}
+                                as="a"
+                                href={item.href}
+                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                              >
+                                {item.name}
+                              </Disclosure.Button>
+                            ))}
+                          </Disclosure.Panel>
+                        </>
+                      )}
+                    </Disclosure>
+
+
+
                     <Disclosure as="div" className="-mx-3">
                       {({ open }) => (
                         <>

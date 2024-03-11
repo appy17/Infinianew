@@ -1,147 +1,312 @@
 // Footer.js
 import React from "react";
-import { footer } from "../data";
+// import { footer } from "../data";
 import Logo from "../assets/img/INFINIA_LOGO.png";
-
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="  justify-center items-top grid mt-4 text-black py-6 w-100">
-      <div className="flex flex-wrap justify-start gap-12 mx-auto mb-5">
-        <div className="mr-50 flex justify-start text">
-        <img src={Logo} alt="" style={{height:"100px",width:"100px"}} />
+  
+
+<footer className="bg-white">
+  <DIV className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div className="-mt-[20px]">
+        <div className="flex justify-center text-teal-600 sm:justify-start">
+         <img src={Logo} width={"100px"} height={"100px"}/>
         </div>
-        <div className="flex flex-wrap justify-between gap-14 text-center mr-12 ml-10 ">
-          <div className="flex justify-start items-start flex-col text-right ">
-            <div
-              className="text-lg "
-              style={{
-                borderBottomWidth: "5px",
-                width: "150px",
-                textAlign: "start",
-              }}
-            >
-              <a
-                href="#"
-                className="hover:text-orange-400 text-xl font-medium boder-b-4 "
-              >
-                Call
-              </a>
-            </div>
-            <div className="mt-6 text-blue-800"></div>
-            <br />
-            <div className="text-xl font-medium">Connect</div>
-            <div className="flex gap-x-4">
-              {footer.social.map((item, index) => {
-                return (
-                  <>
-                    <div
-                      className="w-12 h-12 text-2xl bg-white-700 rounded-full flex justify-center items-center transition-transform transform hover:-translate-y-1 hover:bg-accent"
-                      key={index}
-                    >
-                      <a
-                        href={item.href}
-                        className="text-start justify-start ali hover:color-red"
-          >
-                        {item.icon}
-                      </a>
-                    </div>
-                  </>
-                );
-              })}
-            </div>
-          </div>
-          <div className=" text-start">
-            <h5
-              href="#"
-              className="hover:text-orange-400 text-xl font-medium "
-              style={{
-                borderBottomWidth: "5px",
-                width: "150px",
-                textAlign: "start",
-              }}
-            >
-              Email
-            </h5>
-            <div className="mt-6 text-blue-800">
-              <a href="#">info@infinia.com</a>
-            </div>
-            <br />
-            <div className="text-xl font-medium text-start">
-              Download our App
-            </div>
-          </div>
-          <div className="text-start">
-            <h5
-              href="#"
-              className="hover:text-orange-400 text-xl font-medium text-start"
-              style={{
-                borderBottomWidth: "5px",
-                width: "150px",
-                textAlign: "start",
-              }}
-            >
-              Useful links
-            </h5>
 
-            <div className="mt-6 flex flex-col leading-10 text-start text-lg">
-              <a className="hover:underline" href="#"></a>
-              <a className="hover:underline" href="#">
-                Privacy Policy 
-              </a>
-              <a className="hover:underline" href="#">
-                Catalogue
-              </a>
-              <a className="hover:underline" href="#">
-                FAQs
-              </a>
-              <a className="hover:underline" href="#">
-                Cookies Policy
-              </a>
-              <a className="hover:underline" href="#">
-                Help
-              </a>
-            </div>
-          </div>
-          <div className="text-start">
-            <h2
-              href="#"
-              className=" text-xl font-medium text-start hover:text-orange-400"
-              style={{
-                borderBottomWidth: "5px",
-                width: "150px",
-                textAlign: "start",
-              }}
-            >
-              About Us
-            </h2>
+        <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+        Infinia Industries Pvt Ltd  Central India's Premier Manufacturer of Innovative Building Solutions!we take pride in being the forefront of innovation.
+        </p>
 
-            <div className="mt-6 flex flex-col leading-10 text-start text-lg">
-              <a className="hover:underline" href="#">
+        <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
+        
+            <Link
+              to="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer.php%3Fu%3Dhttps%253A%252F%252Fwww.infiniaindia.in%252F&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=mr_IN"
+              rel="noreferrer"
+              target="_blank"
+              className="text-teal-700 transition hover:text-teal-700/75 hover:-translate-y-3 duration-500 "
+            >
+              <span className="sr-only">Facebook</span>
+              <FaFacebookSquare size={30}/>
+            </Link>
+        
+
+      
+            <Link
+              to="#"
+              rel="noreferrer"
+              target="_blank"
+              className="text-teal-700 transition hover:-translate-y-3 duration-500  hover:text-teal-700/75 "
+            >
+              <span className="sr-only">Instagram</span>
+              <FaInstagram size={30}/>
+            </Link>
+       
+
+          
+            <Link
+              to="https://www.youtube.com/@InfiniaIndia"
+              rel="noreferrer"
+              target="_blank"
+              className="text-teal-700 transition hover:text-teal-700/75 hover:-translate-y-3 duration-500 "
+            >
+              <span className="sr-only">Youtube</span>
+              <FaYoutube size={30}/>
+            </Link>
+
+          <li>
+            <a
+              href="#"
+              rel="noreferrer"
+              target="_blank"
+              className="text-teal-700 transition hover:text-teal-700/75"
+            >
+              <span className="sr-only">Dribbble</span>
+             
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
+        <div className="text-center sm:text-left">
+          <p className="text-lg font-medium text-gray-900">About Us</p>
+
+          <ul className="mt-8 space-y-4 text-sm">
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#">
                 Home
               </a>
-              <a className="hover:underline" href="#">
+            </li>
+
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#">
                 About
               </a>
-              <a className="hover:underline" href="#">
+            </li>
+
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#">
                 Brands
               </a>
-              <a className="hover:underline" href="#">
-                Contact Us
+            </li>
+
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> Contact Us </a>
+            </li>
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> History </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="text-center sm:text-left">
+          <p className="text-lg font-medium text-gray-900">Our Services</p>
+
+          <ul className="mt-8 space-y-4 text-sm">
+          
+
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/particle-boards.html"> Particle Boards </a>
+            </li>
+
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/wpc-door-frame.html"> WPC Door Frame </a>
+            </li>
+
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/brick-pallet.html"> Brick Pallets </a>
+            </li>
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/rrp-sheets.html"> RRP Sheets </a>
+            </li>
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/terracotta.html"> Terracotta </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="text-center sm:text-left">
+          <p className="text-lg font-medium text-gray-900">Helpful Links</p>
+
+          <ul className="mt-8 space-y-4 text-sm">
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> Privacy Policy  </a>
+            </li>
+
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> Catalogue </a>
+            </li>
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> FAQs </a>
+            </li>
+            <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> Cookies Policy </a>
+            </li>
+            <li className="wrapper">
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> Help </a>
+            </li>
+
+          
+          </ul>
+        </div>
+
+        <div className="text-center sm:text-left">
+          <p className="text-lg font-medium text-gray-900">Contact Us</p>
+
+          <ul className="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="#"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-1 shrink-0 text-gray-900"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  width="20px"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+
+                <span className="flex-1 text-gray-700">info@infinia.com</span>
               </a>
-              <a className="hover:underline" href="#">
-                Our History
+            </li>
+
+            <li>
+              <a
+                className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="#"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-5 shrink-0 text-gray-900"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  width="20px"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+
+                <span className="flex-1 text-gray-700">07875577000</span>
               </a>
-            </div>
-          </div>
+            </li>
+
+            <li
+              className="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="size-5 shrink-0 text-gray-900"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+                width="20px"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+
+              <address className="-mt-0.5 flex-1 not-italic text-gray-700">
+              Infinia House, 4Th Floor, Near Indora Chouk, Kamptee Rd, Indora, Square, Nagpur, Maharashtra 440017
+              </address>
+            </li>
+          </ul>
         </div>
       </div>
-      <hr />
-      <div className="text-center mt-10 text-xl font-medium">
-        <p className="mb-2">&copy; infinia 2024 - All rights reserved.</p>
-        <p>Designed and Developed by © Royals WebTech 2024</p>
+    </div>
+
+    <div className="mt-12 border-t border-gray-100 pt-6">
+      <div className="text-center sm:flex sm:justify-between sm:text-left">
+        <p className="text-sm text-gray-500">
+          <span className="block sm:inline">All rights reserved.</span>
+
+          <a
+            className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            href="#"
+          >
+            Terms & Conditions
+          </a>
+
+          <span>&middot;</span>
+
+          <a
+            className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            href="#"
+          >
+            Privacy Policy
+          </a>
+        </p>
+
+        <a href="http://royalswebtech.com/" className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">Designed and Developed by ©Royals WebTech 2024</a>
       </div>
-    </footer>
+    </div>
+  </DIV>
+</footer>
   );
 };
 
 export default Footer;
+
+const DIV = styled.div`
+a{
+ font-size: 17px;
+}
+
+
+li{
+    display: flex;
+
+}
+
+
+
+
+
+a:after {
+    display      : block;
+    content      : '';
+    border-bottom: solid 3px #F3A445;
+    transform    : scaleX(0);
+    transition   : transform 300ms ease-in-out;
+}
+
+a:hover:after {
+    transform: scaleX(1);
+}
+
+a.fromright:after {
+    transform-origin: 100% 50%;
+}
+
+a.fromleft:after {
+    transform-origin: 0 50%;
+}
+`
