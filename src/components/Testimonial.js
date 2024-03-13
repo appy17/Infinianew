@@ -18,8 +18,8 @@ const Testimonial = () => {
           <TestimonialSlider />
         </div>
 {/* image */}
-<div className='order-1'>
-  <img src={image.type} alt=''></img>
+<div className='order-1 rounded-lg'>
+  <img className='rounded-lg' src={image.type} alt=''></img>
 </div>
       </div>
     </div>

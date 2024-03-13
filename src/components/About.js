@@ -15,7 +15,7 @@ function About() {
                 Manufacturer of Innovative Building Solutions! At Infinia
                 Industries, we take pride in being the forefront of innovation,
                 carving a niche as the leading manufacturer of Wood Polymer
-                Composite, Regenerated Plastic, and Terra Cotta products in
+                Composite,Recycle Regenerated Plastic and Terracotta clay products in
                 Central India. With an unwavering commitment to excellence,
                 sustainability, and quality, we offer a diverse range of
                 solutions that cater to the dynamic needs of the construction,
@@ -45,25 +45,25 @@ function About() {
                   </p>
 
                   <h4 className="text-gray-800 text-xl mb-2 ">
-                    Regenerated Plastic:
+                  Recycle Regenerated Plastic:
                   </h4>
                   <p className=" text-gray-600 mb-2">
                     Contributing to the global effort to combat plastic waste,
-                    our Regenerated Plastic products are manufactured with a
+                    our Recycle Regenerated Plastic products are manufactured with a
                     focus on environmental sustainability. By utilizing recycled
                     plastics, we not only prevent deforestation but also
                     contribute to reducing the burden of plastic pollution. From
                     durable outdoor furniture to eco-friendly construction
-                    materials, our Regenerated Plastic offerings redefine
+                    materials, our Recycle Regenerated Plastic offerings redefine
                     responsible manufacturing.{" "}
                   </p>
 
                   <h4 className=" text-gray-800 text-xl mb-2">
-                    Terra Cotta Products:
+                    Terracotta Products:
                   </h4>
                   <p className=" text-gray-600">
                     Rooted in tradition and crafted with modern precision, our
-                    Terra Cotta products add a touch of timeless elegance to
+                    Terracotta products add a touch of timeless elegance to
                     architectural and landscaping projects. Meticulously
                     designed for both aesthetic appeal and functional
                     durability, these products seamlessly integrate with various

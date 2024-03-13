@@ -67,7 +67,7 @@ const Hero = () => {
         <button ref={buttonRef} className='bg-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.5)] px-[20px] py-[6px] mb-[80px] text-lg rounded-md backdrop-blur-md transition lg:px-[35px] lg:py-[9px] lg:mb-[194px]'>{buttonText}</button>
 
         {/* stats */}
-        <div>
+        <div className='mt-[-70px]'>
           <Stats />
         </div>
       </div>

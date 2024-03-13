@@ -7,11 +7,13 @@ import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+import imagebg from "../assets/img/uxie.png"
 const Footer = () => {
   return (
   
 
-<footer className="bg-white">
+<footer className="bg-white w-full">
   <DIV className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div className="-mt-[20px]">
@@ -29,10 +31,10 @@ const Footer = () => {
               to="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer.php%3Fu%3Dhttps%253A%252F%252Fwww.infiniaindia.in%252F&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=mr_IN"
               rel="noreferrer"
               target="_blank"
-              className="text-teal-700 transition hover:text-teal-700/75 hover:-translate-y-3 duration-500 "
+              className="text-teal-700 transition hover:text-red hover:-translate-y-3 duration-500 "
             >
               <span className="sr-only">Facebook</span>
-              <FaFacebookSquare size={30}/>
+              <FaFacebookSquare size={30} />
             </Link>
         
 
@@ -181,7 +183,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <span className="flex-1 text-gray-700">info@infinia.com</span>
+                <span className="flex-1 text-gray-700">care@infiniaindia.com</span>
               </a>
             </li>
 
@@ -234,8 +236,8 @@ const Footer = () => {
                 />
               </svg>
 
-              <address className="-mt-0.5 flex-1 not-italic text-gray-700">
-              Infinia House, 4Th Floor, Near Indora Chouk, Kamptee Rd, Indora, Square, Nagpur, Maharashtra 440017
+              <address className="-mt-0.5 flex-1 not-italic text-gray-700 text-[15px]">
+              Infinia House, 4Th Floor, Near Indora, Kamptee Rd, Nagpur, Maharashtra 440017
               </address>
             </li>
           </ul>
@@ -275,7 +277,11 @@ const Footer = () => {
 
 export default Footer;
 
+
 const DIV = styled.div`
+
+
+
 a{
  font-size: 17px;
 }
@@ -285,10 +291,6 @@ li{
     display: flex;
 
 }
-
-
-
-
 
 a:after {
     display      : block;

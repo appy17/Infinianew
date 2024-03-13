@@ -1,5 +1,8 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { gsap } from 'gsap/gsap-core'
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const products = [
     {
       id: 1,
@@ -93,6 +96,22 @@ const products = [
   ]
 
 const RelatedProducts = () => {
+
+useEffect(()=>{
+  gsap.registerPlugin(ScrollTrigger) 
+  gsap.from(".box", {
+    scale:0,
+    opacity:0,
+    duration:2,
+    stagger:0.3,
+    scrollTrigger:{
+        trigger:".box",
+        toggleActions:"restart none none none",
+    }
+})
+},[])
+
+
   return (
     <div>
      <div className="text-center">
@@ -108,7 +127,7 @@ const RelatedProducts = () => {
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 sm:px-8 mv:px-8">
           {products.map((product) => (
             <a key={product.id} href={product.href} className="group">
-              <div className="aspect-h-1 h-[200px]  aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+              <div className="box aspect-h-1 h-[200px]  aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                 <img
                 
                   src={product.imageSrc}

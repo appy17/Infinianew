@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Tooltip from 'react-tooltip';
+
 import Logo from "../assets/img/INFINIA_LOGO.png";
 import { CgMenuRight, CgClose } from "react-icons/cg";
-import { navigation } from "../data";
+// import { navigation } from "../data";
 // import classNames from 'classnames';
-
+import { gsap } from "gsap";
+    
 
 
 
@@ -23,6 +24,7 @@ import { Fragment } from "react";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import styled from "styled-components";
 
 
 
@@ -148,7 +150,7 @@ const Header = () => {
   const [mobileNav, setMobileNav] = useState(false);
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   console.log("location", location.pathname);
 
   useEffect(() => {
@@ -161,21 +163,37 @@ const Header = () => {
     });
   });
 
-  console.log("bg", bg);
+  useEffect(()=>{
+    const tl = gsap.timeline()
+
+    tl.from("#nav", {
+        opacity:0,
+        delay:0.3,
+        duration:2
+    })
+    tl.from("#nav img", {
+      y:-80,
+      opacity:0,
+      duration:0.8,
+      stagger:0.2
+  })
+
+  },[])
 
   return (
     <header
-      className={`${ bg ? "bg-white  lg:py-4 shadow-md" : "bg-none"
-      } fixed left-0 w-full py-7 z-10 transition-all duration-200 px-10`}>
-      <div className="contianer mx-auto">
-        <div className="flex justify-between items-center">
+      className={`${ bg ? "bg-white py-2 lg:px-10 ms:px-6 mv:px-2 ssm:px-4 shadow-md" : "bg-none"
+      } fixed left-0 w-full  z-10 transition-all duration-200 py-6 px-10`}>
+      <DIV className="contianer mx-auto">
+        <div id="#nav" className="flex justify-between items-center ">
+         
           {/* logo */}
           <a href="/">
            
-            {/* <img className= "lg:h-10 lg:w-full border-2" src={Logo} alt="" /> */}
-            <img
-  className={`lg:w-full ${
-    bg ? "h-12" : "h-20" // Conditionally apply different height classes
+         
+            <img 
+  className={`${
+    bg ? "h-12" : "h-12" 
   }`}
   src={Logo}
   alt=""
@@ -185,7 +203,14 @@ const Header = () => {
           <div onClick={() => setMobileMenuOpen(true)}
             className="text-2xl  md:hidden lg:text-3xl cursor-pointer"
           >
-          {mobileNav ? <CgClose /> : <CgMenuRight />}
+          {mobileNav ? <CgClose /> : <CgMenuRight style={{
+    color: "#F3A445",
+    border: "1px solid #F3A445",
+    borderRadius: "50%",
+    padding: "5px",
+    width: "40px",
+    height: "40px"
+}}/>}
           </div>
           <nav
             className="hidden md:flex"
@@ -197,18 +222,18 @@ const Header = () => {
           >
           <ul className="md:flex md:gap-x-12">
               <NavLink
-                className={`${
-                  bg ? "text:black" : "text-white"
-                } capitalize transition-all`}
+                className={`home ${
+                  bg ? "text-black" : "text-white"
+                }  capitalize transition-all`}
                 to={"/"}
-                exact
-                activeClassName="active"
+            
+                activeClassName="home-active"
               >
                 Home
               </NavLink>
               <NavLink
                 className={`${
-                  bg ? "text:black" : "text-white"
+                  bg ? "text:black hover:" : "text-white"
                 } capitalize transition-all`}
                 to={"/about"}
                 exact
@@ -222,7 +247,7 @@ const Header = () => {
                 <div className="">
                   <Menu.Button
                     className={`${
-                      bg ? "text:black" : "text-white"
+                      bg ? "text-black" : "text-white"
                     } inline-flex w-full justify-center gap-x-1.5  capitalize   transition-all`}
                   >
                     Brands
@@ -580,6 +605,17 @@ const Header = () => {
                   Contact Us
                 </a>
               </li>
+              <li>
+                <a
+                  href="/blog"
+                  className={`${
+                    bg ? "text-black" : "text-white"
+                  } capitalize transition-all hover:cursor-pointers`}
+                >
+                  {/*  */}
+                  Blogs
+                </a>
+              </li>
             </ul>
           </nav>
           {/* nav mobile  */}
@@ -594,16 +630,18 @@ const Header = () => {
             onClose={setMobileMenuOpen}
           >
             <div className="fixed inset-0 z-10" />
-            <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto  bg-white px-6  sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
                 <a href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
-                  {/* <img
-                    className="h-8 w-auto"
-                    src={Logo}
-                    alt=""
-                  /> */}
-                  <h1 className="title mt-2 text-4xl">Infinia</h1>
+                  <img 
+  className={` ${
+    bg ? "h-20" : "h-20 mt-2" 
+  } `}
+  src={Logo}
+  alt=""
+/>
+                  {/* <h1 className="title mt-2 text-4xl">Infinia</h1> */}
                 </a>
                 <button
                   type="button"
@@ -701,6 +739,12 @@ const Header = () => {
                     >
                       Contact Us
                     </a>
+                    <a
+                      href="/blog"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Blogs
+                    </a>
                   </div>
                   <div className="py-6">
                     <a
@@ -715,9 +759,15 @@ const Header = () => {
             </Dialog.Panel>
           </Dialog>
         </div>
-      </div>
+      </DIV>
     </header>
   );
 };
 
 export default Header;
+
+const DIV = styled.div`
+.home-active {
+  color: #F3A445;
+}
+`

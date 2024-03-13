@@ -3,6 +3,7 @@ import MainRoutes from "./components/MainRoutes"
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import styled from 'styled-components';
+import Banner from "./components/Banner";
 
 const App = () => {
  
@@ -15,6 +16,7 @@ const App = () => {
           <Header />
           <MainRoutes />
           <Footer />
+         
         </div>
  
     </>

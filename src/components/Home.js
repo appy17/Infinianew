@@ -12,6 +12,9 @@ import AboutInfinia from "./AboutInfinia";
 import "aos/dist/aos.css"; // Import the styles
 import AOS from "aos"; // Import the AOS library
 
+
+
+
 const Home = () => {
   AOS.init({
     duration: 1500,
@@ -27,9 +30,10 @@ const Home = () => {
       <div data-aos="zoom-in">
         <ImageSlider />
       </div>
-      <div data-aos="zoom-in">
+     
+      {/* <div data-aos="zoom-in"> */}
         <Features />
-      </div>
+      {/* </div> */}
       <div data-aos="zoom-in">
         <NewItems />
       </div>
@@ -51,6 +55,7 @@ const Home = () => {
       <div data-aos="zoom-in">
         <Newsletter />
       </div>
+      
 
       {/* <BrandCarousel /> */}
     </div>

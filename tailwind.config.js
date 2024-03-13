@@ -1,3 +1,4 @@
+
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
@@ -32,7 +33,7 @@ module.exports = {
         pink: 'pink',
       },
       backgroundImage: {
-        hero: 'url("/src/assets/img/hero-bg.png")',
+        hero: 'url("/src/assets/img/Hero_image.jpeg")',
         newsletter: 'url("/src/assets/img/newsletter.png")',
       },
       dropShadow: {

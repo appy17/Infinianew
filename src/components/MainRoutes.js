@@ -14,6 +14,7 @@ import ContactUs from "./ContactUs";
 import Ecomagix from "../pages/Ecomagix";
 import Claymagix from "../pages/Claymagix";
 import Woodmagix from "../pages/Woodmagix";
+import Blog from "./Blog";
 
 const MainRoutes = () => {
   return (
@@ -34,6 +35,7 @@ const MainRoutes = () => {
       <Route path="/woodmagix" element={<Woodmagix />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<ContactUs />} />
+      <Route path="/blog" element={<Blog />} />
     </Routes>
   );
 };

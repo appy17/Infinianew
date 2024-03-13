@@ -14,7 +14,7 @@ import Features1Img from './assets/img/features-1.png';
 import Features2Img from './assets/img/features-2.png';
 import ChairImg from './assets/img/chair.png';
 import BedImg from './assets/img/bed.png';
-import CupboardImg from './assets/img/cupboard.png';
+import CupboardImg from './assets/img/door1.jpg';
 import LightingImg from './assets/img/lighting.png';
 import Product1Img from './assets/img/products/product-1.png';
 import Product2Img from './assets/img/products/product-2.png';
@@ -26,7 +26,7 @@ import Product7Img from './assets/img/products/product-7.png';
 import Product8Img from './assets/img/products/product-8.png';
 import Product9Img from './assets/img/products/product-9.png';
 import Product10Img from './assets/img/products/product-10.png';
-import TestimonialImg from './assets/img/testimonial.png';
+import TestimonialImg from './assets/img/testimonial.jpg';
 import Avatar1Img from './assets/img/avatar-1.png';
 import Avatar2Img from './assets/img/avatar-2.png';
 import Avatar3Img from './assets/img/avatar-3.png';
@@ -95,7 +95,7 @@ export const features = {
     image: <Features2Img />,
     title: 'Recycel plastic sheets WPC Door frames and Particle Boards',
     subtitle:
-      'We are counted amongst the known manufacturer of Recycel plastic sheets WPC Door frames and Particle Boards etc. We offer these products at most affordable prices. always Ready to give services to our all customers.',
+      'We are counted amongst the known manufacturer of Recycel plastic sheets WPC Door frames and Wood Polymer Composite, Recycled Regenerated Plastic and Terracotta Clay Products etc. We offer these products at most affordable prices. always Ready to give services to our all customers.',
   },
 };
 
