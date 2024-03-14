@@ -67,7 +67,7 @@ useEffect(()=> {
         <div className="flex flex-col lg:flex-row lg:gap-[100px]">
           {/* images */}
           <div className="box flex-1 order-1 lg:-order-1">
-            <img src={image.type} alt="" />
+            <img src={image.type} alt="" className="img"/>
           </div>
 
           {/* title */}

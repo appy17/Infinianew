@@ -59,7 +59,7 @@ const Address = () => {
     </div>
 
   </div>
-  <div className='sm:mb-4 w-full mt-6 flex flex-col md:flex-row md:items-center md:gap-10  md:border-r md:mb-5 text-center flex items-center flex flex-col justify-center '>
+  <div className='sm:mb-4 w-full mt-6 flex flex-col md:flex-row md:items-center md:gap-10  md:border-r md:mb-5 text-center  items-center  justify-center '>
   {stats.map((item, index) => {
     return (
       <div key={index} className='relative sm:mb-1'>

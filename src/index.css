@@ -18,3 +18,57 @@
 }
 /* <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> */
+
+.back {
+  background-image: url(./assets/img/footer.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.door {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 400px; 
+  background-image: url("./assets/img/eco.jpg");
+  background-position: center;
+  background-size: cover;
+
+}
+
+.clay {
+  background-image: url('./assets/img/Tile-Roofing.jpg');
+}
+
+.wood {
+  background-image: url('./assets/img/wooden.webp');
+  background-size: auto;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+
+.con-bg{
+  background-image: url('./assets/img/contact.jpg');
+}
+
+.shadow-2 {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 10px -20px;
+}
+
+.bg-new {
+  background-image: url('./assets/img/email-bg.jpg');
+  background-size: cover;
+  background-position: top;
+}
+
+.img:hover {
+  scale: 1.04;
+  transition: all ease-in .3s;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 15px 15px;
+  
+
+}

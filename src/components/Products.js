@@ -4,6 +4,7 @@ import React from 'react';
 
 import { products } from "../data"
 
+
 // import product slider components
 
 import ProductSlider from "../components/ProductSlider"
@@ -17,6 +18,7 @@ const Products = () => {
   const {title, subtitle} =  products;
 
   return <section className='section text-center'>
+     
     <div className='container mx-auto'>
     
       <div>

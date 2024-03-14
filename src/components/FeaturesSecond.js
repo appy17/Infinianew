@@ -17,7 +17,7 @@ const FeaturesSecond = () => {
         
           {/* images */}
           <div className="flex-1 ">
-            <img src={image.type} alt="" />
+            <img src={image.type} alt="" className="img"/>
           </div>
 
      

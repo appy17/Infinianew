@@ -67,8 +67,11 @@ const features = [
 
 function Woodmagix() {
   return (
-    <div className="bg-white">
-      <div className="mx-auto grid  max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+    <div className="bg-white con-bg">
+        <div className='flex items-center w-auto text-center door wood'>
+        <h3 className="text-5xl font-extrabold tracking-normal text-center z-10 text-white">Woodmagix</h3>
+      </div>
+      <div className="mx-auto grid  max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8 ">
         <div>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Woodmagix
@@ -87,7 +90,7 @@ function Woodmagix() {
 
           <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
             {features.map((feature) => (
-              <div key={feature.name} className="border-t border-gray-200 pt-4">
+              <div key={feature.name} className="border-t border-gray-200 p-3 shadow-2">
                 <dt className="font-medium text-gray-900">{feature.name}</dt>
                 <dd className="mt-2 text-sm text-gray-500">
                   {feature.description1}
@@ -121,22 +124,22 @@ function Woodmagix() {
           <img
               src={image1}
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-            className="rounded-lg bg-gray-100 "
+            className="rounded-lg bg-gray-100 shadow img"
           />
           <img
              src={image2}
             alt="Top down view of walnut card tray with embedded magnets and card."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
           <img
              src={image3}
             alt="Side of walnut card tray with card groove and recessed card area."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
           <img
              src={image4}
             alt="Walnut card tray filled with cards and card angled in dedicated groove."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
         </div>
       </div>

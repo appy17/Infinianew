@@ -19,7 +19,7 @@ const Testimonial = () => {
         </div>
 {/* image */}
 <div className='order-1 rounded-lg'>
-  <img className='rounded-lg' src={image.type} alt=''></img>
+  <img className='rounded-lg img' src={image.type} alt='' ></img>
 </div>
       </div>
     </div>

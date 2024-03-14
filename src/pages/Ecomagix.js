@@ -1,7 +1,8 @@
-import image1 from '../assets/img/door.jpg';
+import image1 from '../assets/img/door1.jpg';
 import image2 from '../assets/img/9.jpg';
 import image3 from '../assets/img/flyashbrick.jpg'
 import image4 from '../assets/img/Formwork.jpg'
+import Door from "../assets/img/doors.jpg"
 const features = [
   { name: '1. EM01 Boards & Panels', description1: '1.1 EM01A RRP Panels -regular Variants - Sizes', description2: '1.2 EM01B RRP Panels UHD Varient -Size,colours'},
   { name: '2. EM02 RRP Doors', description1: '2.1 EM02A Panel Doors', description2:'2.2 EM02B Flush Doors'  },
@@ -29,8 +30,12 @@ function Ecomagix() {
 
 
 return (
- <div className="bg-white">
-   <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8 ">
+ <div className="bg-white con-bg">
+  <div className='flex items-center w-auto text-center door'>
+    <h3 className="text-5xl font-extrabold tracking-normal text-center z-10 text-white">Ecomagix</h3>
+  </div>
+  
+   <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
      <div>
        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Ecomagix</h2>
        <p className="mt-4 text-gray-500">
@@ -39,7 +44,7 @@ return (
 
        <dl className="mt-1 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8 ">
          { features.map((feature) => (
-           <div key={feature.name} className="border-t border-gray-200 pt-2">
+           <div key={feature.name} className="border-t border-gray-200  p-3 shadow-2">
              <dt className="font-medium text-gray-900">{feature.name}</dt>
              <dd className="mt-1 text-sm text-gray-500">{feature.description1}</dd>
              <dd className="mt-1 text-sm text-gray-500">{feature.description2}</dd>
@@ -52,22 +57,22 @@ return (
        <img
          src={image1}
          alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-         className="rounded-lg bg-gray-100 "
+         className="rounded-lg bg-gray-100 shadow img"
        />
        <img
          src={image2}
          alt="Top down view of walnut card tray with embedded magnets and card."
-         className="rounded-lg bg-gray-100"
+         className="rounded-lg bg-gray-100 shadow img"
        />
        <img
          src={image3}
          alt="Side of walnut card tray with card groove and recessed card area."
-         className="rounded-lg bg-gray-100"
+         className="rounded-lg bg-gray-100 shadow img"
        />
        <img
          src={image4}
          alt="Walnut card tray filled with cards and card angled in dedicated groove."
-         className="rounded-lg bg-gray-100"
+         className="rounded-lg bg-gray-100 shadow img"
        />
      </div>
    </div>
