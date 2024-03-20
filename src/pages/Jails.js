@@ -125,7 +125,7 @@ function Jails() {
                 >
                   <img
                     src={image}
-                    className="transition-transform duration-300 transform hover:scale-110"
+                    className="rounded-lg bg-gray-100 shadow img"
                     alt={`Terracotta Jali ${index + 1}`}
                   />
                 </div>

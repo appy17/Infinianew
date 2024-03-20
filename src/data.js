@@ -58,17 +58,17 @@ export const stats = [
     text: 'Year Experience',
   },
   {
-    value: '2',
-    text: 'Opened in the country',
+    value: '8',
+    text: 'Serving in the country',
   },
   {
-    value: '10k+',
-    text: 'Furniture sold',
+    value: '10',
+    text: 'Products sold',
   },
-  {
-    value: '260+',
-    text: 'Variant Furniture',
-  },
+  // {
+  //   value: '260+',
+  //   text: 'Variant Products',
+  // },
 ];
 
 export const features = {

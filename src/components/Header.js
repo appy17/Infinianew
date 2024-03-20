@@ -594,6 +594,18 @@ const Header = () => {
                   </Menu.Items>
                 </Transition>
               </Menu>
+             
+              <li>
+                <a
+                  href="/blogs"
+                  className={`${
+                    bg ? "text-black" : "text-white"
+                  } capitalize transition-all hover:cursor-pointers`}
+                >
+                  {/*  */}
+                  Blogs
+                </a>
+              </li>
               <li>
                 <a
                   href="/contact"
@@ -603,17 +615,6 @@ const Header = () => {
                 >
                   {/*  */}
                   Contact Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/blog"
-                  className={`${
-                    bg ? "text-black" : "text-white"
-                  } capitalize transition-all hover:cursor-pointers`}
-                >
-                  {/*  */}
-                  Blogs
                 </a>
               </li>
             </ul>
@@ -732,19 +733,19 @@ const Header = () => {
                         </>
                       )}
                     </Disclosure>
-
+                    <a
+                      href="/blogs"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Blogs
+                    </a>
                     <a
                       href="#"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       Contact Us
                     </a>
-                    <a
-                      href="/blog"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Blogs
-                    </a>
+                   
                   </div>
                   <div className="py-6">
                     <a

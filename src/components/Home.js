@@ -11,6 +11,8 @@ import Products from "./Products";
 import AboutInfinia from "./AboutInfinia";
 import "aos/dist/aos.css"; // Import the styles
 import AOS from "aos"; // Import the AOS library
+import Event from "./Events";
+// import ScrollToTopButton from "./ScrollToTopButton";
 
 
 
@@ -24,28 +26,30 @@ const Home = () => {
   }); // Run this effect only once when the component mounts
   return (
     <div style={{overflow:"hidden"}}>
-      <div data-aos="fade-down">
+      {/* <div data-aos="fade-down">
         <Hero />
-      </div>
+      </div> */}
       <div data-aos="zoom-in">
         <ImageSlider />
       </div>
      
       {/* <div data-aos="zoom-in"> */}
+     
         <Features />
+        <Event />
       {/* </div> */}
       <div data-aos="zoom-in">
         <NewItems />
       </div>
-      <div data-aos="fade-right">
+      {/* <div data-aos="fade-right">
         <FeaturesSecond />
       </div>
       <div data-aos="fade-left">
         <AboutInfinia />
-      </div>
-      <div data-aos="zoom-in">
+      </div> */}
+      {/* <div data-aos="zoom-in">
         <Products />
-      </div>
+      </div> */}
       <div data-aos="fade-right">
         <Testimonial />
       </div>
@@ -56,7 +60,7 @@ const Home = () => {
         <Newsletter />
       </div>
       
-
+{/* <ScrollToTopButton /> */}
       {/* <BrandCarousel /> */}
     </div>
   );

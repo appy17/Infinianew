@@ -82,22 +82,22 @@ const Boards_Panels = () => {
           <img
             src={image1}
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
           <img
             src={image2}
             alt="Top down view of walnut card tray with embedded magnets and card groove."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
           <img
             src="https://5.imimg.com/data5/SELLER/Default/2023/3/294440140/SE/CJ/PB/101519832/bagasse-particle-board-500x500.jpg"
             alt="Side of walnut card tray with card groove and recessed card area."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
           <img
             src={image3}
             alt="Walnut card tray filled with cards and card angled in dedicated groove."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
         </div>
       </div>

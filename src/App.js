@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import styled from 'styled-components';
 import Banner from "./components/Banner";
+import Header2 from "./components/Header2";
 
 const App = () => {
  
@@ -13,8 +14,10 @@ const App = () => {
 
     
         <div className="w-full">
-          <Header />
+          {/* <Header /> */}
+          <Header2 />
           <MainRoutes />
+          
           <Footer />
          
         </div>

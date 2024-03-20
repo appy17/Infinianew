@@ -32,7 +32,7 @@ function Ecomagix() {
 return (
  <div className="bg-white con-bg">
   <div className='flex items-center w-auto text-center door'>
-    <h3 className="text-5xl font-extrabold tracking-normal text-center z-10 text-white">Ecomagix</h3>
+    <h3 className="text-5xl font-extrabold tracking-normal text-center z-1 text-white">Ecomagix</h3>
   </div>
   
    <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">

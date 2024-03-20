@@ -72,22 +72,22 @@ const Flyash_Brick_Pallets = () => {
           <img
             src={image1}
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-            className="rounded-lg bg-gray-100 m-auto mt-6.75rem" 
+            className="rounded-lg bg-gray-100 m-auto mt-6.75rem shadow img" 
           />
           <img
             src={image2}
             alt="Top down view of walnut card tray with embedded magnets and card groove."
-            className="rounded-lg bg-gray-100 m-auto mt-6.75rem"
+            className="rounded-lg bg-gray-100 m-auto mt-6.75rem shadow img"
           />
            <img
             src={image3}
             alt="Top down view of walnut card tray with embedded magnets and card groove."
-            className="rounded-lg bg-gray-100 m-auto mt-6.75rem"
+            className="rounded-lg bg-gray-100 m-auto mt-6.75rem shadow img"
           />
           <img
             src={image4}
             alt="Top down view of walnut card tray with embedded magnets and card groove."
-            className="rounded-lg bg-gray-100 m-auto mt-6.75rem"
+            className="rounded-lg bg-gray-100 m-auto mt-6.75rem shadow img"
           />
          
          

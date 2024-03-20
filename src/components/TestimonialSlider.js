@@ -13,9 +13,10 @@ import {Autoplay, Navigation} from "swiper";
 // import data
 
  import {testimonial} from "../data"
+import styled from 'styled-components';
 
 const TestimonialSlider = () => {
-  return <Swiper className='testimonialSlider'
+  return  <DIV> <Swiper className='testimonialSlider'
  modules={[Navigation, Autoplay]}
   navigation={true}
   autoplay={true}
@@ -38,7 +39,67 @@ const TestimonialSlider = () => {
   </div>
  </SwiperSlide>
     })}
-  </Swiper>;
+  </Swiper>
+  </DIV>
 };
 
 export default TestimonialSlider;
+
+const DIV = styled.div`
+
+.testimonialSlider .swiper-button-prev:hover,
+.testimonialSlider .swiper-button-next:hover {
+  background: #286f6c;
+  transition: all 0.25s ease-in-out;
+}
+
+.testimonialSlider .swiper-button-prev:after,
+.testimonialSlider .swiper-button-next:after {
+  font-size: 16px;
+  color: white;
+}
+
+.testimonialSlider .swiper-button-prev:hover,
+.testimonialSlider .swiper-button-next:hover {
+  background: #286f6c;
+  transition: all 0.25s ease-in-out;
+}
+
+.testimonialSlider .swiper-button-prev:after,
+.testimonialSlider .swiper-button-next:after {
+  font-size: 16px;
+  color: white;
+}
+
+.testimonialSlider .swiper-button-prev,
+.testimonialSlider .swiper-button-next {
+  background: #23262f;
+  box-shadow: 0px 4px 10px rgba(15, 27, 51, 0.1);
+  top: 85%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 20;
+}
+
+.testimonialSlider .swiper-button-prev {
+  left: 0;
+}
+
+.testimonialSlider .swiper-button-next {
+  left: 12%;
+}
+
+   .testimonialSlider .swiper-button-prev {
+ margin-left: 10px;
+ /* margin-top: .1px; */
+ height: 40px;
+ width: 40px;
+}
+    .testimonialSlider .swiper-button-next {
+ margin-left: 30px;
+
+ height: 40px;
+ width: 40px;
+}
+`

@@ -80,7 +80,7 @@ Sheets available in many Thicknesses.
           <img
             src="https://5.imimg.com/data5/SELLER/Default/2022/9/FL/IH/QM/101519832/recycle-plastic-sheet-furniture-500x500.jpeg"
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
        
         </div>

@@ -132,7 +132,8 @@ useEffect(()=>{
                 
                   src={product.imageSrc}
                   alt={product.imageAlt}
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
+                  className="h-full w-full object-cover object-center rounded-lg shadow
+                   img"
                 />
               </div>
               <h3 className="mt-4 text-lg text-gray-700">{product.name}</h3>

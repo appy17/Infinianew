@@ -81,22 +81,22 @@ function SingleProducts() {
           <img
             src="http://5.imimg.com/data5/ANDROID/Default/2023/5/310755063/VH/OT/WG/101519832/product-jpeg-1000x1000.jpg"
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
           <img
             src="https://5.imimg.com/data5/SELLER/PDFImage/2023/5/307959281/TO/ZD/HQ/101519832/wpc-door-frame-1000x1000.png"
             alt="Top down view of walnut card tray with embedded magnets and card groove."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
           <img
             src="https://5.imimg.com/data5/SELLER/Default/2020/8/CM/EE/QL/101519832/wpc-door-frame-500x500.jpg"
             alt="Side of walnut card tray with card groove and recessed card area."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
           <img
             src="https://5.imimg.com/data5/SELLER/PDFImage/2023/5/307959277/MS/IX/OR/101519832/wpc-door-frame-1000x1000.png"
             alt="Walnut card tray filled with cards and card angled in dedicated groove."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow img"
           />
         </div>
       </div>
