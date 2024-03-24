@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import RelatedProducts from "./RelatedProducts";
 import image1 from '../assets/img/adrian-vazquez-casa-en-huerta.jpg'
 import image2 from '../assets/img/6x8x16inch-lightweight-hollow-clay-brick-500x500.jpg'
+import Transition from "../components/Transition";
 
 const features = [
   { name: "Minimum Order Quantity", description: "1000 feet" },
@@ -110,4 +111,4 @@ function Bricks() {
   );
 }
 
-export default Bricks;
+export default Transition(Bricks);

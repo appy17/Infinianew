@@ -2,6 +2,8 @@ import image1 from "../assets/img/metal (1).jpg";
 import image2 from '../assets/img/cladding.jpg';
 import image3 from '../assets/img/cladding3.jpg';
 import image4 from '../assets/img/9.jpg';
+import Transition from "../components/Transition";
+
 
 const features = [
   {
@@ -147,4 +149,4 @@ function Woodmagix() {
   );
 }
 
-export default Woodmagix;
+export default Transition(Woodmagix);

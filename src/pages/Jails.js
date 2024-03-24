@@ -6,6 +6,7 @@ import image2 from '../assets/img/terracotta-jali-500x500.jpg';
 import image3 from '../assets/img/terracotta-jaali-500x500 (2).jpg'
 import image4 from '../assets/img/clay-jali-helmet-jali-60d2f64017de7.jpg'
 import gsap from "gsap";
+import Transition from "../components/Transition";
 
 const images = [image1, image2, image3, image4];
 const features = [
@@ -116,7 +117,7 @@ function Jails() {
                 ))}
               </dl>
             </div>
-            <div className="grid grid-cols-2  grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+            <div className="grid grid-cols-2  grid-rows-2 gap-4 sm:gap-6 lg:gap-8 lg:mt-[-350px]">
               {images.map((image, index) => (
                 <div
                   key={index}
@@ -139,4 +140,4 @@ function Jails() {
   );
 }
 
-export default Jails;
+export default Transition(Jails);

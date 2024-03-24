@@ -18,11 +18,11 @@ const Footer = () => {
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div className="-mt-[20px]">
         <div className="flex justify-center text-teal-600 sm:justify-start">
-         <img src={Logo} width={"100px"} height={"100px"}/>
+         <img src={Logo} width={"200px"} height={"200px"}/>
         </div>
 
         <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
-        Infinia Industries Pvt Ltd  Central India's Premier Manufacturer of Innovative Building Solutions!we take pride in being the forefront of innovation.
+        Infinia Industries Private Limited ,Central India's Largest manufacturer of Innovative sustainable building Solutions.
         </p>
 
         <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
@@ -80,17 +80,13 @@ const Footer = () => {
           <p className="text-lg font-medium text-gray-900">About Us</p>
 
           <ul className="mt-8 space-y-4 text-sm">
-            <li>
+            
+          <li>
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#">
-                Home
+                Why us
               </a>
             </li>
 
-            <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#">
-                About
-              </a>
-            </li>
 
             <li>
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#">
@@ -108,28 +104,26 @@ const Footer = () => {
         </div>
 
         <div className="text-center sm:text-left">
-          <p className="text-lg font-medium text-gray-900">Our Services</p>
+          <p className="text-lg font-medium text-gray-900">Our Products</p>
 
           <ul className="mt-8 space-y-4 text-sm">
           
-
+          <li>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/wpc-door-frame.html"> WPC</a>
+            </li>
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/particle-boards.html"> Particle Boards </a>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/particle-boards.html"> RRP </a>
             </li>
 
-            <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/wpc-door-frame.html"> WPC Door Frame </a>
-            </li>
+           
 
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/brick-pallet.html"> Brick Pallets </a>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/brick-pallet.html"> Terracotta </a>
             </li>
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/rrp-sheets.html"> RRP Sheets </a>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/rrp-sheets.html"> Wetherproof Furniture </a>
             </li>
-            <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/terracotta.html"> Terracotta </a>
-            </li>
+          
           </ul>
         </div>
 

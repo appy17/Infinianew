@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import RelatedProducts from "./RelatedProducts";
 import image1 from '../assets/img/FEATIMAGE10.jpg'
 import image2 from '../assets/img/1 (1) (1).jpg'
+import Transition from '../components/Transition';
 
 const features = [
   { name: "Minimum Order Quantity", description: "250 feet" },
@@ -106,4 +107,4 @@ const Roofing_Flooring_solutions = () => {
         );
 }
 
-export default Roofing_Flooring_solutions
+export default Transition(Roofing_Flooring_solutions)

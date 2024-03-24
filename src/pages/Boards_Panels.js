@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import image1 from '../assets/img/woodplank (1) (1).png'
 import image2 from '../assets/img/particle-boards.jpg'
 import image3 from '../assets/img/m4prelam-pb-exterior.jpg'
+import Transition from '../components/Transition';
 const features = [
   { name: "Size", description: "8' X 4'" },
   { name: "Laminated", description: "Pre Laminated" },
@@ -108,5 +109,5 @@ const Boards_Panels = () => {
   )
 }
 
-export default Boards_Panels
+export default Transition(Boards_Panels)
 

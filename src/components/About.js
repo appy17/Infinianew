@@ -1,58 +1,112 @@
 import React from "react";
-import img from "../assets/img/testimonial.png";
-// import img1 from '../assets/img/teracota.jpeg'
-import img2 from '../assets/img/woodplank (1) (1).png'
-import img3 from '../assets/img/9.jpg'
-import img4 from '../assets/img/lighting.png'
-import img5 from '../assets/img/cladding.jpg'
-import img6 from '../assets/img/metal (1).jpg'
-import img7 from '../assets/img/m4prelam-pb-exterior.jpg'
+import img from "../assets/img/about_1.jpeg";
+import img3 from "../assets/img/9.jpg";
+import climet from "../assets/img/climet.png";
+import super_q from "../assets/img/super_q.png";
+import cost_effective from "../assets/img/cost-removebg-preview.png";
+import sus from "../assets/img/sus.png";
+import teracota from "../assets/img/terracotta-jali-500x500.jpg";
+import img4 from "../assets/img/lighting.png";
 import styled from "styled-components";
+import Transition from "./Transition";
+import {motion} from "framer-motion"
 function About() {
   return (
     <>
-      <DIV className="bg-white ">
+      <DIV className="bg-white overflow-hidden">
         <section className="pt-20 ">
           <div className="container  m-auto">
             <div className="heading mx-2 mb-10">
-              <h2 className="text1 primary text-center text-3xl" >
-                About <span>Infinia</span>
-              </h2>
+              <motion.h2 className="text1 primary text-center mt-1 text-3xl"
+              animate={{
+                x:0,
+                opacity:1
+              }}
+              initial={{
+                x:"300px",
+                opacity:0.3
+              }}
+              transition={{
+                duration:2
+              }}
+              >
+                Why Infinia Industries?
+              </motion.h2>
 
-              <div className="fade-in about1">
-                {" "}
-                {/* Add animation class */}
-                {/* <img src={img} alt="" /> */}
-                <p className="text-base font-normal leading-7 text-gray-600 mt-5 mb-12 ">
-                  Welcome to Infinia Industries Pvt Ltd – Central India's
-                  Premier Manufacturer of Innovative Building Solutions! At
-                  Infinia Industries, we take pride in being the forefront of
-                  innovation, carving a niche as the leading manufacturer of
-                  Wood Polymer Composite, Regenerated Plastic, and Terra Cotta
-                  products in Central India.
-                </p>
+              <div className="flex flex-col md:flex-row mt-5">
+                <motion.div className="md:w-1/2"
+                animate={{
+                  x:0,
+                  opacity:1
+                }}
+                initial={{
+                  x:"-300px",
+                  opacity:.5
+                }}
+                transition={{
+                  duration:2
+                }}
+                >
+                  <img src={img} alt="Image" className="w-[500px] h-[400px]" />
+                </motion.div>
+                <motion.div className="md:w-1/2 ml-[-100px]"
+                 animate={{
+                  x:0,
+                  opacity:1
+                }}
+                initial={{
+                  x:"300px",
+                  opacity:0
+                }}
+                transition={{
+                  duration:2,
+                  delay:1
+                }}
+                
+                >
+                  <p className="text-base font-normal text-lg leading-7 text-gray-800 mt-5 md:mt-0 mb-12 md:ml-8">
+                    Welcome to Infinia Industries Pvt Ltd – Central India's
+                    Premier Manufacturer of Innovative Building Solutions! At
+                    Infinia Industries, we take pride in being the forefront of
+                    innovation, carving a niche as the leading manufacturer of
+                    Wood Polymer Composite, Regenerated Plastic, and Terra Cotta
+                    products in Central India.
+                  </p>
+                </motion.div>
               </div>
             </div>
             <div className="row">
               <div className="">
-                <h3
+                <motion.h3
                   className="text-2xl font-bold mx-2 p-0  text-gray-700"
                   style={{ textAlign: "center" }}
+                  animate={{
+                    y:0,
+                    opacity:1
+                  }}
+                  initial={{
+                    opacity:0,
+                    y:"100px"
+                  }}
+                  transition={{
+                    duration:2,
+                    delay:1
+                  }}
                 >
                   Our Expertise:{" "}
-                </h3>
+                </motion.h3>
 
                 <div className="text-base font-normal ">
                   <div className="article">
-                   
-                    <article >
-                      <div>
+                    <article className="relative">
+                      <div className="h-[280px]">
                         <img
-                          src={img2}
+                          className="w-[full]"
+                          src="https://www.alstoneindia.in/images/products/157742729920191227.jpg"
                           alt=""
                         />
                       </div>
-                      <h2> Wood Polymer Composite (WPC)</h2>
+                      <h2>Wood Polymer Composite (WPC)</h2>
                       <p>
                         Infinia Industries excels in the production of Wood
                         Polymer Composite, a revolutionary material that
@@ -62,11 +116,8 @@ function About() {
                     </article>
 
                     <article>
-                      <div>
-                        <img
-                          src={img3}
-                          alt=""
-                        />
+                      <div className=" h-[280px]">
+                        <img className="w-full" src={img3} alt="" />
                       </div>
                       <h2>Regenerated Plastic</h2>
                       <p>
@@ -77,9 +128,10 @@ function About() {
                     </article>
 
                     <article>
-                      <div>
+                      <div className=" h-[280px]">
                         <img
-                          src={img3}
+                          className="w-full object-cover"
+                          src={teracota}
                           alt=""
                         />
                       </div>
@@ -90,8 +142,6 @@ function About() {
                         elegance to architectural and landscaping projects.
                       </p>
                     </article>
-
-
                   </div>
                 </div>
                 <h3
@@ -104,11 +154,7 @@ function About() {
                 <div className="main">
                   <down className="down">
                     <div>
-                      <img
-                        className="img"
-                        src={img2}
-                        alt=""
-                      />
+                      <img className="img" src={climet} alt="" />
                     </div>
                     <div className="subdown">
                       <h2>Climate Responsive:</h2>
@@ -121,11 +167,7 @@ function About() {
                   </down>
                   <down className="down">
                     <div>
-                      <img
-                        className="img"
-                        src={img4}
-                        alt=""
-                      />
+                      <img className="img" src={img4} alt="" />
                     </div>
                     <div className="subdown">
                       <h2>Extended Usable Life:</h2>
@@ -138,11 +180,7 @@ function About() {
                   </down>
                   <down className="down">
                     <div>
-                      <img
-                        className="img"
-                        src={img5}
-                        alt=""
-                      />
+                      <img className="img" src={super_q} alt="" />
                     </div>
                     <div className="subdown">
                       <h2>Superior Quality:</h2>
@@ -155,11 +193,7 @@ function About() {
                   </down>
                   <down className="down">
                     <div>
-                      <img
-                        className="img"
-                        src={img6}
-                        alt=""
-                      />
+                      <img className="img" src={cost_effective} alt="" />
                     </div>
                     <div className="subdown">
                       <h2>Cost-Effective Solutions:</h2>
@@ -172,11 +206,7 @@ function About() {
                   </down>
                   <down className="down">
                     <div>
-                      <img
-                        className="img"
-                        src={img7}
-                        alt=""
-                      />
+                      <img className="img" src={sus} alt="" />
                     </div>
                     <div className="subdown">
                       <h2>Sustainability Champions:</h2>
@@ -197,10 +227,10 @@ function About() {
   );
 }
 
-export default About;
+export default Transition(About);
 
 const DIV = styled.div`
-.about1{
+  .about1 {
     display: flex;
     margin-top: 30px;
     gap: 2rem;
@@ -210,12 +240,16 @@ const DIV = styled.div`
     /* flex-wrap: wrap; */
     overflow: hidden;
     font-weight: 600;
-}
-.about1 img{
+  }
+  .down{
+    height: 300px;
+    border: 1px solid red;
+  }
+  .about1 img {
     height: 300px;
     width: 400px;
-}
-article {
+  }
+  article {
     width: 100%;
     max-width: 400px;
     padding: 1rem;
@@ -225,16 +259,16 @@ article {
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.1);
     animation: slide-in-right-to-left 0.5s ease-in-out forwards;
   }
-  article img{
+  article img {
     height: 100%;
     width: 100%;
   }
-  .article{
+  .article {
     width: 100%;
     display: flex;
     gap: 2rem;
     padding: 10px;
-    margin :10px;
+    margin: 10px;
     flex-direction: row;
     justify-content: center;
     /* justify-content: center;
@@ -245,7 +279,7 @@ article {
     animation-name: fade;
     animation-duration: 1s;
   }
-  
+
   article h2 {
     margin: 0.5rem 0;
     padding: 2px;
@@ -253,7 +287,7 @@ article {
     color: black;
     animation: fadetext 2s ease-in-out forwards;
   }
-  
+
   article p {
     margin-bottom: 1rem;
     padding: 2px;
@@ -261,7 +295,7 @@ article {
     font-family: sans-serif;
     animation: fadetext 2.2s ease-in-out forwards;
   }
-  
+
   article button {
     padding: 0.5rem 0.7rem;
     display: block;
@@ -276,18 +310,18 @@ article {
     transition: 0.3s all;
     animation: slide-in-top-to-bottom 1.5s;
   }
-  
+
   article button:hover {
     background-color: #29b6f6;
     transform: translatey(-2px);
     box-shadow: 0 7px 7px rgba(0, 0, 0, 0.1);
   }
-  
+
   article button:active {
     transform: translatey(0);
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
   }
-  
+
   @keyframes slide-in-right-to-left {
     from {
       transform: translateX(100%);
@@ -296,7 +330,7 @@ article {
       transform: translateX(0);
     }
   }
-  
+
   @keyframes slide-in-top-to-bottom {
     0% {
       opacity: 0;
@@ -311,39 +345,38 @@ article {
       transform: translateX(0);
     }
   }
-  
+
   @keyframes fade {
     0% {
       opacity: 0;
       transform: translateX(-100%);
     }
-  
+
     50% {
       opacity: 0;
       transform: translateX(-100%);
     }
-  
+
     100% {
       opacity: 1;
     }
   }
-  
+
   @keyframes fadetext {
     0% {
       opacity: 0;
     }
-  
+
     50% {
       opacity: 0;
     }
-  
+
     100% {
       opacity: 1;
     }
   }
 
-
-  .down{
+  .down {
     width: 48%;
     /* max-width: 320px; */
     padding: 10px;
@@ -352,19 +385,19 @@ article {
     border-radius: 10px;
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.1);
     animation: slide-in-right-to-left 0.5s ease-in-out forwards;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-gap: 1rem;
-height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 160px;
   }
-  .down .img{
-    height: 110px ;
+  .down .img {
+    height: 110px;
     width: 400px;
     animation: fade;
   }
-  .subdown{
+  .subdown {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -380,43 +413,41 @@ height: 50%;
     margin: 10px;
     /* justify-content: center;
     width: 600px; */
-}
+  }
 
+  /* Default styles */
 
-
-/* Default styles */
-
-/* Tablet styles */
-@media only screen and (max-width: 768px) {
-    .about1{
-        display: flex;
-        margin-top: 30px;
-        gap: 2rem;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        /* flex-wrap: wrap; */
+  /* Tablet styles */
+  @media only screen and (max-width: 768px) {
+    .about1 {
+      display: flex;
+      margin-top: 30px;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      /* flex-wrap: wrap; */
     }
-    .about1 img{
-        height: 300px;
-        width: 400px;
+    .about1 img {
+      height: 300px;
+      width: 400px;
     }
     .container {
       width: 90%; /* Adjust width for tablets */
     }
-  
+
     .main {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 10px;
-        margin: 10px;
-        justify-content: start;
-        width: 600px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 10px;
+      margin: 10px;
+      justify-content: start;
+      width: 600px;
     }
 
-    .article{
+    .article {
       /* width: 100%; */
       max-width: 500px;
       padding: 1rem;
@@ -425,47 +456,43 @@ height: 50%;
       border-radius: 10px;
       /* box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.1); */
       animation: slide-in-right-to-left 0.5s ease-in-out forwards;
-        flex-direction: column;
+      flex-direction: column;
     }
     .down {
       width: 50%;
-      display: flex;      
+      display: flex;
       flex-direction: column;
-  } 
-    
+    }
   }
-  
+
   /* Mobile styles */
   @media screen and (max-width: 320px) {
-    .about1{
+    .about1 {
       overflow: hidden;
       /* width: 50%; */
     }
-      .main {
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          /* gap: 20px; */
-          /* padding: -6px; */
-          /* margin: 10px; */
-          /* justify-content: center; */
-          width: 500px;
-        }
-         .article {
-            width: 100%;  
-            flex-direction: column;
-        } 
-         .down {
-            width: 43%;
-            display: flex;
-            flex-direction: column;
-        } 
-   
-    .text1{
-        margin-top: 40px;
+    .main {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      /* gap: 20px; */
+      /* padding: -6px; */
+      /* margin: 10px; */
+      /* justify-content: center; */
+      width: 500px;
+    }
+    .article {
+      width: 100%;
+      flex-direction: column;
+    }
+    .down {
+      width: 43%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text1 {
+      margin-top: 40px;
     }
   }
-  
-
-  
-`
+`;

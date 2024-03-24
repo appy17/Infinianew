@@ -35,30 +35,6 @@ const Features = () => {
     };
   }, []);
 
-useEffect(()=> {
-  gsap.registerPlugin(ScrollTrigger) 
-
-  gsap.from(".box", {
-    scrollTrigger: {
-      trigger:".box",
-      toggleActions:"restart none none none"
-    },
-    x: -700,
-  delay:0,
-    duration: 2
-  });
- 
-
-  gsap.from(".title", {
-    scrollTrigger: {
-      trigger:".title",
-      toggleActions:"restart none none none"
-    },
-    y:-100,
-  delay:0,
-    duration: 2
-  });
-},[])
 
 
   return (

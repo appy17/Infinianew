@@ -100,45 +100,45 @@ export const features = {
 };
 
 export const newInStore = {
-  title: 'New In Store Now',
+  title: 'Our Material Offering',
   subtitle: 'Get the latest items immediately with promo prices',
   link: 'Check all',
   icon: <IoIosArrowRoundForward />,
   products: [
     {
-      name: 'Shuttering & Framework',
+      name: 'WPC',
       image: <ChairImg />,
     },
     {
-      name: 'Solid Plaine Door',
+      name: 'UPR',
       image: <BedImg />,
     },
     {
-      name: 'Door & Doors Frame',
+      name: 'SPF',
       image: <CupboardImg />,
     },
     {
-      name: 'Board & Panel',
+      name: 'RRP',
       image: <LightingImg />,
     },
     {
-      name: 'Sliding Windows',
+      name: 'Terracotta',
       image: <ChairImg />,
     },
     {
-      name: 'WPC Tubular',
+      name: 'WPC',
       image: <BedImg />,
     },
     {
-      name: 'WPC Flooring',
+      name: 'SPF',
       image: <CupboardImg />,
     },
     {
-      name: 'Plank & Battens',
+      name: 'RRP',
       image: <LightingImg />,
     },
     {
-      name: 'Routed Doors',
+      name: 'Terracotta',
       image: <ChairImg />,
     },
   ],

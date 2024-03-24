@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import RelatedProducts from "./RelatedProducts";
+import Transition from "../components/Transition";
 
 const features = [
   { name: "Usage/Application", description: "shuttering" },
@@ -92,4 +93,4 @@ function Shuttering_formwork() {
   );
 }
 
-export default Shuttering_formwork;
+export default Transition(Shuttering_formwork);

@@ -24,13 +24,11 @@ const NewItemsSlider = () => {
       slidesPerView: 3,
       spaceBetween: 20,
     },
-   
-  
   }}>
     {newInStore.products.map((product, index)=>{
 return <SwiperSlide className='max-w-[256px]' key={index}>
-  <div className='relative p-2'>
-    <img src={product.image.type} className='lg:h-[400px] brightness-75 img'  alt='images'/>
+  <div className='relative p-2 lg:h-[600px]'>
+    <img src={product.image.type} className='lg:h-[100%] brightness-75 img'  alt='images'/>
     <div className='absolute text-white bottom-[20px] w-full text-center text-[18px] lg:text-2xl font-medium capitalize'>{product.name}</div>
   </div>
 </SwiperSlide>

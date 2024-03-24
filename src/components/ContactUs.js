@@ -1,15 +1,61 @@
 
 import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+// import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
+
+import axios from 'axios';
+import Transition from './Transition';
+
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function ContactUs() {
+ function ContactUs() {
   const [agreed, setAgreed] = useState(false)
 
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    company: '',
+    email: '',
+    phoneNumber: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+let url  = ""
+
+ axios.post(url, formData)
+ .then((res)=> {
+  console.log(res.data)
+ })
+ .catch((err)=>{
+  console.log(err.message)
+ })
+
+
+    e.preventDefault();
+    setFormData({
+      firstName: '',
+      lastName: '',
+      company: '',
+      email: '',
+      phoneNumber: '',
+      message: '',
+    });
+  };
+console.log("formData", formData)
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8 con-bg">
       <div
@@ -30,16 +76,16 @@ export default function ContactUs() {
           Aute magna irure deserunt veniam aliqua magna enim voluptate.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900" >
               First name
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
-                name="first-name"
+                name="firstName" value={formData.firstName} onChange={handleChange}
                 id="first-name"
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -47,13 +93,13 @@ export default function ContactUs() {
             </div>
           </div>
           <div>
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900" >
               Last name
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
-                name="last-name"
+                name="lastName" value={formData.lastName} onChange={handleChange}
                 id="last-name"
                 autoComplete="family-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -61,13 +107,13 @@ export default function ContactUs() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900" >
               Company
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
-                name="company"
+                name="company" value={formData.company} onChange={handleChange}
                 id="company"
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -75,13 +121,15 @@ export default function ContactUs() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900" 
+          
+            >
               Email
             </label>
             <div className="mt-2.5">
               <input
                 type="email"
-                name="email"
+                name="email" value={formData.email} onChange={handleChange}
                 id="email"
                 autoComplete="email"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -106,14 +154,14 @@ export default function ContactUs() {
                   <option>CA</option>
                   <option>EU</option>
                 </select>
-                <ChevronDownIcon
+                {/* <ChevronDownIcon
                   className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
                   aria-hidden="true"
-                />
+                /> */}
               </div>
               <input
                 type="tel"
-                name="phone-number"
+                name="phoneNumber" value={formData.phoneNumber} onChange={handleChange}
                 id="phone-number"
                 autoComplete="tel"
                 className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -127,6 +175,7 @@ export default function ContactUs() {
             <div className="mt-2.5">
               <textarea
                 name="message"
+                value={formData.message} onChange={handleChange}
                 id="message"
                 rows={4}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -175,3 +224,4 @@ export default function ContactUs() {
     </div>
   )
 }
+export default Transition(ContactUs)

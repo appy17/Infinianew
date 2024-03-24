@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import RelatedProducts from "./RelatedProducts";
+import Transition from "../components/Transition";
 
 const features = [
   { name: "Thickness Of Sheet", description: "12mm" },
@@ -92,4 +93,4 @@ Sheets available in many Thicknesses.
   );
 }
 
-export default Furniture;
+export default Transition(Furniture);

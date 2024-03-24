@@ -14,7 +14,7 @@ import styled from "styled-components";
 
 const ImageSlider = () => {
   return (
-    <DIV className=" mt-16 w-full  lg:h-[600px]">
+    <DIV className=" mt-[64px] w-full  lg:h-[600px]">
       <Swiper
         className="imageSlider  lg:h-[100%] lg:p-10"
         modules={[Navigation, Pagination, Autoplay]}

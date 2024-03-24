@@ -4,6 +4,7 @@ import image1 from '../assets/img/flyashbrick.jpg'
 import image2 from '../assets/img/flyash-brick-1.jpg'
 import image3 from '../assets/img/fly-ash-bricks (1).jpg'
 import image4 from '../assets/img/cement-blocks-3 - 500x500.jpg'
+import Transition from "../components/Transition";
 
 
 const features = [
@@ -97,4 +98,4 @@ const Flyash_Brick_Pallets = () => {
   );
 };
 
-export default Flyash_Brick_Pallets;
+export default Transition(Flyash_Brick_Pallets);

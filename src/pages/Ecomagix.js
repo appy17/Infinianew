@@ -3,6 +3,7 @@ import image2 from '../assets/img/9.jpg';
 import image3 from '../assets/img/flyashbrick.jpg'
 import image4 from '../assets/img/Formwork.jpg'
 import Door from "../assets/img/doors.jpg"
+import Transition from '../components/Transition';
 const features = [
   { name: '1. EM01 Boards & Panels', description1: '1.1 EM01A RRP Panels -regular Variants - Sizes', description2: '1.2 EM01B RRP Panels UHD Varient -Size,colours'},
   { name: '2. EM02 RRP Doors', description1: '2.1 EM02A Panel Doors', description2:'2.2 EM02B Flush Doors'  },
@@ -80,4 +81,4 @@ return (
 )
 }
 
-export default Ecomagix
+export default Transition(Ecomagix)

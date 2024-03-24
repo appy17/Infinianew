@@ -12,6 +12,7 @@ import AboutInfinia from "./AboutInfinia";
 import "aos/dist/aos.css"; // Import the styles
 import AOS from "aos"; // Import the AOS library
 import Event from "./Events";
+import Transition from "./Transition";
 // import ScrollToTopButton from "./ScrollToTopButton";
 
 
@@ -26,9 +27,9 @@ const Home = () => {
   }); // Run this effect only once when the component mounts
   return (
     <div style={{overflow:"hidden"}}>
-      {/* <div data-aos="fade-down">
+      <div data-aos="fade-down">
         <Hero />
-      </div> */}
+      </div>
       <div data-aos="zoom-in">
         <ImageSlider />
       </div>
@@ -66,4 +67,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Transition(Home);

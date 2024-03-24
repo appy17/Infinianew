@@ -16,10 +16,14 @@ import Claymagix from "../pages/Claymagix";
 import Woodmagix from "../pages/Woodmagix";
 import Blog from "./Blog";
 import NotFound from "../pages/NotFound";
-
+import Login from "./Login";
+import FormData from "./FormData";
+import PrivateRoutes from "./PrivateRoutes";
+import { AnimatePresence } from "framer-motion";
 const MainRoutes = () => {
   return (
-    <Routes>
+ <AnimatePresence>
+     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/DoorFrams" element={<SingleProducts />} />
       <Route path="/Flyash_Brick_pallets" element={<Flyash_Brick_Pallets />} />
@@ -36,9 +40,12 @@ const MainRoutes = () => {
       <Route path="/woodmagix" element={<Woodmagix />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<ContactUs />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/blogs" element={<Blog />} />
+      <Route path="/formData" element={<PrivateRoutes><FormData /></PrivateRoutes>} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+ </AnimatePresence>
   );
 };
 

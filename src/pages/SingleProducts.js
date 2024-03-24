@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import RelatedProducts from "./RelatedProducts";
+import Transition from "../components/Transition";
 
 const features = [
   { name: "Minimum Order Quantity", description: "250 feet" },
@@ -107,4 +108,4 @@ function SingleProducts() {
   );
 }
 
-export default SingleProducts;
+export default Transition(SingleProducts);

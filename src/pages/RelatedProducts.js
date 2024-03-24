@@ -84,14 +84,7 @@ const products = [
       imageSrc: 'https://5.imimg.com/data5/SELLER/Default/2022/12/NN/LX/UL/101519832/facing-clay-brick-250x250.jpeg',
       imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
     },
-    {
-      id: 4,
-      name: 'Combustion Fuel',
-      href: '#',
-      price: '$35',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
-      imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
-    },
+   
     // More products...
   ]
 

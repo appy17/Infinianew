@@ -4,7 +4,9 @@ import { EffectCoverflow, Pagination } from 'swiper/core';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import styled from 'styled-components';
+import { Navigation } from 'swiper';
 
 const videos = [
   { source: "https://player.vimeo.com/progressive_redirect/playback/617209007/rendition/360p/file.mp4?loc=external&oauth2_token_id=1747418641&signature=d5b4b95263bc1cdd7d56a2592c0370fa35a874ed20271164cb261bdc245f06cf" },
@@ -55,14 +57,15 @@ console.log("component render")
           slideShadows: true,
         }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
+        modules={[EffectCoverflow, Pagination, Navigation]}
+        className="mySwiper imageSlider"
         initialSlide={1}
+        navigation
         onSwiper={setSwiper}
         onSlideChange={handleSlideChange}
       >
         {videos.map((item, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide className='slider' key={index}>
             <video
             className=''
               ref={(el) => (videoRefs.current[index] = el)}
@@ -97,5 +100,119 @@ const DIV = styled.div`
     display: block;
     width: 100%;
     height: 100%;
+  }
+ 
+.imageSlider{
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+/* image Slider start */
+.imageSlider .swiper-pagination-bullet {
+  background: #23262f;
+}
+
+.imageSlider .swiper-button-prev,
+.imageSlider .swiper-button-next {
+  background: #23262f;
+  box-shadow: 0px 4px 10px rgba(15, 27, 51, 0.1);
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 20;
+}
+
+.imageSlider .swiper-button-prev:hover,
+.imageSlider .swiper-button-next:hover,
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #286f6c;
+  transition: all 0.25s ease-in-out;
+}
+
+.imageSlider .swiper-button-prev {
+  left: 4%;
+}
+.imageSlider .swiper-button-next {
+  right: 4%;
+}
+
+.imageSlider .swiper-button-prev:after,
+.imageSlider .swiper-button-next:after,
+.swiper-button-prev:after,
+ .swiper-button-next:after {
+  font-size: 16px;
+  color: white;
+}
+
+.imageSlider .swiper-pagination {
+  bottom: 20px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background: #23262f;
+  box-shadow: 0px 4px 10px rgba(15, 27, 51, 0.1);
+  top: 85%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 20;
+}
+
+@media (max-width: 950px) {
+  .imageSlider{
+    margin-top: -20px;
+    margin-bottom: 50px;
+  }
+  
+}  
+
+ @media (min-width: 500px) and (max-width: 684px) {
+  .site_Address{
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .imageSlider .swiper-pagination {
+    bottom: 220px;
+  }
+  .imageSlider .swiper-button-prev {
+    top: 50%;
+  }
+  .imageSlider .swiper-button-next {
+    top: 50% 59
+  }
+ 
+} 
+  @media (min-width: 300px) and (max-width: 399px) {
+.my_logo{
+  height: 8px;
+}
+.slider{
+  height: auto;
+    }
+    .productSlider .swiper-button-prev {
+     margin-left: -60px;
+     margin-top: 15px;
+      height: 40px;
+ width: 40px;
+    }
+    .productSlider .swiper-button-next {
+     margin-left: -60px;
+     margin-top: 15px;
+     height: 40px;
+     width: 40px;
+    } 
+.imageSlider .swiper-pagination-bullet {
+  background: #23262f;
+  margin-top: 50px;
+}
   }
 `;

@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import Transition from "./Transition";
+
+
 
 let BlogsData = [
   {
@@ -51,7 +54,7 @@ let BlogsData = [
 const Blog = () => {
   return (
     <DIV className="grid grid-template-rows: repeat(4, minmax(0, 1fr)) w-full m-auto">
-      <div class="grid_outer mt-20">
+      <div class="grid_outer mt-20 overflow-hidden flex-wrap">
         {BlogsData &&
           BlogsData.map((item) => {
             return (
@@ -63,7 +66,7 @@ const Blog = () => {
                   alt={item.user}
 
                 />
-                <div className="w-full p-2">
+                <div className="w-full p-2 items">
                   <span className="text-blue-600 mt-10">{item.category}</span>
                   <h4>{item.description}...</h4>
                   <div className="flex -space-x-1 overflow-hidden mt-2  justify-between">
@@ -84,7 +87,7 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Transition(Blog);
 
 const DIV = styled.div`
   .grid_outer {
@@ -94,17 +97,22 @@ const DIV = styled.div`
     margin: auto;
     margin-top: 80px;
     justify-content: space-between;
-  
+  flex-wrap: wrap;
     width: 90%;
-    gap: 10px;
+    gap: 20px;
     padding-left: 40px;
     box-sizing: border-box;
   }
+.inner_blog:hover{
+  box-shadow: rgba(240, 195, 46, 0.4) 5px 5px, rgba(243, 193, 30, 0.3) 10px 10px, rgba(240, 204, 46, 0.2) 15px 15px, rgba(240, 195, 46, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
   .image_main {
   width: 100%; /* Set the width to 100% to make the image responsive */
   height: 270px; /* Set a fixed height for the images */
   object-fit: cover; /* Maintain aspect ratio while covering the container */
 }
+
 
   .image_main:hover {
     transition: all ease-in-out 0.5s;
@@ -117,7 +125,7 @@ const DIV = styled.div`
   img:hover {
   scale: 1.02;
   transition: all ease-in .3s;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 15px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.5) 0px 15px 15px; */
 
 }
 

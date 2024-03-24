@@ -130,16 +130,16 @@ const brands = [
     href: "#",
     icon: CursorArrowRaysIcon,
   },
-  {
-    name: "ProFuels",
-    href: "#",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Propanels",
-    href: "#",
-    icon: CursorArrowRaysIcon,
-  },
+  // {
+  //   name: "ProFuels",
+  //   href: "#",
+  //   icon: CursorArrowRaysIcon,
+  // },
+  // {
+  //   name: "Propanels",
+  //   href: "#",
+  //   icon: CursorArrowRaysIcon,
+  // },
 ];
 
 
@@ -163,27 +163,11 @@ const Header2 = () => {
   //   });
   // });
 
-  useEffect(()=>{
-    const tl = gsap.timeline()
-
-    tl.from("#nav", {
-        opacity:0,
-        delay:0.3,
-        duration:2
-    })
-    tl.from("#nav img", {
-      y:-80,
-      opacity:0,
-      duration:0.8,
-      stagger:0.2
-  })
-
-  },[])
 
   return (
     <header
-      className={`${ bg ? "bg-white py-2 lg:px-10 ms:px-6 mv:px-2 ssm:px-4 shadow-md" : "bg-none"
-      } fixed left-0 w-full  z-10 transition-all duration-200 py-6 px-10`}>
+      className={`${ bg ? "bg-white py-2 lg:px-10  ms:px-6 mv:px-2 ssm:px-4 shadow-md" : "bg-none"
+      } fixed left-0 w-full  z-10 transition-all duration-200 px-10`}>
       <DIV className="contianer mx-auto">
         <div id="#nav" className="flex justify-between items-center ">
          
@@ -222,8 +206,8 @@ const Header2 = () => {
           >
           <ul className="md:flex md:gap-x-12">
               <NavLink
-                className={`home ${
-                  bg ? "text-black" : "text-white"
+                className={`active ${
+                  location.pathname==="/" ? "border-b-4 border-orange-400 text-[#F3A445] hover:clear-none" : ""
                 }  capitalize transition-all`}
                 to={"/"}
             
@@ -232,8 +216,8 @@ const Header2 = () => {
                 Home
               </NavLink>
               <NavLink
-                className={`${
-                  bg ? "text:black hover:" : "text-white"
+                className={`active ${
+                  location.pathname==="/about" ? "border-b-4 border-orange-400 text-[#F3A445]" : ""
                 } capitalize transition-all`}
                 to={"/about"}
                 exact
@@ -244,13 +228,17 @@ const Header2 = () => {
              
 
               <Menu as="div" className="relative inline-block text-left">
-                <div className="">
+                <div>
                   <Menu.Button
-                    className={`${
-                      bg ? "text-black" : "text-white"
-                    } inline-flex w-full justify-center gap-x-1.5  capitalize   transition-all`}
+                    className={`inline-flex w-full justify-center gap-x-1.5  capitalize   transition-all`}
                   >
+                    <a
+                    className={`${
+                      location.pathname==="/ecomagix" || location.pathname==="/claymagix" || location.pathname==="/woodmagix" ? "border-b-4 border-orange-400 text-[#F3A445]" : ""
+                    } `}
+                    >
                     Brands
+                    </a>
                     <ChevronDownIcon
                       className="-mr-1 h-5 w-5 text-gray-400"
                       aria-hidden="true"
@@ -314,7 +302,7 @@ const Header2 = () => {
                           </a>
                         )}
                       </Menu.Item>
-                      <Menu.Item>
+                      {/* <Menu.Item>
                         {({ active }) => (
                           <a
                             href="/woodmagix"
@@ -328,7 +316,7 @@ const Header2 = () => {
                           Profules
                           </a>
                         )}
-                      </Menu.Item>
+                      </Menu.Item> */}
                       <Menu.Item>
                         {({ active }) => (
                           <a
@@ -344,7 +332,7 @@ const Header2 = () => {
                           </a>
                         )}
                       </Menu.Item>
-                      <Menu.Item>
+                      {/* <Menu.Item>
                         {({ active }) => (
                           <a
                             href="/woodmagix"
@@ -358,7 +346,7 @@ const Header2 = () => {
                             Propanels
                           </a>
                         )}
-                      </Menu.Item>
+                      </Menu.Item> */}
                     </div>
                   </Menu.Items>
                 </Transition>
@@ -371,7 +359,13 @@ const Header2 = () => {
                       bg ? "text:black" : "text-white"
                     } inline-flex w-full justify-center gap-x-1.5 capitalize  transition-all`}
                   >
+                 <a
+                    className={`${
+                      location.pathname==="/DoorFrams" || location.pathname==="/Flyash_Brick_pallets" || location.pathname==="/Boards_panels" || location.pathname==="/jails" || location.pathname==="/furniture" || location.pathname==="/Shuttering_formwork" || location.pathname==="/Roofing_Flooring_Solution" || location.pathname==="/Roofing_Flooring_Solution" || location.pathname==="/bricks" ? "border-b-4 border-orange-400 text-[#F3A445]" : ""
+                    } `}
+                    >
                     Products
+                    </a>
                     <ChevronDownIcon
                       className="-mr-1 h-5 w-5 text-gray-400"
                       aria-hidden="true"
@@ -598,8 +592,8 @@ const Header2 = () => {
               <li>
                 <a
                   href="/blogs"
-                  className={`${
-                    bg ? "text-black" : "text-white"
+                  className={`active ${
+                    location.pathname==="/blogs" ? "border-b-4 border-orange-400 text-[#F3A445]" : ""
                   } capitalize transition-all hover:cursor-pointers`}
                 >
                   {/*  */}
@@ -609,8 +603,8 @@ const Header2 = () => {
               <li>
                 <a
                   href="/contact"
-                  className={`${
-                    bg ? "text-black" : "text-white"
+                  className={`active ${
+                    location.pathname==="/contact" ? "border-b-4 border-orange-400 text-[#F3A445]" : ""
                   } capitalize transition-all hover:cursor-pointers`}
                 >
                   {/*  */}
@@ -771,4 +765,24 @@ const DIV = styled.div`
 .home-active {
   color: #F3A445;
 }
+.active:after {
+    display      : block;
+    content      : '';
+    border-bottom: solid 3px #F3A445;
+    transform    : scaleX(0);
+    transition   : transform 300ms ease-in-out;
+}
+
+.active:hover:after {
+    transform: scaleX(1);
+}
+
+.active.fromright:after {
+    transform-origin: 100% 50%;
+}
+
+.active.fromleft:after {
+    transform-origin: 0 50%;
+}
+
 `

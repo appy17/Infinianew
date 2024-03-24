@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Transition from '../components/Transition'
 
 const NotFound = () => {
   return (
@@ -129,4 +130,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default Transition(NotFound)
