@@ -2,14 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Logo from "../assets/img/INFINIA_LOGO.png";
 import { CgMenuRight, CgClose } from "react-icons/cg";
-// import { navigation } from "../data";
-// import classNames from 'classnames';
-import { gsap } from "gsap";
-    
-
-
-
-
+import { motion } from "framer-motion";
 
 import {
   ArrowPathIcon,
@@ -25,10 +18,6 @@ import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-
-
-
-
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -142,9 +131,6 @@ const brands = [
   // },
 ];
 
-
-
-
 const Header2 = () => {
   const [bg, setBg] = useState(true);
   const [mobileNav, setMobileNav] = useState(false);
@@ -164,37 +150,72 @@ const Header2 = () => {
   // });
 
 
+  const boxvariants = {
+    hidden:{
+      x:"-100vw",
+  
+    },
+    visible:{
+      x:0,
+      transition:{
+        delay:0.5,
+        when:"beforeChildren",
+        staggerChildren:0.3
+      }
+    }
+  }
+  const listvariants = {
+    hidden:{
+      x:-10,
+      opacity:0
+    },
+    visible:{
+      x:0,
+   opacity:1,
+
+  
+    }
+  }
+
   return (
-    <header
-      className={`${ bg ? "bg-white py-2 lg:px-10  ms:px-6 mv:px-2 ssm:px-4 shadow-md" : "bg-none"
-      } fixed left-0 w-full  z-10 transition-all duration-200 px-10`}>
+    <motion.header
+      drag
+      dragConstraints={{
+        right: 0,
+        left: 0,
+        top: 0,
+        bottom: -30,
+      }}
+      className={`${
+        bg
+          ? "bg-white py-2 lg:px-10  ms:px-6 mv:px-2 ssm:px-4 shadow-md"
+          : "bg-none"
+      } fixed left-0 w-full  z-10 transition-all duration-200 px-10`}
+    >
       <DIV className="contianer mx-auto">
         <div id="#nav" className="flex justify-between items-center ">
-         
           {/* logo */}
           <a href="/">
-           
-         
-            <img 
-  className={`${
-    bg ? "h-12" : "h-12" 
-  }`}
-  src={Logo}
-  alt=""
-/>
-           
+            <img className={`${bg ? "h-12" : "h-12"}`} src={Logo} alt="" />
           </a>
-          <div onClick={() => setMobileMenuOpen(true)}
+          <div
+            onClick={() => setMobileMenuOpen(true)}
             className="text-2xl  md:hidden lg:text-3xl cursor-pointer"
           >
-          {mobileNav ? <CgClose /> : <CgMenuRight style={{
-    color: "#F3A445",
-    border: "1px solid #F3A445",
-    borderRadius: "50%",
-    padding: "5px",
-    width: "40px",
-    height: "40px"
-}}/>}
+            {mobileNav ? (
+              <CgClose />
+            ) : (
+              <CgMenuRight
+                style={{
+                  color: "#F3A445",
+                  border: "1px solid #F3A445",
+                  borderRadius: "50%",
+                  padding: "5px",
+                  width: "40px",
+                  height: "40px",
+                }}
+              />
+            )}
           </div>
           <nav
             className="hidden md:flex"
@@ -204,20 +225,23 @@ const Header2 = () => {
               transform: "0.3s ease",
             }}
           >
-          <ul className="md:flex md:gap-x-12">
+            <ul className="md:flex md:gap-x-12">
               <NavLink
                 className={`active ${
-                  location.pathname==="/" ? "border-b-4 border-orange-400 text-[#F3A445] hover:clear-none" : ""
+                  location.pathname === "/"
+                    ? "border-b-4 border-orange-400 text-[#F3A445] hover:clear-none"
+                    : ""
                 }  capitalize transition-all`}
                 to={"/"}
-            
                 activeClassName="home-active"
               >
                 Home
               </NavLink>
               <NavLink
                 className={`active ${
-                  location.pathname==="/about" ? "border-b-4 border-orange-400 text-[#F3A445]" : ""
+                  location.pathname === "/about"
+                    ? "border-b-4 border-orange-400 text-[#F3A445]"
+                    : ""
                 } capitalize transition-all`}
                 to={"/about"}
                 exact
@@ -225,26 +249,34 @@ const Header2 = () => {
               >
                 About Us
               </NavLink>
-             
 
-              <Menu as="div" className="relative inline-block text-left">
-                <div>
+              <Menu as="div" className="relative inline-block text-left"
+                initial="hidden"
+                variants={boxvariants}
+                animate="visible"
+              
+              >
+                <motion.div whileTap={{ scale: 0.97 }}>
                   <Menu.Button
                     className={`inline-flex w-full justify-center gap-x-1.5  capitalize   transition-all`}
                   >
                     <a
-                    className={`${
-                      location.pathname==="/ecomagix" || location.pathname==="/claymagix" || location.pathname==="/woodmagix" ? "border-b-4 border-orange-400 text-[#F3A445]" : ""
-                    } `}
+                      className={`${
+                        location.pathname === "/ecomagix" ||
+                        location.pathname === "/claymagix" ||
+                        location.pathname === "/woodmagix"
+                          ? "border-b-4 border-orange-400 text-[#F3A445]"
+                          : ""
+                      } `}
                     >
-                    Brands
+                      Brands
                     </a>
                     <ChevronDownIcon
                       className="-mr-1 h-5 w-5 text-gray-400"
                       aria-hidden="true"
                     />
                   </Menu.Button>
-                </div>
+                </motion.div>
 
                 <Transition
                   as={Fragment}
@@ -255,23 +287,27 @@ const Header2 = () => {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    <div className="py-1 border-red-500">
+                  <Menu.Items   className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className="py-1 border-red-500"
+                   
+                    >
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="/ecomagix"
                             className={classNames(
-                            active ? "bg-gray-100 text-gray-900"
+                              active
+                                ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
                               "block px-4 py-2 text-sm"
                             )}
-                          >Ecomagix
+                          >
+                            Ecomagix
                           </a>
                         )}
                       </Menu.Item>
 
-                <Menu.Item>
+                      <Menu.Item>
                         {({ active }) => (
                           <a
                             href="/claymagix"
@@ -359,12 +395,22 @@ const Header2 = () => {
                       bg ? "text:black" : "text-white"
                     } inline-flex w-full justify-center gap-x-1.5 capitalize  transition-all`}
                   >
-                 <a
-                    className={`${
-                      location.pathname==="/DoorFrams" || location.pathname==="/Flyash_Brick_pallets" || location.pathname==="/Boards_panels" || location.pathname==="/jails" || location.pathname==="/furniture" || location.pathname==="/Shuttering_formwork" || location.pathname==="/Roofing_Flooring_Solution" || location.pathname==="/Roofing_Flooring_Solution" || location.pathname==="/bricks" ? "border-b-4 border-orange-400 text-[#F3A445]" : ""
-                    } `}
+                    <a
+                      className={`${
+                        location.pathname === "/DoorFrams" ||
+                        location.pathname === "/Flyash_Brick_pallets" ||
+                        location.pathname === "/Boards_panels" ||
+                        location.pathname === "/jails" ||
+                        location.pathname === "/furniture" ||
+                        location.pathname === "/Shuttering_formwork" ||
+                        location.pathname === "/Roofing_Flooring_Solution" ||
+                        location.pathname === "/Roofing_Flooring_Solution" ||
+                        location.pathname === "/bricks"
+                          ? "border-b-4 border-orange-400 text-[#F3A445]"
+                          : ""
+                      } `}
                     >
-                    Products
+                      Products
                     </a>
                     <ChevronDownIcon
                       className="-mr-1 h-5 w-5 text-gray-400"
@@ -588,12 +634,14 @@ const Header2 = () => {
                   </Menu.Items>
                 </Transition>
               </Menu>
-             
+
               <li>
                 <a
                   href="/blogs"
                   className={`active ${
-                    location.pathname==="/blogs" ? "border-b-4 border-orange-400 text-[#F3A445]" : ""
+                    location.pathname === "/blogs"
+                      ? "border-b-4 border-orange-400 text-[#F3A445]"
+                      : ""
                   } capitalize transition-all hover:cursor-pointers`}
                 >
                   {/*  */}
@@ -604,7 +652,9 @@ const Header2 = () => {
                 <a
                   href="/contact"
                   className={`active ${
-                    location.pathname==="/contact" ? "border-b-4 border-orange-400 text-[#F3A445]" : ""
+                    location.pathname === "/contact"
+                      ? "border-b-4 border-orange-400 text-[#F3A445]"
+                      : ""
                   } capitalize transition-all hover:cursor-pointers`}
                 >
                   {/*  */}
@@ -629,13 +679,11 @@ const Header2 = () => {
               <div className="flex items-center justify-between">
                 <a href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
-                  <img 
-  className={` ${
-    bg ? "h-20" : "h-20 mt-2" 
-  } `}
-  src={Logo}
-  alt=""
-/>
+                  <img
+                    className={` ${bg ? "h-20" : "h-20 mt-2"} `}
+                    src={Logo}
+                    alt=""
+                  />
                   {/* <h1 className="title mt-2 text-4xl">Infinia</h1> */}
                 </a>
                 <button
@@ -669,7 +717,7 @@ const Header2 = () => {
                     >
                       Brands
                     </a> */}
-<Disclosure as="div" className="-mx-3">
+                    <Disclosure as="div" className="-mx-3">
                       {({ open }) => (
                         <>
                           <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
@@ -696,8 +744,6 @@ const Header2 = () => {
                         </>
                       )}
                     </Disclosure>
-
-
 
                     <Disclosure as="div" className="-mx-3">
                       {({ open }) => (
@@ -739,7 +785,6 @@ const Header2 = () => {
                     >
                       Contact Us
                     </a>
-                   
                   </div>
                   <div className="py-6">
                     <a
@@ -755,34 +800,33 @@ const Header2 = () => {
           </Dialog>
         </div>
       </DIV>
-    </header>
+    </motion.header>
   );
 };
 
 export default Header2;
 
 const DIV = styled.div`
-.home-active {
-  color: #F3A445;
-}
-.active:after {
-    display      : block;
-    content      : '';
-    border-bottom: solid 3px #F3A445;
-    transform    : scaleX(0);
-    transition   : transform 300ms ease-in-out;
-}
+  .home-active {
+    color: #f3a445;
+  }
+  .active:after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px #f3a445;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+  }
 
-.active:hover:after {
+  .active:hover:after {
     transform: scaleX(1);
-}
+  }
 
-.active.fromright:after {
+  .active.fromright:after {
     transform-origin: 100% 50%;
-}
+  }
 
-.active.fromleft:after {
+  .active.fromleft:after {
     transform-origin: 0 50%;
-}
-
-`
+  }
+`;

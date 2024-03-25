@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 // import components
 import TestimonialSlider from "./TestimonialSlider";
 
@@ -11,16 +11,42 @@ const Testimonial = () => {
   return <section className='section lg:mt-[200px] ssm:-mt-16' >
     <div className='container mx-auto'>
       <div className='flex flex-col lg:flex-row lg:gap-x-10 gap-y-2'>
-        <div className='lg:max-w-[50%]'>
+        <motion.div
+        initial={{
+          x:"-200px",
+          opacity:0
+        }}
+        whileInView={{
+          x:0,
+          opacity:1
+        }}
+        transition={{
+          duration:1
+        }}
+        
+        className='lg:max-w-[50%]'>
           {/* title */}
           <h2 className='title mb-9'>{title}</h2>
           {/* sliders */}
           <TestimonialSlider />
-        </div>
+        </motion.div>
 {/* image */}
-<div className='order-1 rounded-lg'>
+<motion.div
+ initial={{
+  x:"200px",
+  opacity:0
+}}
+whileInView={{
+  x:0,
+  opacity:1
+}}
+transition={{
+  duration:1
+}}
+
+className='order-1 rounded-lg'>
   <img className='rounded-lg img' src={image.type} alt='' ></img>
-</div>
+</motion.div>
       </div>
     </div>
   </section>;

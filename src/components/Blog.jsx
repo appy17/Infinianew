@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Transition from "./Transition";
-
+import {motion} from "framer-motion"
 
 
 let BlogsData = [
@@ -51,39 +51,108 @@ let BlogsData = [
   },
 ];
 
+
+
 const Blog = () => {
+  const blogsPerPage = 9; // Number of blogs to display per page
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalBlogs = BlogsData.length;
+  const totalPages = Math.ceil(totalBlogs / blogsPerPage);
+
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = BlogsData.slice(indexOfFirstBlog, indexOfLastBlog);
+
+
+
+  const boxvariants = {
+    hidden:{
+      y:0
+    },
+    visible:{
+      x:0,
+      transition:{
+        delay:1,
+        when:"beforeChildren",
+        staggerChildren:0.4,
+        duration:1
+      }
+    }
+  }
+  const listvariants = {
+    hidden:{
+      x:-10,
+      opacity:0
+    },
+    visible:{
+      x:0,
+   opacity:1,
+
+  
+    }
+  }
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const nextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
+  const prevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
+  };
   return (
     <DIV className="grid grid-template-rows: repeat(4, minmax(0, 1fr)) w-full m-auto">
-      <div class="grid_outer mt-20 overflow-hidden flex-wrap">
-        {BlogsData &&
-          BlogsData.map((item) => {
-            return (
-              <div className="border-2 rounded-lg w-[400px] h-full inner_blog">
-                <img
-                  className="rounded-md image_main"
-                
-                  src={item.image}
-                  alt={item.user}
-
-                />
-                <div className="w-full p-2 items">
-                  <span className="text-blue-600 mt-10">{item.category}</span>
-                  <h4>{item.description}...</h4>
-                  <div className="flex -space-x-1 overflow-hidden mt-2  justify-between">
-                    <img
-                      className="inline-block h-6 w-6 rounded-full bg-cover "
-                      src={item.avatare}
-                      alt=""
-                    />
-                    <label className="opacity-70">{item.user}</label>
-                    <label className="opacity-70">{item.date}</label>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-      </div>
-    </DIV>
+    <motion.div
+      initial="hidden"
+      variants={boxvariants}
+      animate="visible"
+      className="grid_outer mt-20 overflow-hidden flex-wrap"
+    >
+      {currentBlogs.map((item, index) => (
+        <motion.div
+          key={index}
+          variants={listvariants}
+          className="border-2 rounded-lg w-[400px] h-full inner_blog"
+        >
+          <img
+            className="rounded-md image_main"
+            src={item.image}
+            alt={item.user}
+          />
+          <div className="w-full p-2 items">
+            <span className="text-blue-600 mt-10">{item.category}</span>
+            <h4>{item.description}...</h4>
+            <div className="flex -space-x-1 overflow-hidden mt-2 justify-between">
+              <img
+                className="inline-block h-6 w-6 rounded-full bg-cover"
+                src={item.avatare}
+                alt=""
+              />
+              <label className="opacity-70">{item.user}</label>
+              <label className="opacity-70">{item.date}</label>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+    {/* Pagination */}
+    <Pagination className="p-4 flex items-center">
+      <PageNumber className="border-2 py-1 px-3 bg-black text-white rounded-full" onClick={prevPage}>&laquo;</PageNumber>
+      {Array.from({ length: totalPages }).map((_, index) => (
+        <PageNumber
+          key={index}
+          onClick={() => paginate(index + 1)}
+          active={index + 1 === currentPage}
+        >
+          {index + 1}
+        </PageNumber>
+      ))}
+      <PageNumber className="border-2 py-1 px-3 bg-black text-white rounded-full" onClick={nextPage}>&raquo;</PageNumber>
+    </Pagination>
+  </DIV>
   );
 };
 
@@ -206,4 +275,18 @@ justify-content: center;
 
     }
   }
+ 
 `;
+
+const Pagination = styled.ul`
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-top: 20px;
+`;
+
+const PageNumber = styled.li`
+  margin: 0 5px;
+  cursor: pointer;
+  ${({ active }) => active && "font-weight: bold; color:blue"}
+  `;

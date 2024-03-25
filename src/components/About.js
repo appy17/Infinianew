@@ -11,6 +11,9 @@ import styled from "styled-components";
 import Transition from "./Transition";
 import {motion} from "framer-motion"
 function About() {
+
+
+
   return (
     <>
       <DIV className="bg-white overflow-hidden">
@@ -18,16 +21,16 @@ function About() {
           <div className="container  m-auto">
             <div className="heading mx-2 mb-10">
               <motion.h2 className="text1 primary text-center mt-1 text-3xl"
-              animate={{
+              whileInView={{
                 x:0,
                 opacity:1
               }}
               initial={{
-                x:"300px",
+                x:"100px",
                 opacity:0.3
               }}
               transition={{
-                duration:2
+                duration:1
               }}
               >
                 Why Infinia Industries?
@@ -35,7 +38,7 @@ function About() {
 
               <div className="flex flex-col md:flex-row mt-5">
                 <motion.div className="md:w-1/2"
-                animate={{
+                whileInView={{
                   x:0,
                   opacity:1
                 }}
@@ -44,27 +47,28 @@ function About() {
                   opacity:.5
                 }}
                 transition={{
-                  duration:2
+                  duration:1
                 }}
                 >
                   <img src={img} alt="Image" className="w-[500px] h-[400px]" />
                 </motion.div>
                 <motion.div className="md:w-1/2 ml-[-100px]"
-                 animate={{
+                 whileInView={{
                   x:0,
                   opacity:1
                 }}
                 initial={{
-                  x:"300px",
+                  x:"100px",
                   opacity:0
                 }}
                 transition={{
-                  duration:2,
+                  duration:1,
                   delay:1
                 }}
                 
                 >
-                  <p className="text-base font-normal text-lg leading-7 text-gray-800 mt-5 md:mt-0 mb-12 md:ml-8">
+                  <h1 className="text-base font-normal lg:text-[150px] leading-7 text-gray-800 mt-5 lg:mt-[39px] md:mt-0 mb-2 md:ml-8">INFINIA </h1>
+                  <p className="text-base font-normal text-lg leading-7 text-gray-800 mt-5 md:mt-0 mb-12 md:ml-8 lg:mt-[60px]">
                     Welcome to Infinia Industries Pvt Ltd – Central India's
                     Premier Manufacturer of Innovative Building Solutions! At
                     Infinia Industries, we take pride in being the forefront of
@@ -98,7 +102,21 @@ function About() {
 
                 <div className="text-base font-normal ">
                   <div className="article">
-                    <article className="relative">
+
+                    <motion.article className="relative"
+                      whileInView={{
+                        y:0,
+                        opacity:1
+                      }}
+                      initial={{
+                        y:"100px",
+                        opacity:0,
+                      }}
+                      transition={{
+                        duration:1,
+                        delay:0.5
+                      }}
+                    >
                       <div className="h-[280px]">
                         <img
                           className="w-[full]"
@@ -113,9 +131,22 @@ function About() {
                         combines the natural aesthetics of wood with the
                         durability of polymer.
                       </p>
-                    </article>
+                    </motion.article>
 
-                    <article>
+                    <motion.article
+                     whileInView={{
+                      y:0,
+                      opacity:1
+                    }}
+                    initial={{
+                      y:"100px",
+                      opacity:0,
+                    }}
+                    transition={{
+                      duration:1,
+                      delay:0.8
+                    }}
+                    >
                       <div className=" h-[280px]">
                         <img className="w-full" src={img3} alt="" />
                       </div>
@@ -125,9 +156,22 @@ function About() {
                         waste, our Regenerated Plastic products are manufactured
                         with a focus on environmental sustainability.
                       </p>
-                    </article>
+                    </motion.article>
 
-                    <article>
+                    <motion.article
+                     whileInView={{
+                      y:0,
+                      opacity:1
+                    }}
+                    initial={{
+                      y:"100px",
+                      opacity:0,
+                    }}
+                    transition={{
+                      duration:1,
+                      delay:1.3
+                    }}
+                    >
                       <div className=" h-[280px]">
                         <img
                           className="w-full object-cover"
@@ -141,7 +185,7 @@ function About() {
                         our Terra Cotta products add a touch of timeless
                         elegance to architectural and landscaping projects.
                       </p>
-                    </article>
+                    </motion.article>
                   </div>
                 </div>
                 <h3
@@ -152,9 +196,23 @@ function About() {
                 </h3>
 
                 <div className="main">
-                  <down className="down">
+                  {/* first div */}
+                  <motion.down 
+                   whileInView={{
+                      y:0,
+                      opacity:1
+                    }}
+                    initial={{
+                      y:"100px",
+                      opacity:0,
+                    }}
+                    transition={{
+                      duration:1,
+                      delay:0.3
+                    }}
+                  className="down">
                     <div>
-                      <img className="img" src={climet} alt="" />
+                      <img className="image"  src={climet} alt="" />
                     </div>
                     <div className="subdown">
                       <h2>Climate Responsive:</h2>
@@ -164,10 +222,24 @@ function About() {
                         any environment
                       </p>
                     </div>
-                  </down>
-                  <down className="down">
+                  </motion.down>
+                  {/* second div */}
+                  <motion.down 
+                   whileInView={{
+                      y:0,
+                      opacity:1
+                    }}
+                    initial={{
+                      y:"100px",
+                      opacity:0,
+                    }}
+                    transition={{
+                      duration:1,
+                      delay:0.6
+                    }}
+                  className="down">
                     <div>
-                      <img className="img" src={img4} alt="" />
+                      <img className="image" src={sus} alt="" />
                     </div>
                     <div className="subdown">
                       <h2>Extended Usable Life:</h2>
@@ -177,10 +249,24 @@ function About() {
                         solutions that stand the test of time.
                       </p>
                     </div>
-                  </down>
-                  <down className="down">
+                  </motion.down>
+                  {/* third div */}
+                  <motion.down 
+                   whileInView={{
+                      y:0,
+                      opacity:1
+                    }}
+                    initial={{
+                      y:"100px",
+                      opacity:0,
+                    }}
+                    transition={{
+                      duration:1,
+                      delay:0.9
+                    }}
+                  className="down">
                     <div>
-                      <img className="img" src={super_q} alt="" />
+                      <img className="image" src={super_q} alt="" />
                     </div>
                     <div className="subdown">
                       <h2>Superior Quality:</h2>
@@ -190,10 +276,24 @@ function About() {
                         and exceed industry standards
                       </p>
                     </div>
-                  </down>
-                  <down className="down">
+                  </motion.down>
+                  {/* fouth div */}
+                  <motion.down 
+                   whileInView={{
+                      y:0,
+                      opacity:1
+                    }}
+                    initial={{
+                      y:"100px",
+                      opacity:0,
+                    }}
+                    transition={{
+                      duration:1,
+                      delay:1.2
+                    }}
+                  className="down">
                     <div>
-                      <img className="img" src={cost_effective} alt="" />
+                      <img className="image" src={cost_effective} alt="" />
                     </div>
                     <div className="subdown">
                       <h2>Cost-Effective Solutions:</h2>
@@ -203,10 +303,24 @@ function About() {
                         unmatched value for your investment.
                       </p>
                     </div>
-                  </down>
-                  <down className="down">
+                  </motion.down>
+                  {/* five number */}
+                  <motion.down 
+                   whileInView={{
+                      y:0,
+                      opacity:1
+                    }}
+                    initial={{
+                      y:"100px",
+                      opacity:0,
+                    }}
+                    transition={{
+                      duration:1,
+                      delay:1
+                    }}
+                  className="down">
                     <div>
-                      <img className="img" src={sus} alt="" />
+                      <img className="image" src={sus} alt="" />
                     </div>
                     <div className="subdown">
                       <h2>Sustainability Champions:</h2>
@@ -216,7 +330,7 @@ function About() {
                         to preventing deforestation and reducing plastic waste.
                       </p>
                     </div>
-                  </down>
+                  </motion.down>
                 </div>
               </div>
             </div>
@@ -243,8 +357,9 @@ const DIV = styled.div`
   }
   .down{
     height: 300px;
-    border: 1px solid red;
+
   }
+  
   .about1 img {
     height: 300px;
     width: 400px;
@@ -257,7 +372,6 @@ const DIV = styled.div`
     border: 1px solid #d5d5d5;
     border-radius: 10px;
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.1);
-    animation: slide-in-right-to-left 0.5s ease-in-out forwards;
   }
   article img {
     height: 100%;
@@ -271,13 +385,10 @@ const DIV = styled.div`
     margin: 10px;
     flex-direction: row;
     justify-content: center;
-    /* justify-content: center;
-    align-items: center; */
+  
   }
   article img {
     border-radius: 5px;
-    animation-name: fade;
-    animation-duration: 1s;
   }
 
   article h2 {
@@ -285,7 +396,7 @@ const DIV = styled.div`
     padding: 2px;
     font: 600 24px sans-serif;
     color: black;
-    animation: fadetext 2s ease-in-out forwards;
+ 
   }
 
   article p {
@@ -293,7 +404,6 @@ const DIV = styled.div`
     padding: 2px;
     color: #777;
     font-family: sans-serif;
-    animation: fadetext 2.2s ease-in-out forwards;
   }
 
   article button {
@@ -308,7 +418,7 @@ const DIV = styled.div`
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s all;
-    animation: slide-in-top-to-bottom 1.5s;
+    /* animation: slide-in-top-to-bottom 1.5s; */
   }
 
   article button:hover {
@@ -384,7 +494,7 @@ const DIV = styled.div`
     border: 1px solid #d5d5d5;
     border-radius: 10px;
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.1);
-    animation: slide-in-right-to-left 0.5s ease-in-out forwards;
+    /* animation: slide-in-right-to-left 0.5s ease-in-out forwards; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -392,8 +502,8 @@ const DIV = styled.div`
     gap: 1rem;
     height: 160px;
   }
-  .down .img {
-    height: 110px;
+  .down .image{
+    height: 100%;
     width: 400px;
     animation: fade;
   }
@@ -455,7 +565,7 @@ const DIV = styled.div`
       /* border: 1px solid #d5d5d5; */
       border-radius: 10px;
       /* box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.1); */
-      animation: slide-in-right-to-left 0.5s ease-in-out forwards;
+      /* animation: slide-in-right-to-left 0.5s ease-in-out forwards; */
       flex-direction: column;
     }
     .down {
