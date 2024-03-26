@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { IconButton, useColorModeValue } from "@chakra-ui/react";
+import { IoMdArrowUp } from "react-icons/io";
 
-import { TiArrowSortedUp } from "react-icons/ti";
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -25,19 +24,14 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <IconButton
-      position="fixed"
-      bottom="6"
-      right="6"
-      zIndex={100}
-      size="md"
-      icon={<TiArrowSortedUp  size={25} color='white'/>}
+    <button
+      className={`fixed bottom-6 right-6 z-50 bg-[#E99C41] hover:bg-teal-600 text-white  p-3 transition-opacity duration-300 rounded-full ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      }`}
       onClick={handleClick}
-      bg={useColorModeValue("teal.500", "teal.200")}
-      _hover={{ bg: useColorModeValue("teal.600", "teal.300") }}
-      opacity={isVisible ? 1 : 0}
-      transition="opacity 0.3s"
-    />
+    >
+      <IoMdArrowUp size={25} />
+    </button>
   );
 };
 

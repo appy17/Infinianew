@@ -9,73 +9,84 @@ import teracota from "../assets/img/terracotta-jali-500x500.jpg";
 import img4 from "../assets/img/lighting.png";
 import styled from "styled-components";
 import Transition from "./Transition";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 function About() {
-
-
-
   return (
     <>
       <DIV className="bg-white overflow-hidden">
         <section className="pt-20 ">
-          <div className="container  m-auto">
-            <div className="heading mx-2 mb-10">
-              <motion.h2 className="text1 primary text-center mt-1 text-3xl"
-              whileInView={{
-                x:0,
-                opacity:1
-              }}
-              initial={{
-                x:"100px",
-                opacity:0.3
-              }}
-              transition={{
-                duration:1
-              }}
+          <div className=" w-[100%] ">
+            <div className="heading lg:mx-2 mb-10 ssm:w-[100%] mv:w-[100%] ">
+              <motion.h2
+                className="text1 primary text-center mt-1 text-3xl "
+                whileInView={{
+                  x: 0,
+                  opacity: 1,
+                }}
+                initial={{
+                  x: "100px",
+                  opacity: 0.3,
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 Why Infinia Industries?
               </motion.h2>
 
-              <div className="flex flex-col md:flex-row mt-5">
-                <motion.div className="md:w-1/2"
-                whileInView={{
-                  x:0,
-                  opacity:1
-                }}
-                initial={{
-                  x:"-300px",
-                  opacity:.5
-                }}
-                transition={{
-                  duration:1
-                }}
+              <div className="outer flex flex-col md:flex-row mt-5 h-[500px]">
+                <motion.div
+                  className="image_outer md:w-1/2"
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  initial={{
+                    x: "-300px",
+                    opacity: 0.5,
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
-                  <img src={img} alt="Image" className="w-[500px] h-[400px]" />
+                  <img
+                    src={img}
+                    alt="Image"
+                    className="left  w-[100%]  ssm:w-[100%] ssm:p-2 sv:w-[100%] lg:h-[100%] ssm:h-[300px]"
+                  />
                 </motion.div>
-                <motion.div className="md:w-1/2 ml-[-100px]"
-                 whileInView={{
-                  x:0,
-                  opacity:1
-                }}
-                initial={{
-                  x:"100px",
-                  opacity:0
-                }}
-                transition={{
-                  duration:1,
-                  delay:1
-                }}
-                
+                <motion.div
+                  className="md:w-1/2 ml-[-100px]"
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  initial={{
+                    x: "100px",
+                    opacity: 0,
+                  }}
+                  transition={{
+                    duration: 1,
+                    delay: 1,
+                  }}
                 >
-                  <h1 className="text-base font-normal lg:text-[150px] leading-7 text-gray-800 mt-5 lg:mt-[39px] md:mt-0 mb-2 md:ml-8">INFINIA </h1>
-                  <p className="text-base font-normal text-lg leading-7 text-gray-800 mt-5 md:mt-0 mb-12 md:ml-8 lg:mt-[60px]">
-                    Welcome to Infinia Industries Pvt Ltd – Central India's
-                    Premier Manufacturer of Innovative Building Solutions! At
-                    Infinia Industries, we take pride in being the forefront of
-                    innovation, carving a niche as the leading manufacturer of
-                    Wood Polymer Composite, Regenerated Plastic, and Terra Cotta
-                    products in Central India.
-                  </p>
+                  <h1
+                    className="text-base  font-normal lg:text-[150px]  mv:text-[50px] ssm:text-[50px] mv:text-center ssm:ml-[100px] mv:mt-12 leading-7 text-gray-800 mt-5 lg:mt-[39px] md:mt-0 mb-2"
+                    style={{ textAlign: "center" }}
+                  >
+                    INFINIA{" "}
+                  </h1>
+
+                  <div className="outer_para">
+                    <p className="para font-normal text-lg leading-7 text-gray-800 mv:text-left lg:ml-[117px]  mt-5 mv:mt-12 mv:ml-14   lg:mt-[60px]">
+                      Welcome to Infinia Industries Pvt Ltd – Central India's
+                      Premier Manufacturer of Innovative Building Solutions! At
+                      Infinia Industries, we take pride in being the forefront
+                      of innovation, carving a niche as the leading manufacturer
+                      of Wood Polymer Composite, Regenerated Plastic, and Terra
+                      Cotta products in Central India.
+                    </p>
+                  </div>
                 </motion.div>
               </div>
             </div>
@@ -85,36 +96,36 @@ function About() {
                   className="text-2xl font-bold mx-2 p-0  text-gray-700"
                   style={{ textAlign: "center" }}
                   animate={{
-                    y:0,
-                    opacity:1
+                    y: 0,
+                    opacity: 1,
                   }}
                   initial={{
-                    opacity:0,
-                    y:"100px"
+                    opacity: 0,
+                    y: "100px",
                   }}
                   transition={{
-                    duration:2,
-                    delay:1
+                    duration: 2,
+                    delay: 1,
                   }}
                 >
                   Our Expertise:{" "}
                 </motion.h3>
 
-                <div className="text-base font-normal ">
+                <div className="text-base font-norma">
                   <div className="article">
-
-                    <motion.article className="relative"
+                    <motion.article
+                      className="relative"
                       whileInView={{
-                        y:0,
-                        opacity:1
+                        y: 0,
+                        opacity: 1,
                       }}
                       initial={{
-                        y:"100px",
-                        opacity:0,
+                        y: "100px",
+                        opacity: 0,
                       }}
                       transition={{
-                        duration:1,
-                        delay:0.5
+                        duration: 1,
+                        delay: 0.5,
                       }}
                     >
                       <div className="h-[280px]">
@@ -134,18 +145,18 @@ function About() {
                     </motion.article>
 
                     <motion.article
-                     whileInView={{
-                      y:0,
-                      opacity:1
-                    }}
-                    initial={{
-                      y:"100px",
-                      opacity:0,
-                    }}
-                    transition={{
-                      duration:1,
-                      delay:0.8
-                    }}
+                      whileInView={{
+                        y: 0,
+                        opacity: 1,
+                      }}
+                      initial={{
+                        y: "100px",
+                        opacity: 0,
+                      }}
+                      transition={{
+                        duration: 1,
+                        delay: 0.8,
+                      }}
                     >
                       <div className=" h-[280px]">
                         <img className="w-full" src={img3} alt="" />
@@ -159,18 +170,18 @@ function About() {
                     </motion.article>
 
                     <motion.article
-                     whileInView={{
-                      y:0,
-                      opacity:1
-                    }}
-                    initial={{
-                      y:"100px",
-                      opacity:0,
-                    }}
-                    transition={{
-                      duration:1,
-                      delay:1.3
-                    }}
+                      whileInView={{
+                        y: 0,
+                        opacity: 1,
+                      }}
+                      initial={{
+                        y: "100px",
+                        opacity: 0,
+                      }}
+                      transition={{
+                        duration: 1,
+                        delay: 1.3,
+                      }}
                     >
                       <div className=" h-[280px]">
                         <img
@@ -197,22 +208,28 @@ function About() {
 
                 <div className="main">
                   {/* first div */}
-                  <motion.down 
-                   whileInView={{
-                      y:0,
-                      opacity:1
+                  <motion.down
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
                     }}
                     initial={{
-                      y:"100px",
-                      opacity:0,
+                      y: "100px",
+                      opacity: 0,
                     }}
                     transition={{
-                      duration:1,
-                      delay:0.3
+                      duration: 1,
+                      delay: 0.3,
                     }}
-                  className="down">
-                    <div>
-                      <img className="image"  src={climet} alt="" />
+                    className="down"
+                  >
+                    <div className="w-[100%] h-[100%]">
+                      <img
+                        className="image"
+                        width={"50%"}
+                        src={climet}
+                        alt=""
+                      />
                     </div>
                     <div className="subdown">
                       <h2>Climate Responsive:</h2>
@@ -223,21 +240,23 @@ function About() {
                       </p>
                     </div>
                   </motion.down>
+
                   {/* second div */}
-                  <motion.down 
-                   whileInView={{
-                      y:0,
-                      opacity:1
+                  <motion.down
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
                     }}
                     initial={{
-                      y:"100px",
-                      opacity:0,
+                      y: "100px",
+                      opacity: 0,
                     }}
                     transition={{
-                      duration:1,
-                      delay:0.6
+                      duration: 1,
+                      delay: 0.6,
                     }}
-                  className="down">
+                    className="down"
+                  >
                     <div>
                       <img className="image" src={sus} alt="" />
                     </div>
@@ -250,21 +269,23 @@ function About() {
                       </p>
                     </div>
                   </motion.down>
+
                   {/* third div */}
-                  <motion.down 
-                   whileInView={{
-                      y:0,
-                      opacity:1
+                  <motion.down
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
                     }}
                     initial={{
-                      y:"100px",
-                      opacity:0,
+                      y: "100px",
+                      opacity: 0,
                     }}
                     transition={{
-                      duration:1,
-                      delay:0.9
+                      duration: 1,
+                      delay: 0.9,
                     }}
-                  className="down">
+                    className="down"
+                  >
                     <div>
                       <img className="image" src={super_q} alt="" />
                     </div>
@@ -277,21 +298,23 @@ function About() {
                       </p>
                     </div>
                   </motion.down>
+
                   {/* fouth div */}
-                  <motion.down 
-                   whileInView={{
-                      y:0,
-                      opacity:1
+                  <motion.down
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
                     }}
                     initial={{
-                      y:"100px",
-                      opacity:0,
+                      y: "100px",
+                      opacity: 0,
                     }}
                     transition={{
-                      duration:1,
-                      delay:1.2
+                      duration: 1,
+                      delay: 1.2,
                     }}
-                  className="down">
+                    className="down"
+                  >
                     <div>
                       <img className="image" src={cost_effective} alt="" />
                     </div>
@@ -304,21 +327,23 @@ function About() {
                       </p>
                     </div>
                   </motion.down>
+
                   {/* five number */}
-                  <motion.down 
-                   whileInView={{
-                      y:0,
-                      opacity:1
+                  <motion.down
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
                     }}
                     initial={{
-                      y:"100px",
-                      opacity:0,
+                      y: "100px",
+                      opacity: 0,
                     }}
                     transition={{
-                      duration:1,
-                      delay:1
+                      duration: 1,
+                      delay: 1,
                     }}
-                  className="down">
+                    className="down"
+                  >
                     <div>
                       <img className="image" src={sus} alt="" />
                     </div>
@@ -355,11 +380,10 @@ const DIV = styled.div`
     overflow: hidden;
     font-weight: 600;
   }
-  .down{
+  .down {
     height: 300px;
-
   }
-  
+
   .about1 img {
     height: 300px;
     width: 400px;
@@ -367,7 +391,7 @@ const DIV = styled.div`
   article {
     width: 100%;
     max-width: 400px;
-    padding: 1rem;
+
     background-color: #fff;
     border: 1px solid #d5d5d5;
     border-radius: 10px;
@@ -385,7 +409,6 @@ const DIV = styled.div`
     margin: 10px;
     flex-direction: row;
     justify-content: center;
-  
   }
   article img {
     border-radius: 5px;
@@ -396,7 +419,6 @@ const DIV = styled.div`
     padding: 2px;
     font: 600 24px sans-serif;
     color: black;
- 
   }
 
   article p {
@@ -500,12 +522,14 @@ const DIV = styled.div`
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    height: 160px;
+    height: 180px;
+    /* border: 2px solid red; */
   }
-  .down .image{
+  .down .image {
     height: 100%;
     width: 400px;
     animation: fade;
+    /* border: 1px solid blue; */
   }
   .subdown {
     display: flex;
@@ -529,6 +553,33 @@ const DIV = styled.div`
 
   /* Tablet styles */
   @media only screen and (max-width: 768px) {
+    .down {
+      margin-left: -10px;
+      height: fit-content;
+    }
+    .subdown {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 5px;
+      margin-left: 0px;
+      height: 100%;
+    }
+    .outer {
+      height: fit-content;
+    }
+    .para {
+      margin-left: 115px;
+      margin-top: 15px;
+    }
+    .article {
+      margin-left: -1px;
+    }
+    .outer_para {
+      width: 100%;
+      padding: 2px;
+    }
+
     .about1 {
       display: flex;
       margin-top: 30px;
@@ -543,7 +594,7 @@ const DIV = styled.div`
       width: 400px;
     }
     .container {
-      width: 90%; /* Adjust width for tablets */
+      width: 100%; /* Adjust width for tablets */
     }
 
     .main {
@@ -551,16 +602,15 @@ const DIV = styled.div`
       flex-direction: row;
       flex-wrap: wrap;
       gap: 20px;
-      padding: 10px;
-      margin: 10px;
+
       justify-content: start;
-      width: 600px;
+      width: 100%;
+    }
+    .main .down h2 {
+      margin-top: 20px;
     }
 
     .article {
-      /* width: 100%; */
-      max-width: 500px;
-      padding: 1rem;
       /* background-color: #fff; */
       /* border: 1px solid #d5d5d5; */
       border-radius: 10px;
@@ -569,14 +619,28 @@ const DIV = styled.div`
       flex-direction: column;
     }
     .down {
-      width: 50%;
+      overflow: hidden;
+      width: 100%;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+    }
+    .down img {
+      width: 100px;
+      height: 100px;
     }
   }
 
   /* Mobile styles */
   @media screen and (max-width: 320px) {
+    .image_outer {
+      border: 2px solid red;
+      width: 100%;
+    }
+
+    .left {
+      border: 2px solid blue;
+      width: 100%;
+    }
     .about1 {
       overflow: hidden;
       /* width: 50%; */

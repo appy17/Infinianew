@@ -145,96 +145,106 @@ export const newInStore = {
 };
 
 export const products = {
-  title: 'All Products & Materials',
+  title: 'Ecomagix',
   subtitle:
-    'The products we provide only for you as our service are selected from the best products with number 1 quality in the world',
+    'Each category seems to have different variants or types of products within them, ranging from panels, doors, door frames, window profiles, claddings, planks, pallets, storage solutions, formwork, and porta cabins. If you need more detailed information about any specific product or category, feel free to ask.',
   pages: [
     {
       productList: [
         {
           image: <Product1Img />,
           icon: <IoMdAddCircle />,
-          name: 'Doors & Door Frames',
-          price: 75,
-          oldPrice: 82,
+          name: 'EM01 Boards & Panels',
+          point1: "EM01A RRP Panels -regular Variants - Sizes",
+          point2: "EM01B RRP Panels UHD Varient -Size,colours",
+          point3: ""
         },
         {
           image: <Product2Img />,
           icon: <IoMdAddCircle />,
-          name: 'Sliding Window',
-          price: 50,
-          oldPrice: 70,
+          name: 'EM02 RRP Doors',
+          point1: "EM02A Panel Doors",
+          point2: "EM02B Flush Doors",
+          point3: ""
         },
         {
           image: <Product3Img />,
           icon: <IoMdAddCircle />,
-          name: 'Fly-ash Bricks',
-          price: 105,
-          oldPrice: 120,
+          name: 'EM03 RRP Door Frames',
+          point1: "EM03A 3x2",
+          point2: "EM03B 4x2",
+          point3: "EM03C 4x2.5"
         },
         {
           image: <Product4Img />,
           icon: <IoMdAddCircle />,
-          name: 'Warehouse Pallets',
-          price: 75,
-          oldPrice: 82,
+          name: 'EM04 RRP Window Profiles',
+          point1: "EM04A 3x2",
+          point2: "EM04B 4x2",
+          point3: "EM04C Shutter 50x18"
         },
         {
           image: <Product5Img />,
           icon: <IoMdAddCircle />,
-          name: 'Boards & Panels',
-          price: 200,
-          oldPrice: 210,
+          name: 'EM05 RRP Claddings',
+          point1: "EM05A Wall Panels",
+          point2: "EM05B Partition Walls",
+          point3: ""
         },
         {
           image: <Product6Img />,
           icon: <IoMdAddCircle />,
-          name: 'Jalis',
-          price: 45,
-          oldPrice: 50,
-        },
-        {
-          image: <Product7Img />,
-          icon: <IoMdAddCircle />,
-          name: 'Planks & Battens',
-          price: 320,
-          oldPrice: 325,
-        },
-        {
-          image: <Product8Img />,
-          icon: <IoMdAddCircle />,
-          name: 'Furniture',
-          price: 225,
-          oldPrice: 240,
+          name: 'EM06 Planks & Battens',
+          point1: "EM06A",
+          point2: "",
+          point3: ""
         },
         {
           image: <Product9Img />,
           icon: <IoMdAddCircle />,
-          name: 'Shuttering & Formwork',
-          price: 105,
-          oldPrice: 120,
+          name: 'EM07 Flyash Bricks/Pavers Pallets',
+          point1: "",
+          point2: "",
+          point3: ""
         },
         {
-          image: <Product10Img />,
+          image: <Product7Img />,
           icon: <IoMdAddCircle />,
-          name: 'Roofing & Flooring',
-          price: 75,
-          oldPrice: 82,
+          name: 'EM08 RRP Storage Pallets',
+          point1: "EM08A Warehouse storage pallets",
+          point2: "EM08B Warehouse storage pallets",
+          point3: ""
         },
         {
-          image: <Product10Img />,
+          image: <Product8Img />,
           icon: <IoMdAddCircle />,
-          name: 'Construction Blocks',
-          price: 75,
-          oldPrice: 82,
-        },
-        {
-          image: <Product10Img />,
-          icon: <IoMdAddCircle />,
-          name: 'Combustion Fuel',
-          price: 75,
-          oldPrice: 82,
-        },
+          name: 'EM09 RRP Shuttering Formwork',
+          point1: "EM09A Column/Beam Panel",
+          point2: "EM09B Slab Panel",
+          point3: ""
+        }
+      
+        // {
+        //   image: <Product10Img />,
+        //   icon: <IoMdAddCircle />,
+        //   name: 'Roofing & Flooring',
+        //   price: 75,
+        //   oldPrice: 82,
+        // },
+        // {
+        //   image: <Product10Img />,
+        //   icon: <IoMdAddCircle />,
+        //   name: 'Construction Blocks',
+        //   price: 75,
+        //   oldPrice: 82,
+        // },
+        // {
+        //   image: <Product10Img />,
+        //   icon: <IoMdAddCircle />,
+        //   name: 'Combustion Fuel',
+        //   price: 75,
+        //   oldPrice: 82,
+        // },
       ],
     },
     {
@@ -242,45 +252,75 @@ export const products = {
         {
           image: <Product1Img />,
           icon: <IoMdAddCircle />,
-          name: 'WPC',
-          price: 75,
-          oldPrice: 82,
+          name: 'EM01 Boards & Panels',
+          point1: "EM01A RRP Panels -regular Variants - Sizes",
+          point2: "EM01B RRP Panels UHD Varient -Size,colours",
+          point3: ""
         },
         {
           image: <Product2Img />,
           icon: <IoMdAddCircle />,
-          name: 'RRP',
-          price: 50,
-          oldPrice: 70,
+          name: 'EM02 RRP Doors',
+          point1: "EM02A Panel Doors",
+          point2: "EM02B Flush Doors",
+          point3: ""
         },
         {
           image: <Product3Img />,
           icon: <IoMdAddCircle />,
-          name: 'Terracotta',
-          price: 105,
-          oldPrice: 120,
+          name: 'EM03 RRP Door Frames',
+          point1: "EM03A 3x2",
+          point2: "EM03B 4x2",
+          point3: "EM03C 4x2.5"
         },
         {
           image: <Product4Img />,
           icon: <IoMdAddCircle />,
-          name: 'UPR',
-          price: 75,
-          oldPrice: 82,
+          name: 'EM04 RRP Window Profiles',
+          point1: "EM04A 3x2",
+          point2: "EM04B 4x2",
+          point3: "EM04C Shutter 50x18"
         },
         {
           image: <Product5Img />,
           icon: <IoMdAddCircle />,
-          name: 'Biomass Briquettes',
-          price: 200,
-          oldPrice: 210,
+          name: 'EM05 RRP Claddings',
+          point1: "EM05A Wall Panels",
+          point2: "EM05B Partition Walls",
+          point3: ""
         },
         {
           image: <Product6Img />,
           icon: <IoMdAddCircle />,
-          name: 'Wood Particles',
-          price: 45,
-          oldPrice: 50,
+          name: 'EM06 Planks & Battens',
+          point1: "EM06A",
+          point2: "",
+          point3: ""
         },
+        {
+          image: <Product9Img />,
+          icon: <IoMdAddCircle />,
+          name: 'EM07 Flyash Bricks/Pavers Pallets',
+          point1: "",
+          point2: "",
+          point3: ""
+        },
+        {
+          image: <Product7Img />,
+          icon: <IoMdAddCircle />,
+          name: 'EM08 RRP Storage Pallets',
+          point1: "EM08A Warehouse storage pallets",
+          point2: "EM08B Warehouse storage pallets",
+          point3: ""
+        },
+        {
+          image: <Product8Img />,
+          icon: <IoMdAddCircle />,
+          name: 'EM09 RRP Shuttering Formwork',
+          point1: "EM09A Column/Beam Panel",
+          point2: "EM09B Slab Panel",
+          point3: ""
+        }
         // {
         //   image: <Product7Img />,
         //   icon: <IoMdAddCircle />,

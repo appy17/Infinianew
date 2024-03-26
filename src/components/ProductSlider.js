@@ -32,7 +32,7 @@ const ProductSlider = () => {
             <div className="grid grid-cols-2 gap-x-5 md:grid-cols-3 lg:grid-cols-4 lg:gap-[30px]">
               {page.productList.map((products, index) => {
                 // DeStructure products
-                const { image, name, price, oldPrice } = products;
+                const { image, name, point1, point2, point3 } = products;
                 return (
                   <div
                     className="w-full max-w-[290px] h-[380px] text-left"
@@ -45,12 +45,17 @@ const ProductSlider = () => {
                       </div>
                     </div>
 
-                    <div className="font-semibold lg:text-xl">{name}</div>
-                    <div className="flex items-center gap-x-3">
-                      <div>$ {price}</div>
-                      <div className="text-[15px] text-gray line-through">
-                        $ {oldPrice}
-                      </div>
+                    <div className="font-semibold lg:text-xl gap-5">{name}</div>
+                    <div className="items-center gap-x-3">
+                     {point1 && <div>1){point1}</div>} 
+
+                    {point2 && <div className="text-[15px] text-gray">
+                       2){point2}
+                      </div>}  
+
+                    {point3 && <div className="text-[15px] text-gray">
+                      3){point3}
+                      </div>}  
                     </div>
                   </div>
                 );

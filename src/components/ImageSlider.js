@@ -270,6 +270,40 @@ const DIV = styled.div`
   background: #23262f;
   margin-top: 50px;
 }
+@media (min-width: 300px) and (max-width: 399px) {
+.my_logo{
+  height: 8px;
+}
+.slider{
+  height: auto;
+  /* border: 2px solid red; */
+  width: 100%;
+    }
+    .productSlider .swiper-button-prev {
+     margin-left: -60px;
+     margin-top: 15px;
+      height: 20px;
+ width: 20px;
+    }
+    .productSlider .swiper-button-next {
+     margin-left: -60px;
+     margin-top: 15px;
+     height: 20px;
+     width: 20px;
+    } 
+.imageSlider .swiper-pagination-bullet {
+  background: #23262f;
+  margin-top: 50px;
+}
+.imageSlider .swiper-button-prev,
+.imageSlider .swiper-button-next {
+ /* background: pink; */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+}
+  }
 
 }  
 

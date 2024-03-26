@@ -8,6 +8,8 @@ import 'swiper/css/navigation';
 import styled from 'styled-components';
 import { Navigation } from 'swiper';
 
+
+
 const videos = [
   { source: "https://player.vimeo.com/progressive_redirect/playback/617209007/rendition/360p/file.mp4?loc=external&oauth2_token_id=1747418641&signature=d5b4b95263bc1cdd7d56a2592c0370fa35a874ed20271164cb261bdc245f06cf" },
   { source: "https://player.vimeo.com/progressive_redirect/playback/823476801/rendition/360p/file.mp4?loc=external&oauth2_token_id=57447761&signature=dbfbcba1448d8dfc1902392cbc50ab7d65efde5d89904698e271c27a9df54bcc" },
@@ -43,7 +45,7 @@ console.log("component render")
 
   return (
     <DIV>
-      <h1 className='title text-center'>Events</h1>
+      <h1 className='title text-center lg:mt-4'>Events</h1>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -189,6 +191,14 @@ const DIV = styled.div`
   .imageSlider .swiper-button-next {
     top: 50% 59
   }
+  .imageSlider .swiper-button-prev,
+.imageSlider .swiper-button-next {
+ background: pink;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+}
  
 } 
   @media (min-width: 300px) and (max-width: 399px) {
@@ -197,22 +207,34 @@ const DIV = styled.div`
 }
 .slider{
   height: auto;
+  /* border: 2px solid red; */
+  padding: 5px;
+  width: 100%;
+
     }
     .productSlider .swiper-button-prev {
      margin-left: -60px;
      margin-top: 15px;
-      height: 40px;
- width: 40px;
+      height: 20px;
+ width: 20px;
     }
     .productSlider .swiper-button-next {
      margin-left: -60px;
      margin-top: 15px;
-     height: 40px;
-     width: 40px;
+     height: 20px;
+     width: 20px;
     } 
 .imageSlider .swiper-pagination-bullet {
   background: #23262f;
   margin-top: 50px;
+}
+.imageSlider .swiper-button-prev,
+.imageSlider .swiper-button-next {
+ /* background: pink; */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
 }
   }
 `;

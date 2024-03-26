@@ -59,6 +59,13 @@
   box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 10px -20px;
 }
 
+.test_bg{
+  background-image: url('./assets/img/test_bg.jpg');
+  background-size: cover;
+  background-position: top; 
+  /* margin-top: -100px; */
+}
+
 .bg-new {
   background-image: url('./assets/img/email-bg.jpg');
   background-size: cover;

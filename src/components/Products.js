@@ -23,7 +23,7 @@ const Products = () => {
     
       <div>
         <h2 className='title'>{title}</h2>
-        <p className='max-w-[639px] mx-auto mb-[50px] lg:mb-[70px]'>{subtitle}</p>
+        <p className='max-w-[750px] mx-auto mb-[50px] lg:mb-[70px]'>{subtitle}</p>
       </div>
 {/* sliders */}
 <ProductSlider />

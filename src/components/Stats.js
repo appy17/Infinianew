@@ -27,7 +27,7 @@ const Stats = () => {
   }, [animatedStats]);
 
   return (
-    <div className="bg-accent rounded-[20px] p-10 selection">
+    <div className="bg-[#f1a955fa] rounded-[20px] p-10 selection ssm:mt-10 ssm:p-5">
       <div className="flex flex-wrap gap-y-8">
         {animatedStats.map((item, index) => (
           <div

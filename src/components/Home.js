@@ -13,6 +13,7 @@ import "aos/dist/aos.css"; // Import the styles
 import AOS from "aos"; // Import the AOS library
 import Event from "./Events";
 import Transition from "./Transition";
+import ScrollToTopButton from "./ScrollToTopButton";
 // import ScrollToTopButton from "./ScrollToTopButton";
 
 
@@ -36,7 +37,7 @@ const Home = () => {
      
       {/* <div data-aos="zoom-in"> */}
      
-        <Features />
+        {/* <Features /> */}
         <Event />
       {/* </div> */}
       <div data-aos="zoom-in">
@@ -61,7 +62,7 @@ const Home = () => {
         <Newsletter />
       </div>
       
-{/* <ScrollToTopButton /> */}
+<ScrollToTopButton />
       {/* <BrandCarousel /> */}
     </div>
   );

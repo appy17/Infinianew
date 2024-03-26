@@ -4,6 +4,7 @@ import image3 from '../assets/img/flyashbrick.jpg'
 import image4 from '../assets/img/Formwork.jpg'
 import Door from "../assets/img/doors.jpg"
 import Transition from '../components/Transition';
+import Products from '../components/Products';
 const features = [
   { name: '1. EM01 Boards & Panels', description1: '1.1 EM01A RRP Panels -regular Variants - Sizes', description2: '1.2 EM01B RRP Panels UHD Varient -Size,colours'},
   { name: '2. EM02 RRP Doors', description1: '2.1 EM02A Panel Doors', description2:'2.2 EM02B Flush Doors'  },
@@ -31,18 +32,20 @@ function Ecomagix() {
 
 
 return (
+  <>
+
  <div className="bg-white con-bg">
   <div className='flex items-center w-auto text-center door'>
     <h3 className="text-5xl font-extrabold tracking-normal text-center z-1 text-white">Ecomagix</h3>
   </div>
-  
+  <Products />
    <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
      <div>
        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Ecomagix</h2>
        <p className="mt-4 text-gray-500">
        Each category seems to have different variants or types of products within them, ranging from panels, doors, door frames, window profiles, claddings, planks, pallets, storage solutions, formwork, and porta cabins. If you need more detailed information about any specific product or category, feel free to ask.
        </p>
-
+      
        <dl className="mt-1 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8 ">
          { features.map((feature) => (
            <div key={feature.name} className="border-t border-gray-200  p-3 shadow-2">
@@ -78,6 +81,7 @@ return (
      </div>
    </div>
  </div>
+ </>
 )
 }
 

@@ -178,13 +178,13 @@ const Header2 = () => {
   }
 
   return (
-    <motion.header
+    <header
       drag
       dragConstraints={{
         right: 0,
         left: 0,
         top: 0,
-        bottom: -30,
+        bottom: "-30px"
       }}
       className={`${
         bg
@@ -229,13 +229,14 @@ const Header2 = () => {
               <NavLink
                 className={`active ${
                   location.pathname === "/"
-                    ? "border-b-4 border-orange-400 text-[#F3A445] hover:clear-none"
+                    ? "border-b-4 border-orange-400 text-[#F3A445] "
                     : ""
                 }  capitalize transition-all`}
                 to={"/"}
                 activeClassName="home-active"
               >
                 Home
+              
               </NavLink>
               <NavLink
                 className={`active ${
@@ -648,14 +649,14 @@ const Header2 = () => {
                   Blogs
                 </a>
               </li>
-              <li>
+              <li className="border-2 px-2 border-gray-400  rounded-full text-center self-center">
                 <a
                   href="/contact"
                   className={`active ${
                     location.pathname === "/contact"
                       ? "border-b-4 border-orange-400 text-[#F3A445]"
                       : ""
-                  } capitalize transition-all hover:cursor-pointers`}
+                  } capitalize transition-all hover:cursor-pointers mt-[5px]`}
                 >
                   {/*  */}
                   Contact Us
@@ -800,7 +801,7 @@ const Header2 = () => {
           </Dialog>
         </div>
       </DIV>
-    </motion.header>
+    </header>
   );
 };
 

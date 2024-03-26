@@ -9,7 +9,7 @@ import NewItemsSlider from "./NewItemsSlider";
 const NewItems = () => {
   const { title, subtitle, link, icon } = newInStore;
   return (
-    <section className="section">
+    <section className="section ssm:-mt-20">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">   
           {/* text */}
