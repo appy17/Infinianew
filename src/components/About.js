@@ -114,7 +114,7 @@ function About() {
                 <div className="text-base font-norma">
                   <div className="article">
                     <motion.article
-                      className="relative"
+                      className="relative  border-4 border-red-600"
                       whileInView={{
                         y: 0,
                         opacity: 1,
@@ -135,13 +135,16 @@ function About() {
                           alt=""
                         />
                       </div>
-                      <h2>Wood Polymer Composite (WPC)</h2>
+                    <div className="p-1">
+                    <h2>Wood Polymer Composite (WPC)</h2>
                       <p>
                         Infinia Industries excels in the production of Wood
                         Polymer Composite, a revolutionary material that
                         combines the natural aesthetics of wood with the
                         durability of polymer.
                       </p>
+                    </div>
+                     
                     </motion.article>
 
                     <motion.article
@@ -158,15 +161,17 @@ function About() {
                         delay: 0.8,
                       }}
                     >
-                      <div className=" h-[280px]">
+                      <div className=" h-[280px] ">
                         <img className="w-full" src={img3} alt="" />
                       </div>
-                      <h2>Regenerated Plastic</h2>
+                     <div className="p-1">
+                     <h2>Regenerated Plastic</h2>
                       <p>
                         Contributing to the global effort to combat plastic
                         waste, our Regenerated Plastic products are manufactured
                         with a focus on environmental sustainability.
                       </p>
+                     </div>
                     </motion.article>
 
                     <motion.article
@@ -190,12 +195,14 @@ function About() {
                           alt=""
                         />
                       </div>
-                      <h2>Terra Cotta Products</h2>
+                     <div className="p-1">
+                     <h2>Terra Cotta Products</h2>
                       <p>
                         Rooted in tradition and crafted with modern precision,
                         our Terra Cotta products add a touch of timeless
                         elegance to architectural and landscaping projects.
                       </p>
+                     </div>
                     </motion.article>
                   </div>
                 </div>

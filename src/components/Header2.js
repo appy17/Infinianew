@@ -649,7 +649,20 @@ const Header2 = () => {
                   Blogs
                 </a>
               </li>
-              <li className="border-2 px-2 border-gray-400  rounded-full text-center self-center">
+              <li>
+                <a
+                  href="/events"
+                  className={`active ${
+                    location.pathname === "/events"
+                      ? "border-b-4 border-orange-400 text-[#F3A445]"
+                      : ""
+                  } capitalize transition-all hover:cursor-pointers`}
+                >
+                  {/*  */}
+                 Media and events
+                </a>
+              </li>
+              <li className=" px-2 text-center self-center">
                 <a
                   href="/contact"
                   className={`active ${
@@ -774,6 +787,12 @@ const Header2 = () => {
                         </>
                       )}
                     </Disclosure>
+                    <a
+                      href="/blogs"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Media and events
+                    </a>
                     <a
                       href="/blogs"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"

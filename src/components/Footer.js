@@ -8,12 +8,12 @@ import { FaInstagram } from "react-icons/fa";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
-import imagebg from "../assets/img/uxie.png"
+// import imagebg from "../assets/img/99.png"
 const Footer = () => {
   return (
   
 
-<footer className="bg-white w-full back">
+<footer className="bg-[#f2eded] w-full">
   <DIV className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div className="-mt-[20px]">
@@ -121,7 +121,7 @@ const Footer = () => {
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/brick-pallet.html"> Terracotta </a>
             </li>
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/rrp-sheets.html"> Wetherproof Furniture </a>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/rrp-sheets.html"> Weatherproof Furniture </a>
             </li>
           
           </ul>

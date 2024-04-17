@@ -20,6 +20,7 @@ import Login from "./Login";
 import FormData from "./FormData";
 import PrivateRoutes from "./PrivateRoutes";
 import { AnimatePresence } from "framer-motion";
+import Image_Event from "./Image_Event";
 const MainRoutes = () => {
   return (
  <AnimatePresence>
@@ -42,8 +43,9 @@ const MainRoutes = () => {
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/login" element={<Login />} />
       <Route path="/blogs" element={<Blog />} />
+      <Route path="/events" element={<Image_Event />} />
       <Route path="/formData" element={<PrivateRoutes><FormData /></PrivateRoutes>} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/*" element={<NotFound />} />
     </Routes>
  </AnimatePresence>
   );

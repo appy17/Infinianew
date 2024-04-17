@@ -2,11 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { features } from "../data";
 import { gsap } from "gsap";
 import {motion} from "framer-motion"
+import { useNavigate } from "react-router-dom";
 
 const Features = () => {
   const { title, subtitle, image, buttonText, items } = features;
   const sectionRef = useRef(null);
 const [visi, setVisi] = useState(false)
+const navigate = useNavigate() 
+
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -67,13 +70,17 @@ const [visi, setVisi] = useState(false)
       <div className="container mx-auto  lg:-mt-10  md:-mt-20  ssm:-mt-20" >
         <div className="flex flex-col lg:flex-row lg:gap-[100px]">
           {/* images */}
-          <motion.div className="box flex-1 order-1 lg:-order-1"
+          <motion.div className="box flex-1 order-1 lg:-order-1 relative"
           initial={{ opacity: 0.3,x:"-300px" }}
           whileInView={{ opacity: 1, x:0}}
         transition={{duration:1}}
           
           >
             <img src={image.type} alt="" className="img"/>
+            <div className="absolute top-[80%] left-[40%] ">
+            <button onClick={()=> navigate("/contact")} className='bg-[rgba(255,255,255,0.9)] hover:bg-[rgba(255,255,255,0.5)]   text-lg rounded-md backdrop-blur-md transition lg:px-[35px] lg:py-[9px]'>Join</button>
+
+            </div>
           </motion.div>
 
           {/* title */}

@@ -27,15 +27,15 @@ const Stats = () => {
   }, [animatedStats]);
 
   return (
-    <div className="bg-[#f1a955fa] rounded-[20px] p-10 selection ssm:mt-10 ssm:p-5">
+    <div className="bg-teal-600 rounded-[20px] p-10 selection ssm:mt-10  ssm:p-5 ">
       <div className="flex flex-wrap gap-y-8">
         {animatedStats.map((item, index) => (
           <div
             className="min-h-[70px] w-3/6 flex flex-col justify-center  lg:flex-1 "
             key={index}
           >
-            <div className="text-2xl font-semibold lg:text-4xl">{Math.round(item.animatedValue)}{item.text==='Products sold'&&'K+'}</div>
-            <div className="text-base font-light max-w-[110px] mx-auto lg:text-xl">{item.text}</div>
+            <div className="text-2xl font-semibold lg:text-4xl ">{Math.round(item.animatedValue)}{item.value == 1 ? 'Lac+' : "+"}</div>
+            <div className="text-base font-light max-w-[170px] mx-auto lg:text-md">{item.text}</div>
           </div>
         ))}
       </div>

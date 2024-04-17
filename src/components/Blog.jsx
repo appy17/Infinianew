@@ -194,13 +194,8 @@ const DIV = styled.div`
   img:hover {
   scale: 1.02;
   transition: all ease-in .3s;
-  /* box-shadow: rgba(0, 0, 0, 0.5) 0px 15px 15px; */
-
+ 
 }
-
-
-
-
 
 
   @media only screen and (max-width: 499px) {

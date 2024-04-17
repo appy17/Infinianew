@@ -14,12 +14,20 @@ import AOS from "aos"; // Import the AOS library
 import Event from "./Events";
 import Transition from "./Transition";
 import ScrollToTopButton from "./ScrollToTopButton";
+import EventPhotoSlider from "./EventPhotoSlider";
+import Image_comp from "./Image_comp";
+import Handsome from "./Handsome";
 // import ScrollToTopButton from "./ScrollToTopButton";
 
 
 
 
 const Home = () => {
+
+
+
+
+  
   AOS.init({
     duration: 1500,
     once: true,
@@ -38,6 +46,8 @@ const Home = () => {
       {/* <div data-aos="zoom-in"> */}
      
         {/* <Features /> */}
+        <Image_comp />
+        {/* <EventPhotoSlider /> */}
         <Event />
       {/* </div> */}
       <div data-aos="zoom-in">
@@ -64,6 +74,7 @@ const Home = () => {
       
 <ScrollToTopButton />
       {/* <BrandCarousel /> */}
+      <Handsome></Handsome>
     </div>
   );
 };

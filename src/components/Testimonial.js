@@ -8,7 +8,7 @@ import {testimonial} from "../data"
 // deStructure textimonial
 const Testimonial = () => {
   const {image, title} = testimonial
-  return <section className='section test_bg lg:mt-[200px] ssm:-mt-16'>
+  return <section className='section test_bg lg:mt-[40px]'>
     <div className='container mx-auto'>
       <div className='flex flex-col lg:flex-row lg:gap-x-10 gap-y-2'>
         <motion.div
