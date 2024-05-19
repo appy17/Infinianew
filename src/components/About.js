@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import img from "../assets/img/about_1.jpeg";
 import img3 from "../assets/img/9.jpg";
 import climet from "../assets/img/climet.png";
@@ -10,7 +10,17 @@ import img4 from "../assets/img/lighting.png";
 import styled from "styled-components";
 import Transition from "./Transition";
 import { motion } from "framer-motion";
+import image1 from '../assets/img/WPC355 x 280px.jpg'
+import image2 from '../assets/img/RRP 355 x 280px.jpg'
+import image3 from '../assets/img/Terracotta 355 x 280px.jpg'
+
+
+
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <>
       <DIV className="bg-white overflow-hidden">
@@ -83,8 +93,8 @@ function About() {
                       Premier Manufacturer of Innovative Building Solutions! At
                       Infinia Industries, we take pride in being the forefront
                       of innovation, carving a niche as the leading manufacturer
-                      of Wood Polymer Composite, Regenerated Plastic, and Terra
-                      Cotta products in Central India.
+                      of Wood Polymer Composite,Recycle  Regenerated Plastic(Rpp Products), and Terra
+                      Cotta clay products in Central India.
                     </p>
                   </div>
                 </motion.div>
@@ -131,7 +141,7 @@ function About() {
                       <div className="h-[280px]">
                         <img
                           className="w-[full]"
-                          src="https://www.alstoneindia.in/images/products/157742729920191227.jpg"
+                          src={image1}
                           alt=""
                         />
                       </div>
@@ -162,13 +172,13 @@ function About() {
                       }}
                     >
                       <div className=" h-[280px] ">
-                        <img className="w-full" src={img3} alt="" />
+                        <img className="w-full" src={image2} alt="" />
                       </div>
                      <div className="p-1">
-                     <h2>Regenerated Plastic</h2>
+                     <h2>Recycle Regenerated Plastic(RRP)</h2>
                       <p>
                         Contributing to the global effort to combat plastic
-                        waste, our Regenerated Plastic products are manufactured
+                        waste, our Recycle Regenerated Plastic(RRP) products are manufactured
                         with a focus on environmental sustainability.
                       </p>
                      </div>
@@ -191,12 +201,12 @@ function About() {
                       <div className=" h-[280px]">
                         <img
                           className="w-full object-cover"
-                          src={teracota}
+                          src={image3}
                           alt=""
                         />
                       </div>
                      <div className="p-1">
-                     <h2>Terra Cotta Products</h2>
+                     <h2>Terracotta Clay Products</h2>
                       <p>
                         Rooted in tradition and crafted with modern precision,
                         our Terra Cotta products add a touch of timeless

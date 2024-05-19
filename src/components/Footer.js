@@ -1,6 +1,4 @@
-// Footer.js
 import React from "react";
-// import { footer } from "../data";
 import Logo from "../assets/img/INFINIA_LOGO.png";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
@@ -8,7 +6,8 @@ import { FaInstagram } from "react-icons/fa";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
-// import imagebg from "../assets/img/99.png"
+import { FaLinkedin } from "react-icons/fa";
+
 const Footer = () => {
   return (
   
@@ -18,7 +17,7 @@ const Footer = () => {
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div className="-mt-[20px]">
         <div className="flex justify-center text-teal-600 sm:justify-start">
-         <img src={Logo} width={"200px"} height={"200px"}/>
+         <img src={Logo} width={"200px"} height={"200px"} />
         </div>
 
         <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
@@ -28,7 +27,7 @@ const Footer = () => {
         <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
         
             <Link
-              to="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer.php%3Fu%3Dhttps%253A%252F%252Fwww.infiniaindia.in%252F&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=mr_IN"
+              to="https://www.facebook.com/infinia.india.92/"
               rel="noreferrer"
               target="_blank"
               className="text-teal-700 transition hover:text-red hover:-translate-y-3 duration-500 "
@@ -40,7 +39,7 @@ const Footer = () => {
 
       
             <Link
-              to="#"
+              to="https://www.instagram.com/infiniaindia/"
               rel="noreferrer"
               target="_blank"
               className="text-teal-700 transition hover:-translate-y-3 duration-500  hover:text-teal-700/75 "
@@ -59,6 +58,15 @@ const Footer = () => {
             >
               <span className="sr-only">Youtube</span>
               <FaYoutube size={30}/>
+            </Link>
+            <Link
+              to="https://www.linkedin.com/in/team-infinia-a993a7233 "
+              rel="noreferrer"
+              target="_blank"
+              className="text-teal-700 transition hover:text-teal-700/75 hover:-translate-y-3 duration-500 "
+            >
+              <span className="sr-only">LinkedIn</span>
+              <FaLinkedin  size={30}/>
             </Link>
 
           <li>
@@ -82,24 +90,24 @@ const Footer = () => {
           <ul className="mt-8 space-y-4 text-sm">
             
           <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#">
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/about">
                 Why us
               </a>
             </li>
 
 
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#">
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/ecomagix">
                 Brands
               </a>
             </li>
 
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> Contact Us </a>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/contact"> Contact Us </a>
             </li>
-            <li>
+            {/* <li>
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> History </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -132,10 +140,10 @@ const Footer = () => {
 
           <ul className="mt-8 space-y-4 text-sm">
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> Privacy Policy  </a>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/privacy"> Privacy Policy  </a>
             </li>
 
-            <li>
+            {/* <li>
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> Catalogue </a>
             </li>
             <li>
@@ -143,9 +151,9 @@ const Footer = () => {
             </li>
             <li>
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> Cookies Policy </a>
-            </li>
+            </li> */}
             <li className="wrapper">
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> Help </a>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/contact"> Help </a>
             </li>
 
           
@@ -246,7 +254,7 @@ const Footer = () => {
 
           <a
             className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-            href="#"
+            href="/privacy"
           >
             Terms & Conditions
           </a>
@@ -255,7 +263,7 @@ const Footer = () => {
 
           <a
             className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-            href="#"
+            href="/privacy"
           >
             Privacy Policy
           </a>

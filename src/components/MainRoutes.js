@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import SingleProducts from "../pages/SingleProducts";
@@ -21,7 +21,12 @@ import FormData from "./FormData";
 import PrivateRoutes from "./PrivateRoutes";
 import { AnimatePresence } from "framer-motion";
 import Image_Event from "./Image_Event";
+
+import Privacy_Policy from '../pages/Privacy_Policy';
 const MainRoutes = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
  <AnimatePresence>
      <Routes>
@@ -44,7 +49,10 @@ const MainRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/blogs" element={<Blog />} />
       <Route path="/events" element={<Image_Event />} />
+      <Route path="/privacy" element={<Privacy_Policy />} />
+
       <Route path="/formData" element={<PrivateRoutes><FormData /></PrivateRoutes>} />
+      
       <Route path="/*" element={<NotFound />} />
     </Routes>
  </AnimatePresence>

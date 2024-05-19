@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
 import RelatedProducts from "./RelatedProducts";
 import Transition from "../components/Transition";
 
@@ -12,6 +13,9 @@ const features = [
 ];
 
 function Furniture() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
   <>
  <div className="relative">
@@ -40,7 +44,7 @@ Sheets available in many Thicknesses.
 
           <div className="mt-3 flex gap-4">
             <a
-              href="https://pdf.indiamart.com/impdf/22443121988/101519832/wpc-door-frame.pdf"
+              href="../Pdf/INFINIA WPC DOORS & DOOR FRAMES BROCHURE.pdf"
               download
               target="_blank"
               className="flex items-center gap-2 subtitle  hover:cursor-pointer"

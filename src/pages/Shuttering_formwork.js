@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
 import RelatedProducts from "./RelatedProducts";
 import Transition from "../components/Transition";
 
@@ -12,6 +13,9 @@ const features = [
 ];
 
 function Shuttering_formwork() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="relative">
@@ -26,10 +30,10 @@ function Shuttering_formwork() {
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                RRP Shuttering Plywood
+                RRP Shuttering Grade
               </h2>
               <p className="mt-4 text-gray-500">
-                Rectangular recycle plastic shuttering plywood for centering
+                Recycle Regenerated Plastic(RRP Products) for centering
                 purpose. Waterproof , Termiteproof and long lasting
                 Thickness:12mm ,18mm,25mm Size:8x4
               </p>

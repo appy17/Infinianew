@@ -12,10 +12,10 @@ import {
 // import images
 import Features1Img from './assets/img/features-1.png';
 import Features2Img from './assets/img/features-2.png';
-import ChairImg from './assets/img/chair.png';
-import BedImg from './assets/img/bed.png';
-import CupboardImg from './assets/img/door1.jpg';
-import LightingImg from './assets/img/lighting.png';
+import ChairImg from './assets/img/TERRACOTTA 1.jpg';
+import BedImg from './assets/img/UPR 1.jpg';
+import CupboardImg from './assets/img/SPF 1.jpg';
+import LightingImg from './assets/img/rrp 1.jpg';
 import Product1Img from './assets/img/products/product-1.png';
 import Product2Img from './assets/img/products/product-2.png';
 import Product3Img from './assets/img/products/product-3.png';
@@ -31,7 +31,7 @@ import Avatar1Img from './assets/img/avatar-1.png';
 import Avatar2Img from './assets/img/avatar-2.png';
 import Avatar3Img from './assets/img/avatar-3.png';
 import Avatar4Img from './assets/img/avatar-4.png';
-import Slider_1 from "./assets/img/wpc_flooring.jpg"
+import Slider_1 from "./assets/img/wpc 1.jpg"
 
 export const navigation = [
   {

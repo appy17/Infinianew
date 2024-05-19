@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import RelatedProducts from "./RelatedProducts";
 import image1 from '../assets/img/FEATIMAGE10.jpg'
@@ -32,6 +32,9 @@ const features1 = [
 
 
 const Roofing_Flooring_solutions = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
     return (
         <>
         {/* Roof tiles div */}

@@ -30,12 +30,14 @@ const features = [
     description7: "3.3 WM03C 4x2.5",
     description8: "3.3.1 WM03C-D01 4x2.5 SMG",
     description9: "3.3.2 WM03C-D02 4x2.5 SMP",
-    description10:
+    description10: "3.3.2 WM03C-D02 5x2.5 SMP",
+
+    description11:
       "3.3.3 WM03C-D03 4x2.5 SPP Variants - Colours, Sizes(lengths)",
-    description11: "3.4 WM03D 5x2.5",
-    description12: "3.4.1 WM03D-D01 5x2.5 SMG ",
-    description13: "3.4.2 WM03D-D02 5x2.5 SPP",
-    description14:
+    description12: "3.4 WM03D 5x2.5",
+    description13: "3.4.1 WM03D-D01 5x2.5 SMG ",
+    description14: "3.4.2 WM03D-D02 5x2.5 SPP",
+    description15:
       "3.4.3 WM03D-D03 5x2.5 DPG  Variants - Colours, Sizes(lengths)",
   },
   {
@@ -117,6 +119,9 @@ function Woodmagix() {
                 </dd>
                 <dd className="mt-2 text-sm text-gray-500">
                   {feature.description9}
+                </dd>
+                <dd className="mt-2 text-sm text-gray-500">
+                  {feature.description10}
                 </dd>
               </div>
             ))}

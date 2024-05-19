@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
 import RelatedProducts from "./RelatedProducts";
 import Transition from "../components/Transition";
 
@@ -13,6 +14,9 @@ const features = [
 ];
 
 function SingleProducts() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
   <>
  <div className="">

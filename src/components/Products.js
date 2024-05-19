@@ -1,5 +1,5 @@
 import React from 'react';
-
+import upper from "../assets/img/1500 x 400px.jpg"
 // import data
 
 import { products } from "../data"
@@ -18,7 +18,11 @@ const Products = () => {
   const {title, subtitle} =  products;
 
   return <section className='section text-center'>
-     
+  <div className='-mt-[10px]'>
+
+<img src={upper} />
+  </div>
+
     <div className='container mx-auto'>
     
       <div>

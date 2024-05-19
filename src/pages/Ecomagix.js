@@ -3,8 +3,10 @@ import image2 from '../assets/img/9.jpg';
 import image3 from '../assets/img/flyashbrick.jpg'
 import image4 from '../assets/img/Formwork.jpg'
 import Door from "../assets/img/doors.jpg"
+import upper from "../assets/img/1500 x 400px.jpg"
 import Transition from '../components/Transition';
 import Products from '../components/Products';
+import { useLocation } from 'react-router-dom';
 const features = [
   { name: '1. EM01 Boards & Panels', description1: '1.1 EM01A RRP Panels -regular Variants - Sizes', description2: '1.2 EM01B RRP Panels UHD Varient -Size,colours'},
   { name: '2. EM02 RRP Doors', description1: '2.1 EM02A Panel Doors', description2:'2.2 EM02B Flush Doors'  },
@@ -30,15 +32,21 @@ description1:'4.1 EM04A 3x2', description2:'4.2 EM04B 4x2', description3:'4.3 EM
 
 function Ecomagix() {
 
+  const location = useLocation()
+  console.log(location)
 
 return (
   <>
+      {location.pathname !== "/ecomagix" && (
+        <div className="bg-white con-bg">
+          <div className='flex items-center w-auto text-center door'>
+            <h3 className="text-5xl font-extrabold tracking-normal text-center z-1 text-white"></h3>
+          </div>
+        </div>
+      )}
 
- <div className="bg-white con-bg">
-  <div className='flex items-center w-auto text-center door'>
-    <h3 className="text-5xl font-extrabold tracking-normal text-center z-1 text-white">Ecomagix</h3>
-  </div>
-  <Products />
+      <Products /> {/* Assuming this is a custom component */}
+    
    <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
      <div>
        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Ecomagix</h2>
@@ -80,8 +88,9 @@ return (
        />
      </div>
    </div>
- </div>
  </>
+
+  
 )
 }
 

@@ -45,7 +45,7 @@ console.log("component render")
 
   return (
     <DIV>
-      <h1 className='title text-center lg:mt-4'>Events</h1>
+      <h1 className='title text-center lg:mt-4'>Video of Events</h1>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}

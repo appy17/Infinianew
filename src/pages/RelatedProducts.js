@@ -89,6 +89,9 @@ const products = [
   ]
 
 const RelatedProducts = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
 useEffect(()=>{
   gsap.registerPlugin(ScrollTrigger) 
@@ -106,6 +109,7 @@ useEffect(()=>{
 
 
   return (
+
     <div>
      <div className="text-center">
      <h1 className="text-3xl font-bold lg:-mt-10 md:-mt-32 md:-mb-10 sm:-mt-28 sm:-mb-10 ssm:-mt-20 ssm:-mb-10 border-b pl-4">Our Products</h1>

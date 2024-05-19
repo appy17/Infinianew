@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import RelatedProducts from './RelatedProducts'
 import { Link } from 'react-router-dom';
 import image1 from '../assets/img/woodplank (1) (1).png'
@@ -16,6 +16,9 @@ const features = [
 ];
 
 const Boards_Panels = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
  <div className="relative">

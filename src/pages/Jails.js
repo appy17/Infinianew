@@ -25,6 +25,9 @@ const features = [
 
 function Jails() {
   const imageRefs = useRef(images.map(() => React.createRef()));
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     imageRefs.current.forEach((ref, index) => {
