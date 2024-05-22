@@ -1,5 +1,5 @@
-import image1 from '../assets/img/door1.jpg';
-import image2 from '../assets/img/9.jpg';
+import image1 from '../assets/img/2. RRP Ecomagix 280 x 286px.jpg';
+import image2 from '../assets/img/3. RRP Ecomagix 280 x 286px.jpg';
 import image3 from '../assets/img/flyashbrick.jpg'
 import image4 from '../assets/img/Formwork.jpg'
 import Door from "../assets/img/doors.jpg"

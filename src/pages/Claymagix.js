@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import image from '../assets/img/shuttering.jpg';
-import image2 from '../assets/img/2.jpg'
-import image3 from '../assets/img/3.jpg'
-import image4 from '../assets/img/6.jpg'
+import image2 from '../assets/img/2.Terracotta 280 x 286px (1).jpg'
+import image3 from '../assets/img/1. RRP Ecomagix 280 x 286px.jpg'
+import image4 from '../assets/img/1. Terracotta 280 x 286px.jpg'
 import Transition from '../components/Transition';
 // import AOS from 'aos';
 // import "aos/dist/aos/css";

@@ -20,7 +20,7 @@ const Products = () => {
   return <section className='section text-center'>
   <div className='-mt-[10px]'>
 
-<img src={upper} />
+<img src={upper} style={{marginTop:'18px'}} />
   </div>
 
     <div className='container mx-auto'>

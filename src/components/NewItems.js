@@ -35,4 +35,4 @@ const NewItems = () => {
   );
 };
 
-export default NewItems;
+export default NewItems;

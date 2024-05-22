@@ -44,11 +44,8 @@ const NewItemsSlider = () => {
 return <SwiperSlide className='max-w-[256px]' key={index}
 
 >
-  <div className='relative p-2 lg:h-[600px]'>
-  
-    <img src={product.image.type} className='lg:h-[100%] brightness-75 img'  alt='images'/>
-
-
+  <div className='relative p-2 lg:h-[600px] ssm:h-[350px]'>
+    <img src={product.image.type} className='lg:h-[100%] ssm:h-[100%] brightness-75 img rounded-md'  alt='images'/>
     <div className='absolute text-white bottom-[20px] w-full text-center text-[18px] lg:text-2xl font-medium capitalize'>{product.name}</div>
    
   </div>
@@ -121,12 +118,6 @@ top: 50%;
  margin-left: -10px;
 
  height: 40px;
- width: 40px;
+ width: 40px;
 }
-
-
-
-
-
-
 `

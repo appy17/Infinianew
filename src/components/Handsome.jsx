@@ -6,7 +6,7 @@ import 'swiper/css/effect-coverflow';
 // import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+import { EffectCoverflow,Autoplay, Pagination, Navigation } from 'swiper';
 
 import slide_image_1 from '../assets/events/01.jpeg';
 import slide_image_2 from '../assets/events/02.jpeg';
@@ -20,7 +20,7 @@ import styled from 'styled-components';
 
 function Handsome() {
   return (
-    <DIV className="container_image_slider">
+    <DIV className="container_image_slider ssm:-mt-10">
       <h1 className="heading">Events Gallery</h1>
       <Swiper
         effect={'coverflow'}
@@ -40,7 +40,14 @@ function Handsome() {
           prevEl: '.swiper-button-prev',
           clickable: true,
         }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
+        modules={[EffectCoverflow, Pagination, Navigation,Autoplay]}
+        autoplay={
+          {
+            delay: 2500,
+                disableOnInteraction: false,
+          }
+        }
+      
         className="swiper_container"
       >
         <SwiperSlide>
@@ -65,15 +72,15 @@ function Handsome() {
           <img src={slide_image_7} alt="slide_image" />
         </SwiperSlide>
 
-        {/* <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow">
+         <div className="slider-controler">
+          {/* <div className="swiper-button-prev slider-arrow">
             <ion-icon name="arrow-back-outline"></ion-icon>
-          </div>
-          <div className="swiper-button-next slider-arrow">
+          </div> */}
+          {/* <div className="swiper-button-next slider-arrow">
             <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          {/* <div className="swiper-pagination"></div> */}
-        {/* </div> */} 
+          </div> */}
+           <div className="swiper-pagination"></div> 
+         </div> 
       </Swiper>
     </DIV>
   );
@@ -82,6 +89,8 @@ function Handsome() {
 export default Handsome;
 
 const DIV = styled.div`
+
+
 
 ::-webkit-scrollbar {
   width: 1.3rem;
@@ -114,35 +123,43 @@ const DIV = styled.div`
 }
 
 .swiper_container {
-  height: 35rem;
-  padding: 2rem 10rem;
+  height: auto;
+  /* padding: 2rem 10rem; */
   position: relative;
+  /* border:1px solid blue; */
+  
 }
 
 .swiper-slide {
   width: 30rem;
   height: 20rem;
   position: relative;
+  /* border:1px solid red; */
+  height: auto;
+  margin: 10px;
 }
 
 .swiper-slide img {
     width: 28rem;
-    height: 25rem;
+    height: auto;
     border-radius: 2rem;
     object-fit: cover;
 }
 
 @media (max-width: 500px) {
   .swiper_container {
-    height: 47rem;
+    height: auto;
   }
   .swiper-slide {
     width: 26rem !important;
     height: 33rem !important;
+    // border: 2px solid pink;
+    padding: 10px;
   }
   .swiper-slide img {
-    width: 22rem !important;
-    height: 87% !important;
+    width: 100% !important;
+    height: 100% !important;
+  
   }
 }
 
@@ -200,7 +217,7 @@ const DIV = styled.div`
 }
 
 .slider-controler .slider-arrow {
-  background:#ffffff;
+  background:#ac3131;
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
@@ -221,7 +238,8 @@ const DIV = styled.div`
 .swiper-pagination {
   position: relative;
   width: 15rem !important;
-  bottom: 1rem;
+  /* bottom: 1rem; */
+  margin-top: 4rem;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -229,6 +247,6 @@ const DIV = styled.div`
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
-  background: #6a59ff;
+  background: #f89603;
 }
 `
