@@ -16,16 +16,24 @@ import ChairImg from './assets/img/TERRACOTTA 1.jpg';
 import BedImg from './assets/img/UPR 1.jpg';
 import CupboardImg from './assets/img/SPF 1.jpg';
 import LightingImg from './assets/img/rrp 1.jpg';
-import Product1Img from './assets/img/products/product-1.png';
-import Product2Img from './assets/img/products/product-2.png';
-import Product3Img from './assets/img/products/product-3.png';
-import Product4Img from './assets/img/products/product-4.png';
-import Product5Img from './assets/img/products/product-5.png';
-import Product6Img from './assets/img/products/product-6.png';
-import Product7Img from './assets/img/products/product-7.png';
-import Product8Img from './assets/img/products/product-8.png';
-import Product9Img from './assets/img/products/product-9.png';
-import Product10Img from './assets/img/products/product-10.png';
+import Product1Img from './assets/img/products/rirp-s-701-pvc-panel-250x250-removebg-preview.png';
+import Product2Img from './assets/img/products/plain-brown-pvc-panel-1000x1000-removebg-preview.png';
+import Product3Img from './assets/img/products/quality-panel-door-1000x1000-removebg-preview.png';
+import Product4Img from './assets/img/products/wooden-flush-doors-1000x1000-removebg-preview.png';
+import Product5Img from './assets/img/products/3x2-inch-wpc-door-frame-1000x1000.jpg';
+import Product6Img from './assets/img/products/wpc-door-frame-250x250-removebg-preview.png';
+// import Product7Img from './assets/img/products/product-7.png';
+import Product8Img from './assets/img/products/greenfortune-upvc-profiles-1000x1000-removebg-preview.png';
+import Product9Img from './assets/img/products/aluminium-shutter-profile-removebg-preview.png';
+import Product10Img from './assets/img/products/product-10.png'
+import Product14Img from './assets/img/products/wall-panelling-500x500.jpg'
+import Product13Img from './assets/img/products/wall-partition-works-500x500.jpg'
+import Product16Img from './assets/img/products/wooden-battens-planks-500x500-removebg-preview.png'
+import Product15Img from './assets/img/products/fly-ash-brick-250x250-removebg-preview.png'
+import Product17Img from './assets/img/products/warehouse-plastic-pallet-500x500-removebg-preview.png'
+import Product18Img from './assets/img/products/product-jpeg-1000x1000-removebg-preview.png'
+import Product19Img from './assets/img/products/2-removebg-preview (1).png'
+import Product20Img from './assets/img/products/Uc6d2306ed83b408da0f4ad4756fcc2d2N.jpg_300x300.jpg'
 import TestimonialImg from './assets/img/testimonial.jpg';
 import Avatar1Img from './assets/img/avatar-1.png';
 import Avatar2Img from './assets/img/avatar-2.png';
@@ -155,7 +163,6 @@ export const products = {
         {
           image: <Product1Img />,
           image1: <Product2Img />,
-          image2: <Product3Img />,
           icon: <IoMdAddCircle />,
           name: 'EM01 Boards & Panels',
           point1: "EM01A RRP Panels -regular Variants - Sizes",
@@ -164,9 +171,8 @@ export const products = {
           count:[1,2]
         },
         {
-          image: <Product2Img />,
-          image1: <Product1Img />,
-          image2: <Product3Img />,
+          image: <Product3Img />,
+          image1: <Product4Img />,
           icon: <IoMdAddCircle />,
           name: 'EM02 RRP Doors',
           point1: "EM02A Panel Doors",
@@ -175,20 +181,19 @@ export const products = {
           count:[1,2]
         },
         {
-          image: <Product3Img />,
-          image1: <Product4Img />,
-          image2: <Product1Img />,
+          image: <Product5Img />,
+          image1: <Product6Img />,
           icon: <IoMdAddCircle />,
           name: 'EM03 RRP Door Frames',
           point1: "EM03A 3x2",
           point2: "EM03B 4x2",
-          point3: "EM03C 4x2.5",
+          point3: "",
           count:[1,2,3]
         },
         {
-          image: <Product4Img />,
-          image1: <Product5Img />,
-          image2: <Product6Img />,
+          image: <Product8Img />,
+          image1: <Product9Img />,
+          image2: <Product8Img />,
           icon: <IoMdAddCircle />,
           name: 'EM04 RRP Window Profiles',
           point1: "EM04A 3x2",
@@ -197,42 +202,44 @@ export const products = {
           count:[1,2,3]
         },
         {
-          image: <Product5Img />,
-          image1: <Product9Img />,
+          image: <Product14Img />,
+          image1: <Product13Img />,
           image2: <Product2Img />,
           icon: <IoMdAddCircle />,
           name: 'EM05 RRP Claddings',
           point1: "EM05A Wall Panels",
           point2: "EM05B Partition Walls",
-          point3: "",
           count:[1,2]
         },
         {
-          image: <Product6Img />,
-          image1: <Product7Img />,
-          image2: <Product8Img />,
+          image: <Product16Img />,
+          image1: <Product18Img />, 
           icon: <IoMdAddCircle />,
           name: 'EM06 Planks & Battens',
           point1: "EM06A",
-          point2: "",
-          point3: "",
-          count:1
-        },
-        {
-          image: <Product9Img />,
-          image1: <Product7Img />,
-          image2: <Product8Img />,
-          icon: <IoMdAddCircle />,
-          name: 'EM07 Flyash Bricks/Pavers Pallets',
-          point1: "mukesh",
-          point2: "",
-          point3: "",
           count:[]
         },
         {
-          image: <Product7Img />,
-          image1: <Product8Img />,
-          image2: <Product1Img />,
+          image: <Product15Img />,
+          image1: <Product18Img />, 
+          icon: <IoMdAddCircle />,
+          name: 'EM07 Flyash Bricks/Pavers Pallets',
+          point1: "EM07A",
+          count:[]
+        },
+        // {
+        //   image: <Product16Img />,
+        //   image1: <Product18Img />,
+        //   icon: <IoMdAddCircle />,
+        //   name: 'EM07 Flyash Bricks/Pavers Pallets',
+        //   point1: "",
+        //   point2: "",
+        //   point3: "",
+        //   count:[1]
+        // },
+        {
+          image: <Product17Img />,
+          image1: <Product18Img />,
           icon: <IoMdAddCircle />,
           name: 'EM08 RRP Storage Pallets',
           point1: "EM08A Warehouse storage pallets",
@@ -241,45 +248,23 @@ export const products = {
           count:[1,2]
         },
         {
-          image: <Product8Img />,
-          image1: <Product9Img />,
-          image2: <Product7Img />,
+          image: <Product19Img />,
+          image1: <Product20Img />,
           icon: <IoMdAddCircle />,
           name: 'EM09 RRP Shuttering Formwork',
           point1: "EM09A Column/Beam Panel",
           point2: "EM09B Slab Panel",
-          point3: "",
           count:[1,2]
         }
       
-        // {
-        //   image: <Product10Img />,
-        //   icon: <IoMdAddCircle />,
-        //   name: 'Roofing & Flooring',
-        //   price: 75,
-        //   oldPrice: 82,
-        // },
-        // {
-        //   image: <Product10Img />,
-        //   icon: <IoMdAddCircle />,
-        //   name: 'Construction Blocks',
-        //   price: 75,
-        //   oldPrice: 82,
-        // },
-        // {
-        //   image: <Product10Img />,
-        //   icon: <IoMdAddCircle />,
-        //   name: 'Combustion Fuel',
-        //   price: 75,
-        //   oldPrice: 82,
-        // },
+     
       ],
     },
     // {
     //   productList: [
     //     {
     //       image: <Product1Img />,
-    //       icon: <IoMdAddCircle />,
+    //       icon: <IoMdAddCircle />,http://localhost:3000/
     //       name: 'EM01 Boards & Panels',
     //       point1: "EM01A RRP Panels -regular Variants - Sizes",
     //       point2: "EM01B RRP Panels UHD Varient -Size,colours",

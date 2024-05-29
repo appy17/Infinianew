@@ -18,9 +18,9 @@ const Products = () => {
   const {title, subtitle} =  products;
 
   return <section className='section text-center'>
-  <div className='-mt-[10px]'>
+  <div className='mv:-mt-[30px] ssm:-mt-4'>
 
-<img src={upper} style={{marginTop:'18px'}} />
+<img src={upper}  />
   </div>
 
     <div className='container mx-auto'>

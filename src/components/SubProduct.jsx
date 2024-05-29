@@ -38,21 +38,21 @@ const SubProduct = ({ products }) => {
                         {
                             hoverOn ? (
                                 <>
-                                    point1 && <SwiperSlide>
+                                    {point1 && <SwiperSlide>
                                         <div className="flex justify-center lg:h-[100%] items-center ">
                                             <img className="ssm:mt-10" src={image.type} alt="" />
                                         </div>
-                                    </SwiperSlide>
-                                    point2 && <SwiperSlide>
+                                    </SwiperSlide>}
+                                    {point2 && <SwiperSlide>
                                         <div className="flex justify-center lg:h-[100%] items-center ">
                                             <img className="ssm:mt-10" src={image1.type} alt="" />
                                         </div>
-                                    </SwiperSlide>
-                                    point3 && <SwiperSlide>
+                                    </SwiperSlide>}
+                                    {point3 && <SwiperSlide>
                                         <div className="flex justify-center lg:h-[100%] items-center ">
                                             <img className="ssm:mt-10" src={image2.type} alt="" />
                                         </div>
-                                    </SwiperSlide>
+                                    </SwiperSlide>}
                                 </>
                             ) : (<SwiperSlide>
                                 <div className="flex justify-center lg:h-[100%] items-center ">
