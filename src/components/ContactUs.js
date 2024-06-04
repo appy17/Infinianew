@@ -55,6 +55,24 @@ let url  = ""
       message: '',
     });
   };
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwHOopoO6FLeo3jphOX1GWaz1uPSrBvCKAJ53WsVQBmQFeypEi06jFYIxLfN3k1JWUJgg/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  const handleSubmit2= ()=>{
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  }
+
+//   form.addEventListener('submit', e => {
+//     e.preventDefault()
+//     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+//       .then(response => console.log('Success!', response))
+//       .catch(error => console.error('Error!', error.message))
+//  
+
+// }
+// )
 console.log("formData", formData)
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8 con-bg">
@@ -76,7 +94,7 @@ console.log("formData", formData)
           Aute magna irure deserunt veniam aliqua magna enim voluptate.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20" onSubmit={handleSubmit}>
+      <form name='submit-to-google-sheet' action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900" >
@@ -213,7 +231,7 @@ console.log("formData", formData)
           </Switch.Group>
         </div>
         <div className="mt-10">
-          <button
+          <button onClick={handleSubmit2}
             type="submit"
             className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
