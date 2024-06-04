@@ -2,6 +2,8 @@
 import { useState } from 'react'
 // import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 import axios from 'axios';
 import Transition from './Transition';
@@ -11,11 +13,15 @@ import Transition from './Transition';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+const handleToast= () => {
+  toast.success("Details Add Sucessfully")
+
+};
 
  function ContactUs() {
   const [agreed, setAgreed] = useState(false)
 
-
+const [loading, setLoading] =useState(false)
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -58,11 +64,18 @@ let url  = ""
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwHOopoO6FLeo3jphOX1GWaz1uPSrBvCKAJ53WsVQBmQFeypEi06jFYIxLfN3k1JWUJgg/exec'
   const form = document.forms['submit-to-google-sheet']
 
-  const handleSubmit2= ()=>{
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  }
+  const handleSubmit2 = async () => {
+    setLoading(true)
+    try {
+      const response = await fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+      console.log('Success!', response);
+      handleToast();
+      setLoading(false)
+    } catch (error) {
+      console.error('Error!', error.message);
+      setLoading(false)
+    }
+  };
 
 //   form.addEventListener('submit', e => {
 //     e.preventDefault()
@@ -169,8 +182,7 @@ console.log("formData", formData)
                   className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
                 >
                   <option>IN</option>
-                  <option>CA</option>
-                  <option>EU</option>
+                 
                 </select>
                 {/* <ChevronDownIcon
                   className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
@@ -235,10 +247,12 @@ console.log("formData", formData)
             type="submit"
             className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Let's talk
+         {loading ? "please wait..." : "Submit"}  
           </button>
+      
         </div>
       </form>
+      <ToastContainer position="bottom-center" style={{zIndex: 9999}} />
     </div>
   )
 }
