@@ -36,7 +36,7 @@ const Flyash_Brick_Pallets = () => {
 
           <div className="mt-2 flex gap-4">
             <Link
-              to="https://pdf.indiamart.com/impdf/25686556973/101519832/pallets-for-brick-manufacture.pdf#ITEM_DOC#"
+              to="../../public/ECOMAGIX .by Infinia.pdf"
               download
               target="_blank"
               className="flex items-center gap-2 subtitle  hover:cursor-pointer"

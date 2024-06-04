@@ -16,23 +16,23 @@ import ChairImg from './assets/img/TERRACOTTA 1.jpg';
 import BedImg from './assets/img/UPR 1.jpg';
 import CupboardImg from './assets/img/SPF 1.jpg';
 import LightingImg from './assets/img/rrp 1.jpg';
-import Product1Img from './assets/img/products/rirp-s-701-pvc-panel-250x250-removebg-preview.png';
+import Product1Img from './assets/img/products/RRP Board & Panels (1).jpg';
 import Product2Img from './assets/img/products/plain-brown-pvc-panel-1000x1000-removebg-preview.png';
-import Product3Img from './assets/img/products/quality-panel-door-1000x1000-removebg-preview.png';
+import Product3Img from './assets/img/products/RRP_Door__1_-removebg-preview.png';
 import Product4Img from './assets/img/products/wooden-flush-doors-1000x1000-removebg-preview.png';
-import Product5Img from './assets/img/products/3x2-inch-wpc-door-frame-1000x1000.jpg';
+import Product5Img from './assets/img/products/RRP Door Frame (1).jpg';
 import Product6Img from './assets/img/products/wpc-door-frame-250x250-removebg-preview.png';
 // import Product7Img from './assets/img/products/product-7.png';
-import Product8Img from './assets/img/products/greenfortune-upvc-profiles-1000x1000-removebg-preview.png';
+import Product8Img from './assets/img/products/RRP Window.jpg';
 import Product9Img from './assets/img/products/aluminium-shutter-profile-removebg-preview.png';
 import Product10Img from './assets/img/products/product-10.png'
-import Product14Img from './assets/img/products/wall-panelling-500x500.jpg'
+import Product14Img from './assets/img/products/RRP Cladding.jpg'
 import Product13Img from './assets/img/products/wall-partition-works-500x500.jpg'
-import Product16Img from './assets/img/products/wooden-battens-planks-500x500-removebg-preview.png'
+import Product16Img from './assets/img/products/RRP Planks & Battens.jpg'
 import Product15Img from './assets/img/products/fly-ash-brick-250x250-removebg-preview.png'
-import Product17Img from './assets/img/products/warehouse-plastic-pallet-500x500-removebg-preview.png'
+import Product17Img from './assets/img/products/RRP Storage Pallets.jpg'
 import Product18Img from './assets/img/products/product-jpeg-1000x1000-removebg-preview.png'
-import Product19Img from './assets/img/products/2-removebg-preview (1).png'
+import Product19Img from './assets/img/products/RRP Shuttering Formwork (3).jpg'
 import Product20Img from './assets/img/products/Uc6d2306ed83b408da0f4ad4756fcc2d2N.jpg_300x300.jpg'
 import TestimonialImg from './assets/img/testimonial.jpg';
 import Avatar1Img from './assets/img/avatar-1.png';
@@ -162,7 +162,7 @@ export const products = {
       productList: [
         {
           image: <Product1Img />,
-          image1: <Product2Img />,
+          image1: <Product1Img />,
           icon: <IoMdAddCircle />,
           name: 'EM01 Boards & Panels',
           point1: "EM01A RRP Panels -regular Variants - Sizes",
@@ -172,7 +172,7 @@ export const products = {
         },
         {
           image: <Product3Img />,
-          image1: <Product4Img />,
+          image1: <Product3Img />,
           icon: <IoMdAddCircle />,
           name: 'EM02 RRP Doors',
           point1: "EM02A Panel Doors",
@@ -182,7 +182,7 @@ export const products = {
         },
         {
           image: <Product5Img />,
-          image1: <Product6Img />,
+          image1: <Product5Img />,
           icon: <IoMdAddCircle />,
           name: 'EM03 RRP Door Frames',
           point1: "EM03A 3x2",
@@ -192,7 +192,7 @@ export const products = {
         },
         {
           image: <Product8Img />,
-          image1: <Product9Img />,
+          image1: <Product8Img />,
           image2: <Product8Img />,
           icon: <IoMdAddCircle />,
           name: 'EM04 RRP Window Profiles',
@@ -249,7 +249,7 @@ export const products = {
         },
         {
           image: <Product19Img />,
-          image1: <Product20Img />,
+          image1: <Product19Img />,
           icon: <IoMdAddCircle />,
           name: 'EM09 RRP Shuttering Formwork',
           point1: "EM09A Column/Beam Panel",
