@@ -1,9 +1,9 @@
-import image1 from '../assets/img/2. RRP Ecomagix 280 x 286px.jpg';
-import image2 from '../assets/img/3. RRP Ecomagix 280 x 286px.jpg';
-import image3 from '../assets/img/flyashbrick.jpg'
-import image4 from '../assets/img/Formwork.jpg'
-import Door from "../assets/img/doors.jpg"
-import upper from "../assets/img/1500 x 400px.jpg"
+// import image1 from '../assets/img/2. RRP Ecomagix 280 x 286px.jpg';
+// import image2 from '../assets/img/3. RRP Ecomagix 280 x 286px.jpg';
+// import image3 from '../assets/img/flyashbrick.jpg'
+// import image4 from '../assets/img/Formwork.jpg'
+// import Door from "../assets/img/doors.jpg"
+// import upper from "../assets/img/1500 x 400px.jpg"
 import Transition from '../components/Transition';
 import Products from '../components/Products';
 import { useLocation } from 'react-router-dom';
@@ -40,13 +40,13 @@ return (
       {location.pathname !== "/ecomagix" && (
         <div className="bg-white con-bg">
           <div className='flex items-center w-auto text-center door'>
-            <h3 className="text-5xl font-extrabold tracking-normal text-center z-1 text-white animate-out slide-out-to-top slide-out-to-left"></h3>
+            <h3 className="text-5xl font-extrabold tracking-normal text-center z-1 text-white "></h3>
           </div>
         </div>
       )}
 
       <Products /> {/* Assuming this is a custom component */}
-    
+{/*     
    <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
      <div>
        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl animate-fade-right">Ecomagix</h2>
@@ -87,7 +87,7 @@ return (
          className="rounded-lg bg-gray-100 shadow img"
        />
      </div>
-   </div>
+   </div> */}
  </div>
 
   

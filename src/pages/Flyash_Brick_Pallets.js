@@ -15,6 +15,10 @@ const features = [
   { name: "Material", description: "Plastic" },
   { name: "Usage/Application", description: "for fly ash brick manufcturer" },
 ];
+  const handleDownload = () => {
+    window.open(`${process.env.PUBLIC_URL}/Fly Ash Bricks Pallets.pdf`, '_blank');
+  };
+
 
 const Flyash_Brick_Pallets = () => {
   useEffect(() => {
@@ -34,9 +38,9 @@ const Flyash_Brick_Pallets = () => {
             customers requirement .
           </p>
 
-          <div className="mt-2 flex gap-4">
+          <div className="mt-2 flex gap-4" onClick={handleDownload}>
             <Link
-              to="../../public/ECOMAGIX .by Infinia.pdf"
+              to="../../public/Fly Ash Bricks Pallets.pdf"
               download
               target="_blank"
               className="flex items-center gap-2 subtitle  hover:cursor-pointer"
@@ -47,6 +51,7 @@ const Flyash_Brick_Pallets = () => {
                 className="mr-5"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/267px-PDF_file_icon.svg.png"
                 alt="pdf"
+                
               />
               Product Brochure
             </Link>

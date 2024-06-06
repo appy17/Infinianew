@@ -117,16 +117,16 @@ const Footer = () => {
           <ul className="mt-8 space-y-4 text-sm">
           
           <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/wpc-door-frame.html"> WPC</a>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/woodmagix"> WPC</a>
             </li>
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/particle-boards.html"> RRP </a>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href=""> RRP </a>
             </li>
 
            
 
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/brick-pallet.html"> Terracotta </a>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/jails"> Terracotta </a>
             </li>
             <li>
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/rrp-sheets.html"> Weatherproof Furniture </a>

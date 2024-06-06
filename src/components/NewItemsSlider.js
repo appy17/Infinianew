@@ -29,6 +29,7 @@ const NewItemsSlider = () => {
   navigation={true}
   
   
+  
    grabCursor={true} breakpoints={{
     320:{
       slidesPerView: 2,
