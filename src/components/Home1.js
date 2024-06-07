@@ -41,11 +41,11 @@ const Home1 = () => {
   };
 
   return (
-    <div id="app" className="sticky top-0 right-0 bg-white w-full" style={{ zIndex: "99" , borderBottom:'1px solid #d4d4d4'}}>
-      <div className={`w-full absolute z-96 h-[70px] ${menuOpen ? '' : ' bg-[#e9e7e5]'}`}></div>
-      <div className='flex justify-between items-center'>
-        <div className='h-8 w-10 absolute top-[11px] left-[50px] p-8 z-99 cursor-pointer text-right block'>
-          <img src={Logo} className='w-[140px] top-[5px] left-[20px] absolute z-99 flex items-center  justify-center' alt="" />
+    <div id="app" className="fixed top-0 right-0 bg-white w-full" style={{ zIndex: "99" , borderBottom:'1px solid #d4d4d4'}}>
+      <div className={`w-full  h-[70px] ${menuOpen ? 'bg-white' : ' bg-white'}`}></div>
+      <div className='flex justify-between items-center '>
+        <div className='h-8 w-10 absolute top-[11px] left-[23px] p-8 z-999 cursor-pointer text-right block'>
+          <img src={Logo} className='w-[140px] top-[5px] left-[20px] absolute z-99 flex items-center  justify-center bg-white' alt="" />
         </div>
 
         <div onClick={toggleMenu} className={`h-8 w-8 absolute top-0 right-[10px] p-8 z-50 cursor-pointer text-right block`}>
@@ -57,9 +57,9 @@ const Home1 = () => {
         </div>
       </div>
       {menuOpen && (
-        <div className="menu sticky h-full w-full xl:overflow-hidden lg:p-12 lg:pl-0">
+        <div className="menu sticky h-full w-full xl:overflow-hidden lg:p-6 lg:pl-0">
           {!isMobile ? (
-            <nav className="foldable grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 h-full w-full mt-[60px]">
+            <nav className="foldable grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 h-full w-full ">
               <div className="fold hidden xl:block"></div>
               
               <div className="fold h-full w-full grid grid-rows-10 gap-8 px-12 contents">
@@ -126,7 +126,7 @@ const Home1 = () => {
               </div> */}
             </nav>
           ) : (
-            <nav className="w-full p-8 flex flex-wrap h-[100%] max-h-[100vh] overflow-auto">
+            <nav className="w-full p-8 flex flex-wrap h-[100%] max-h-[100vh] overflow-auto" style={{scrollbarWidth:'none'}}>
               <ul className="mb-12 w-full sm:w-1/2 md:w-1/3 px-8 py-0 sm:py-8 mt-[70px]">
               <ul className="row-span-3 leading-8 w-full">
                   <li className={`title uppercase tracking-widest ${isMobile ? 'text-xl': ''}`}>Links</li>

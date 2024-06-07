@@ -104,7 +104,7 @@ console.log("formData", formData)
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Us</h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
+        We'd love to hear from you! Whether you have questions about our products or need assistance with an order, our team is here to help.
         </p>
       </div>
       <form name='submit-to-google-sheet' action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20" onSubmit={handleSubmit}>

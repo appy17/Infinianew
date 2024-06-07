@@ -40,10 +40,10 @@ const Home = () => {
         <Image_comp />
       </div>
 
-      <div data-aos="fade-left">
+      {/* <div data-aos="fade-left"> */}
         {/* <EventPhotoSlider /> */}
-        <Event />
-      </div>
+        {/* <Event />
+      </div> */}
       <div className="fade-up">
         <Handsome />
       </div>
