@@ -11,6 +11,10 @@ const features = [
   { name: "Color", description: "Gray" },
 
 ];
+const handleDownload = () => {
+  window.open(`${process.env.PUBLIC_URL}/ECOMAGIX .by Infinia.pdf`, '_blank');
+};
+
 
 function Furniture() {
   useEffect(() => {
@@ -42,7 +46,7 @@ Sheets available in many Thicknesses.
             wood and Ivory Lenght: 6 ft , 6.5ft , 7ft, 8ft, 10ft and 11 ft
           </p> */}
 
-          <div className="mt-3 flex gap-4">
+          <div className="mt-3 flex gap-4" onClick={handleDownload}>
             <a
               href="../Pdf/INFINIA WPC DOORS & DOOR FRAMES BROCHURE.pdf"
               download

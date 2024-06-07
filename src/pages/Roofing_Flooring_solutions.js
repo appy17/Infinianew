@@ -29,7 +29,9 @@ const features1 = [
   { name: "Material", description: "Clay" },
   { name: "Dimensions", description: "15.5 x 9.5" },
 ];
-
+const handleDownload = () => {
+  window.open(`${process.env.PUBLIC_URL}/roof-tiles.pdf`, '_blank');
+};
 
 const Roofing_Flooring_solutions = () => {
   useEffect(() => {
@@ -63,7 +65,7 @@ const Roofing_Flooring_solutions = () => {
                   wood and Ivory Lenght: 6 ft , 6.5ft , 7ft, 8ft, 10ft and 11 ft
                 </p> */}
       
-                <div className="mt-3 flex gap-4">
+                <div className="mt-3 flex gap-4" onClick={handleDownload}>
                   <a
                     href="https://pdf.indiamart.com/impdf/25190334797/101519832/roof-tiles.pdf#ITEM_DOC#"
                     download

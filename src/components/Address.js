@@ -4,30 +4,40 @@ import "../slider.css"
 export const stats = [
     {
       text: 'Contact Us',
+      link: "/contact"
     },
-    {
+    // {
   
-      text: 'FAQ',
-    },
-    {
+    //   text: 'FAQ',
+    // },
+    // {
    
-      text: 'T&C',
-    },
-    {
+    //   text: 'T&C',
+    //   link: "/privacy"
+    // },
+    // {
    
-      text: 'WPC Wood Polymer Composite',
-    },
-    {
+    //   text: 'WPC Wood Polymer Composite',
+    //   link:""
+    // },
+    // {
  
-      text: 'Silicone',
-    },
+    //   text: 'Silicone',
+    // },
     {
  
       text: 'Blog',
+      link:"/blogs"
     },
     {
  
       text: 'Policy',
+      link:"/privacy"
+    },
+    {
+ 
+      text: 'Media and Events',
+      link:"/events"
     },
   ];
 
@@ -63,7 +73,7 @@ const Address = () => {
   {stats.map((item, index) => {
     return (
       <div key={index} className='relative sm:mb-1'>
-        <a href='#' className=' text-gray-500 text-lg odd:border-r lg:even:last:border-none p5-5 pr-5   border-r-zinc-300 hover:text-teal-900'>{item.text}</a>
+        <a href={item.link} className=' text-gray-500 text-lg odd:border-r lg:even:last:border-none p5-5 pr-5   border-r-zinc-300 hover:text-teal-900'>{item.text}</a>
       </div>
     );
   })}

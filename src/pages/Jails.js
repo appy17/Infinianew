@@ -22,7 +22,9 @@ const features = [
   { name: "Usage/Application", description: "Apartment" },
   { name: "Weight", description: "2.5kg" },
 ];
-
+const handleDownload = () => {
+  window.open(`${process.env.PUBLIC_URL}/document-3a1000009497.pdf`, '_blank');
+};
 function Jails() {
   const imageRefs = useRef(images.map(() => React.createRef()));
   useEffect(() => {
@@ -76,7 +78,7 @@ function Jails() {
                 2)Geo:8"x8"x3" Wt:2.5kg 3)Jevel:8"x8"x3" Wt:2.5kg
               </p>
 
-              <div className="mt-3 flex gap-4">
+              <div className="mt-3 flex gap-4" onClick={handleDownload}>
                 <a
                   href="https://pdf.indiamart.com/impdf/2849033794291/101519832/document-3a1000009497.pdf#ITEM_DOC#"
                   download

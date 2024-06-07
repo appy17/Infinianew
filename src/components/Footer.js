@@ -120,7 +120,7 @@ const Footer = () => {
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/woodmagix"> WPC</a>
             </li>
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href=""> RRP </a>
+              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/furniture"> RRP </a>
             </li>
 
            
@@ -128,9 +128,9 @@ const Footer = () => {
             <li>
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/jails"> Terracotta </a>
             </li>
-            <li>
+            {/* <li>
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/rrp-sheets.html"> Weatherproof Furniture </a>
-            </li>
+            </li> */}
           
           </ul>
         </div>

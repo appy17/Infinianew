@@ -41,8 +41,8 @@ const Home1 = () => {
   };
 
   return (
-    <div id="app" className="fixed top-0 right-0 bg-white w-full" style={{ zIndex: "99" , borderBottom:'1px solid #d4d4d4'}}>
-      <div className={`w-full  h-[70px] ${menuOpen ? 'bg-white' : ' bg-white'}`}></div>
+    <div id="app" className="fixed top-0 right-0 bg-white w-full " style={{ zIndex: "99" , borderBottom:'1px solid #d4d4d4'}}>
+      <div className={`w-full  h-[70px] shadow:lg ${menuOpen ? 'bg-white' : ' bg-white'}`}></div>
       <div className='flex justify-between items-center '>
         <div className='h-8 w-10 absolute top-[11px] left-[23px] p-8 z-999 cursor-pointer text-right block'>
           <img src={Logo} className='w-[140px] top-[5px] left-[20px] absolute z-99 flex items-center  justify-center bg-white' alt="" />

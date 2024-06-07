@@ -14,6 +14,9 @@ const features = [
   { name: "Thickness", description: "9 - 17 mm" },
  
 ];
+const handleDownload = () => {
+  window.open(`${process.env.PUBLIC_URL}/pre-laminated-particle-board.pdf`, '_blank');
+};
 
 const Boards_Panels = () => {
   useEffect(() => {
@@ -43,7 +46,7 @@ const Boards_Panels = () => {
             wood and Ivory Lenght: 6 ft , 6.5ft , 7ft, 8ft, 10ft and 11 ft
           </p> */}
 
-          <div className="mt-3 flex gap-4">
+          <div className="mt-3 flex gap-4" onClick={handleDownload}>
             <a
               href="https://pdf.indiamart.com/impdf/22072361897/101519832/pre-laminated-particle-board.pdf#ITEM_DOC#"
               download

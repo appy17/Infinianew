@@ -12,7 +12,9 @@ const features = [
   { name: "Usage/Application", description: "For Construction & Furnitures" },
   { name: "Type", description: "Indoor, Outdoor" },
 ];
-
+const handleDownload = () => {
+  window.open(`${process.env.PUBLIC_URL}/INFINIA WPC DOORS & DOOR FRAMES BROCHURE.pdf`, '_blank');
+};
 function SingleProducts() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -43,7 +45,7 @@ function SingleProducts() {
             wood and Ivory Lenght: 6 ft , 6.5ft , 7ft, 8ft, 10ft and 11 ft
           </p> */}
 
-          <div className="mt-3 flex gap-4">
+          <div className="mt-3 flex gap-4 "onClick={handleDownload}>
             <a
               href="https://pdf.indiamart.com/impdf/22443121988/101519832/wpc-door-frame.pdf"
               download
