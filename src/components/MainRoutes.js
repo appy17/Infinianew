@@ -23,6 +23,7 @@ import { AnimatePresence } from "framer-motion";
 import Image_Event from "./Image_Event";
 
 import Privacy_Policy from '../pages/Privacy_Policy';
+import Skyace from '../pages/Skyace';
 const MainRoutes = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -44,6 +45,7 @@ const MainRoutes = () => {
       <Route path="/ecomagix" element={<Ecomagix />} />
       <Route path="/claymagix" element={<Claymagix />} />
       <Route path="/woodmagix" element={<Woodmagix />} />
+      <Route path="/skyace" element={<Skyace />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/login" element={<Login />} />

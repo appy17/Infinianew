@@ -12,6 +12,9 @@ const features = [
   { name: "Thickness", description: "18 mm" },
 ];
 
+const handleDownload = () => {
+  window.open(`${process.env.PUBLIC_URL}/ECOMAGIX .by Infinia.pdf`, '_blank');
+};
 function Shuttering_formwork() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -38,7 +41,7 @@ function Shuttering_formwork() {
                 Thickness:12mm ,18mm,25mm Size:8x4
               </p>
 
-              <div className="mt-3 flex gap-4">
+              <div className="mt-3 flex gap-4 "onClick={handleDownload}>
                 <a
                   href="https://pdf.indiamart.com/impdf/22443121988/101519832/wpc-door-frame.pdf"
                   download

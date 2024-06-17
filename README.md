@@ -267,3 +267,8 @@ const DIV = styled.div`
 `; -->
 
 Eveent Slider code end
+
+
+ ${
+                        subMenuActive && subMenuTitle === "Shop" ? "active" : ""
+                      }

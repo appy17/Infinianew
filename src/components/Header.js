@@ -5,11 +5,6 @@ import { CgMenuRight, CgClose } from "react-icons/cg";
 // import { navigation } from "../data";
 // import classNames from 'classnames';
 import { gsap } from "gsap";
-    
-
-
-
-
 
 import {
   ArrowPathIcon,
@@ -25,10 +20,6 @@ import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-
-
-
-
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -127,7 +118,7 @@ const brands = [
   },
   {
     name: "Skyace",
-    href: "#",
+    href: "/skyace",
     icon: CursorArrowRaysIcon,
   },
   {
@@ -141,9 +132,6 @@ const brands = [
     icon: CursorArrowRaysIcon,
   },
 ];
-
-
-
 
 const Header = () => {
   const [bg, setBg] = useState(false);
@@ -163,54 +151,54 @@ const Header = () => {
     });
   });
 
-  useEffect(()=>{
-    const tl = gsap.timeline()
+  useEffect(() => {
+    const tl = gsap.timeline();
 
     tl.from("#nav", {
-        opacity:0,
-        delay:0.3,
-        duration:2
-    })
+      opacity: 0,
+      delay: 0.3,
+      duration: 2,
+    });
     tl.from("#nav img", {
-      y:-80,
-      opacity:0,
-      duration:0.8,
-      stagger:0.2
-  })
-
-  },[])
+      y: -80,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+    });
+  }, []);
 
   return (
     <header
-      className={`${ bg ? "bg-white py-2 lg:px-10 ms:px-6 mv:px-2 ssm:px-4 shadow-md" : "bg-none"
-      } fixed left-0 w-full  z-10 transition-all duration-200 py-6 px-10`}>
+      className={`${
+        bg
+          ? "bg-white py-2 lg:px-10 ms:px-6 mv:px-2 ssm:px-4 shadow-md"
+          : "bg-none"
+      } fixed left-0 w-full  z-10 transition-all duration-200 py-6 px-10`}
+    >
       <DIV className="contianer mx-auto">
         <div id="#nav" className="flex justify-between items-center ">
-         
           {/* logo */}
           <a href="/">
-           
-         
-            <img 
-  className={`${
-    bg ? "h-12" : "h-12" 
-  }`}
-  src={Logo}
-  alt=""
-/>
-           
+            <img className={`${bg ? "h-12" : "h-12"}`} src={Logo} alt="" />
           </a>
-          <div onClick={() => setMobileMenuOpen(true)}
+          <div
+            onClick={() => setMobileMenuOpen(true)}
             className="text-2xl  md:hidden lg:text-3xl cursor-pointer"
           >
-          {mobileNav ? <CgClose /> : <CgMenuRight style={{
-    color: "#F3A445",
-    border: "1px solid #F3A445",
-    borderRadius: "50%",
-    padding: "5px",
-    width: "40px",
-    height: "40px"
-}}/>}
+            {mobileNav ? (
+              <CgClose />
+            ) : (
+              <CgMenuRight
+                style={{
+                  color: "#F3A445",
+                  border: "1px solid #F3A445",
+                  borderRadius: "50%",
+                  padding: "5px",
+                  width: "40px",
+                  height: "40px",
+                }}
+              />
+            )}
           </div>
           <nav
             className="hidden md:flex"
@@ -220,13 +208,12 @@ const Header = () => {
               transform: "0.3s ease",
             }}
           >
-          <ul className="md:flex md:gap-x-12">
+            <ul className="md:flex md:gap-x-12">
               <NavLink
                 className={`home ${
                   bg ? "text-black" : "text-white"
                 }  capitalize transition-all`}
                 to={"/"}
-            
                 activeClassName="home-active"
               >
                 Home
@@ -241,7 +228,6 @@ const Header = () => {
               >
                 About Us
               </NavLink>
-             
 
               <Menu as="div" className="relative inline-block text-left">
                 <div className="">
@@ -267,23 +253,25 @@ const Header = () => {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1 border-red-500">
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="/ecomagix"
                             className={classNames(
-                            active ? "bg-gray-100 text-gray-900"
+                              active
+                                ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
                               "block px-4 py-2 text-sm"
                             )}
-                          >Ecomagix
+                          >
+                            Ecomagix
                           </a>
                         )}
                       </Menu.Item>
 
-                <Menu.Item>
+                      <Menu.Item>
                         {({ active }) => (
                           <a
                             href="/claymagix"
@@ -325,7 +313,7 @@ const Header = () => {
                               "block px-4 py-2 text-sm"
                             )}
                           >
-                          Profules
+                            Profules
                           </a>
                         )}
                       </Menu.Item>
@@ -594,7 +582,7 @@ const Header = () => {
                   </Menu.Items>
                 </Transition>
               </Menu>
-             
+
               <li>
                 <a
                   href="/blogs"
@@ -635,13 +623,11 @@ const Header = () => {
               <div className="flex items-center justify-between">
                 <a href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
-                  <img 
-  className={` ${
-    bg ? "h-20" : "h-20 mt-2" 
-  } `}
-  src={Logo}
-  alt=""
-/>
+                  <img
+                    className={` ${bg ? "h-20" : "h-20 mt-2"} `}
+                    src={Logo}
+                    alt=""
+                  />
                   {/* <h1 className="title mt-2 text-4xl">Infinia</h1> */}
                 </a>
                 <button
@@ -675,7 +661,7 @@ const Header = () => {
                     >
                       Brands
                     </a> */}
-<Disclosure as="div" className="-mx-3">
+                    <Disclosure as="div" className="-mx-3">
                       {({ open }) => (
                         <>
                           <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
@@ -702,8 +688,6 @@ const Header = () => {
                         </>
                       )}
                     </Disclosure>
-
-
 
                     <Disclosure as="div" className="-mx-3">
                       {({ open }) => (
@@ -745,7 +729,6 @@ const Header = () => {
                     >
                       Contact Us
                     </a>
-                   
                   </div>
                   <div className="py-6">
                     <a
@@ -768,7 +751,7 @@ const Header = () => {
 export default Header;
 
 const DIV = styled.div`
-.home-active {
-  color: #F3A445;
-}
-`
+  .home-active {
+    color: #f3a445;
+  }
+`;
