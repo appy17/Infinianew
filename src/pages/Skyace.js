@@ -77,7 +77,7 @@ function Skyace() {
           <img
             src={image}
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-            className="rounded-lg bg-gray-100 shadow img h-[280px]"
+            className="rounded-lg bg-gray-100 shadow img h-[280px] ssm:h-[166px] mv:h-[166px] lg:h-[280px] md:h-[290px]"
           />
           <img
             src={image2}
