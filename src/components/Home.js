@@ -18,6 +18,7 @@ import EventPhotoSlider from "./EventPhotoSlider";
 import Image_comp from "./Image_comp";
 import Handsome from "./Handsome";
 import TrandingSlider from "./TrandingSlider";
+import Footerup from "./Footerup";
 // import ScrollToTopButton from "./ScrollToTopButton";
 
 const Home = () => {
@@ -64,9 +65,11 @@ const Home = () => {
       </div>
       <div data-aos="zoom-in">
         <Address />
+      
       </div>
-      <div data-aos="zoom-in">
-        <Newsletter />
+      <div >
+        {/* <Newsletter /> */}
+          <Footerup />
       </div>
 
       <ScrollToTopButton />

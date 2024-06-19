@@ -16,47 +16,45 @@ import styled from 'styled-components';
 
 const NewItemsSlider = () => {
 
-  return <DIV><Swiper className='testimonialSlider '
-  
-  modules={[Navigation, Pagination, Autoplay]} 
-  autoplay={
-    {
-      delay: 2500,
+  console.log("data", newInStore.products)
+
+  return <DIV>
+    <Swiper
+        className="testimonialSlider"
+        modules={[Navigation, Pagination, Autoplay]}
+        autoplay={{
+          delay: 1500,
           disableOnInteraction: false,
-    }
-  }
-  loop={true}
-  navigation={true}
-  
-  
-  
-   grabCursor={true} breakpoints={{
-    320:{
-      slidesPerView: 2,
-      spaceBetween: 18,
-    },
-    768:{
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-   
-  }}>
-    {newInStore.products.map((product, index)=>{
-return <SwiperSlide className='max-w-[256px]' key={index}
-
->
-  <div className='relative p-2 lg:h-[600px] ssm:h-[350px]'>
-    <img src={product.image.type} className='lg:h-[100%] ssm:h-[100%] brightness-75 img rounded-md'  alt='images'/>
-    <div className='absolute text-white bottom-[20px] w-full text-center text-[18px] lg:text-2xl font-medium capitalize'>{product.name}</div>
-   
-  </div>
-
-</SwiperSlide>
-
-    })}
-
-
-  </Swiper>
+        }}
+        loop={true}
+        navigation={true}
+        grabCursor={true}
+        breakpoints={{
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 18,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
+      >
+        {newInStore.products?.map((product, index) => (
+          <SwiperSlide className="max-w-[256px]" key={index}>
+            <div className="relative p-2 lg:h-[600px] ssm:h-[350px]">
+              <img
+                src={product.image.type}
+                className="lg:h-[100%] ssm:h-[100%] brightness-75 img rounded-md"
+                alt="product"
+              />
+              <div className="absolute text-white bottom-[20px] w-full text-center text-[18px] lg:text-2xl font-medium capitalize">
+                {product.name}
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
   </DIV>;
 };
 

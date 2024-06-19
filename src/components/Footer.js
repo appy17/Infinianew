@@ -7,20 +7,19 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
 import { FaLinkedin } from "react-icons/fa";
+import image1 from '../assets/img/INFINIA (2).png'
 
 const Footer = () => {
   return (
-  
-
-<footer className="bg-[#f2eded] w-full">
-  <DIV className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+<footer className="bg-[#212121] w-full">
+  <DIV className="mx-auto max-w-screen-xl px-4  pt-16 sm:px-6 lg:px-8 lg:pt-24">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div className="-mt-[20px]">
-        <div className="flex justify-center text-teal-600 sm:justify-start">
+        {/* <div className="flex justify-center text-teal-600 sm:justify-start">
          <img src={Logo} width={"200px"} height={"200px"} />
-        </div>
+        </div> */}
 
-        <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+        <p className="mt-6 max-w-md text-center leading-relaxed text-gray-100 sm:max-w-xs sm:text-left">
         Infinia Industries Private Limited ,Central India's Largest manufacturer of Innovative sustainable building Solutions.
         </p>
 
@@ -30,7 +29,7 @@ const Footer = () => {
               to="https://www.facebook.com/infinia.india.92/"
               rel="noreferrer"
               target="_blank"
-              className="text-teal-700 transition hover:text-red hover:-translate-y-3 duration-500 "
+              className="text-gray-100 transition hover:text-red hover:-translate-y-3 duration-500 "
             >
               <span className="sr-only">Facebook</span>
               <FaFacebookSquare size={30} />
@@ -42,7 +41,7 @@ const Footer = () => {
               to="https://www.instagram.com/infiniaindia/"
               rel="noreferrer"
               target="_blank"
-              className="text-teal-700 transition hover:-translate-y-3 duration-500  hover:text-teal-700/75 "
+              className="text-gray-100  transition hover:-translate-y-3 duration-500  hover:text-gray-100/75 "
             >
               <span className="sr-only">Instagram</span>
               <FaInstagram size={30}/>
@@ -54,7 +53,7 @@ const Footer = () => {
               to="https://www.youtube.com/@InfiniaIndia"
               rel="noreferrer"
               target="_blank"
-              className="text-teal-700 transition hover:text-teal-700/75 hover:-translate-y-3 duration-500 "
+              className="text-gray-100  transition hover:text-gray-100/75 hover:-translate-y-3 duration-500 "
             >
               <span className="sr-only">Youtube</span>
               <FaYoutube size={30}/>
@@ -63,7 +62,7 @@ const Footer = () => {
               to="https://www.linkedin.com/in/team-infinia-a993a7233 "
               rel="noreferrer"
               target="_blank"
-              className="text-teal-700 transition hover:text-teal-700/75 hover:-translate-y-3 duration-500 "
+              className="text-gray-100  transition hover:text-gray-100/75 hover:-translate-y-3 duration-500 "
             >
               <span className="sr-only">LinkedIn</span>
               <FaLinkedin  size={30}/>
@@ -74,7 +73,7 @@ const Footer = () => {
               href="#"
               rel="noreferrer"
               target="_blank"
-              className="text-teal-700 transition hover:text-teal-700/75"
+              className="text-gray-100 transition hover:text-gray-100/75"
             >
               <span className="sr-only">Dribbble</span>
              
@@ -85,25 +84,25 @@ const Footer = () => {
 
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
         <div className="text-center sm:text-left">
-          <p className="text-lg font-medium text-gray-900">About Us</p>
+          <p className="text-lg font-medium text-gray-100">About Us</p>
 
           <ul className="mt-8 space-y-4 text-sm">
             
           <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/about">
+              <a className="fromleft text-gray-100 transition hover:text-gray-100/75" href="/about">
                 Why us
               </a>
             </li>
 
 
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/ecomagix">
+              <a className="fromleft text-gray-100 transition hover:text-gray-100/75" href="/ecomagix">
                 Brands
               </a>
             </li>
 
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/contact"> Contact Us </a>
+              <a className="fromleft text-gray-100 transition hover:text-gray-100/75" href="/contact"> Contact Us </a>
             </li>
             {/* <li>
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> History </a>
@@ -112,21 +111,21 @@ const Footer = () => {
         </div>
 
         <div className="text-center sm:text-left">
-          <p className="text-lg font-medium text-gray-900">Our Products</p>
+          <p className="text-lg font-medium text-gray-100">Our Products</p>
 
           <ul className="mt-8 space-y-4 text-sm">
           
           <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/woodmagix"> WPC</a>
+              <a className="fromleft text-gray-100 transition hover:text-gray-100/75" href="/woodmagix"> WPC</a>
             </li>
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/furniture"> RRP </a>
+              <a className="fromleft text-gray-100 transition hover:text-gray-100/75" href="/furniture"> RRP </a>
             </li>
 
            
 
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/jails"> Terracotta </a>
+              <a className="fromleft text-gray-100 transition hover:text-gray-100/75" href="/jails"> Terracotta </a>
             </li>
             {/* <li>
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="https://www.infiniaindia.in/rrp-sheets.html"> Weatherproof Furniture </a>
@@ -136,11 +135,11 @@ const Footer = () => {
         </div>
 
         <div className="text-center sm:text-left">
-          <p className="text-lg font-medium text-gray-900">Helpful Links</p>
+          <p className="text-lg font-medium text-gray-100">Helpful Links</p>
 
           <ul className="mt-8 space-y-4 text-sm">
             <li>
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/privacy"> Privacy Policy  </a>
+              <a className="fromleft text-gray-100 transition hover:text-gray-100/75" href="/privacy"> Privacy Policy  </a>
             </li>
 
             {/* <li>
@@ -153,7 +152,7 @@ const Footer = () => {
               <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="#"> Cookies Policy </a>
             </li> */}
             <li className="wrapper">
-              <a className="fromleft text-gray-700 transition hover:text-gray-700/75" href="/contact"> Help </a>
+              <a className="fromleft text-gray-100 transition hover:text-gray-700/75" href="/contact"> Help </a>
             </li>
 
           
@@ -161,7 +160,7 @@ const Footer = () => {
         </div>
 
         <div className="text-center sm:text-left">
-          <p className="text-lg font-medium text-gray-900">Contact Us</p>
+          <p className="text-lg font-medium text-gray-100">Contact Us</p>
 
           <ul className="mt-8 space-y-4 text-sm">
             <li>
@@ -171,7 +170,7 @@ const Footer = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="size-1 shrink-0 text-gray-900"
+                  className="size-1 shrink-0 text-gray-100"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -185,7 +184,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <span className="flex-1 text-gray-700">care@infiniaindia.com</span>
+                <span className="flex-1 text-gray-100">care@infiniaindia.com</span>
               </a>
             </li>
 
@@ -196,7 +195,7 @@ const Footer = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="size-5 shrink-0 text-gray-900"
+                  className="size-5 shrink-0 text-gray-100"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -210,7 +209,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <span className="flex-1 text-gray-700">07875577000</span>
+                <span className="flex-1 text-gray-100">07875577000</span>
               </a>
             </li>
 
@@ -219,7 +218,7 @@ const Footer = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="size-5 shrink-0 text-gray-900"
+                className="size-5 shrink-0 text-gray-100"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -238,7 +237,7 @@ const Footer = () => {
                 />
               </svg>
 
-              <address className="-mt-0.5 flex-1 not-italic text-gray-700 text-[15px]">
+              <address className="-mt-0.5 flex-1 not-italic text-gray-100 text-[15px]">
               Infinia House, 4Th Floor, Near Indora, Kamptee Rd, Nagpur, Maharashtra 440017
               </address>
             </li>
@@ -246,6 +245,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
+   
 
     <div className="mt-12 border-t border-gray-100 pt-6">
       <div className="text-center sm:flex sm:justify-between sm:text-left">
@@ -253,7 +253,7 @@ const Footer = () => {
           <span className="block sm:inline">All rights reserved.</span>
 
           <a
-            className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            className="inline-block text-gray-300 underline transition hover:text-gray-100/75"
             href="/privacy"
           >
             Terms & Conditions
@@ -262,7 +262,7 @@ const Footer = () => {
           <span>&middot;</span>
 
           <a
-            className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            className="inline-block text-gray-300 underline transition hover:text-gray-100/75"
             href="/privacy"
           >
             Privacy Policy
@@ -271,6 +271,9 @@ const Footer = () => {
 
         <a href="http://royalswebtech.com/" className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">Designed and Developed by ©Royals WebTech 2024</a>
       </div>
+    </div> 
+    <div className="flex items-center justify-center mt-8">
+      <img src={image1} style={{opacity:'0.5'}} />
     </div>
   </DIV>
 </footer>

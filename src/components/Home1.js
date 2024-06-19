@@ -14,6 +14,8 @@ import image4 from "../../src/assets/img/Picture3.jpg";
 import image5 from "../../src/assets/img/flyashbrick copy.jpg";
 import image6 from "../../src/assets/img/terracotta-jali-tiles-500x500.jpg";
 import image7 from "../../src/assets/img/1 (1) (1).jpg";
+import image8 from "../../src/assets/img/particle-boards.jpg";
+
 
 
 
@@ -55,12 +57,12 @@ const Home1 = () => {
 
   return (
     <Home_Container>
-      <header className="header">
-        <div className="container">
+      <header className="header"style={{boxShadow:'0px 6px 4px -5px rgba(0,0,0,0.44)'}}>
+        <div className="container " >
           <div className="row v-center">
             <div className="header-item item-left flex justify-between items-center">
               <div className="logo">
-                <a href="#">
+                <a href="/">
                   <img src={Logo} className="h-12" alt="Logo" />
                 </a>
               </div>
@@ -82,10 +84,10 @@ const Home1 = () => {
                 </div>
                 <ul className="menu-main">
                   <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>
-                    <a href="#">About</a>
+                    <a href="/about">About Us</a>
                   </li>
                   <li className="menu-item-has-children">
                     <a href="#" onClick={() => showSubMenu("New")}>
@@ -97,25 +99,25 @@ const Home1 = () => {
                       }`}
                     >
                       <div className="list-item text-center">
-                        <a href="#">
+                        <a href="/ecomagix">
                           <img src={image1} alt="Fashion" />
                           <h4 className="title">Ecomagix</h4>
                         </a>
                       </div>
                       <div className="list-item text-center">
-                        <a href="#">
+                        <a href="/claymagix">
                           <img src={image2} alt="Electronics" />
                           <h4 className="title">Claymagix</h4>
                         </a>
                       </div>
                       <div className="list-item text-center">
-                        <a href="#">
+                        <a href="/woodmagix">
                           <img src={image3} alt="Mobiles" />
                           <h4 className="title">Woodmagix</h4>
                         </a>
                       </div>
                       <div className="list-item text-center">
-                        <a href="#">
+                        <a href="/skyace">
                           <img src={image4} alt="Appliances" />
                           <h4 className="title">Skyace</h4>
                         </a>
@@ -124,7 +126,7 @@ const Home1 = () => {
                   </li>
                   <li className="menu-item-has-children">
                     <a href="#" onClick={() => showSubMenu("Shop")}>
-                      Shop <i className="fa fa-angle-down"></i>
+                      Products <i className="fa fa-angle-down"></i>
                     </a>
                     <div
                       className={`sub-menu mega-menu mega-menu-column-4   M ${
@@ -136,12 +138,13 @@ const Home1 = () => {
                       <div className="shop_outer">
 
                       <div className=" items-center text-center flex flex-col justify-center ">
-                        <h4 className="title">Door & DoorFrams</h4> 
-                        <div className="list-item text-center">
-                          <a href="#">
+                        <h4 className="title ">Door & DoorFrams</h4> 
+                        <div className="list-item text-center ">
+                          <a href="/DoorFrams">
                             <img
                               src="https://5.imimg.com/data5/SELLER/PDFImage/2023/5/307959281/TO/ZD/HQ/101519832/wpc-door-frame-1000x1000.png"
-                              style={{ height: "120px", width: "120px" }}
+                              className="image-hover-scale"
+                              style={{ height: "120px", width: "120px", marginTop:'20px' }}
                               alt="Fashion"
                             /> 
                             </a>
@@ -149,12 +152,13 @@ const Home1 = () => {
                       </div>
                 
                       <div className="items-center text-center flex flex-col justify-center">
-                        <h4 className="title">Fly-ash Brick Pallets</h4>
+                        <h4 className="title mb-[20px]">Fly-ash Brick Pallets</h4>
                         <div className="list-item text-center">
-                          <a href="#">
+                          <a href="/Flyash_Brick_pallets">
                             <img
                               src={image5}
-                              style={{ height: "120px", width: "120px" }}
+                              style={{ height: "120px", width: "120px" , marginTop:'20px'}}
+                              className="image-hover-scale"
                               alt="Fashion"
                             />
                           </a>
@@ -163,12 +167,13 @@ const Home1 = () => {
 
 
                       <div className="items-center text-center flex flex-col justify-center">
-                        <h4 className="title">Boards & Panels</h4>
+                        <h4 className="title mb-[20px]">Boards & Panels</h4>
                         <div className="list-item text-center">
-                          <a href="#">
+                          <a href="/Boards_panels">
                             <img
-                              src="https://5.imimg.com/data5/SELLER/Default/2023/3/294440140/SE/CJ/PB/101519832/bagasse-particle-board-500x500.jpg"
-                              style={{ height: "120px", width: "120px" }}
+                              src={image8}
+                              style={{ height: "120px", width: "120px" ,marginTop:'20px'}}
+                              className="image-hover-scale"
                               alt="Fashion"
                             />
                           </a>
@@ -181,10 +186,11 @@ const Home1 = () => {
                       <div className="items-center text-center flex flex-col justify-center">
                           <h4 className="title ">Jalis</h4>
                           <div className="list-item text-center">
-                            <a href="#">
+                            <a href="/jails">
                               <img
                                 src={image6}
-                                style={{ height: "120px", width: "120px" }}
+                                style={{ height: "120px", width: "120px" ,marginTop:'20px'}}
+                                className="image-hover-scale"
                                 alt="Fashion"
                               />
                             </a>
@@ -194,12 +200,13 @@ const Home1 = () => {
                     
                     
                       <div className="items-center text-center flex flex-col justify-center">
-                        <h4 className="title">Furniture</h4>
+                        <h4 className="title mb-[20px]">Furniture</h4>
                         <div className="list-item text-center">
-                          <a href="#">
+                          <a href="/furniture">
                             <img
                               src="https://5.imimg.com/data5/SELLER/Default/2022/9/FL/IH/QM/101519832/recycle-plastic-sheet-furniture-500x500.jpeg"
-                              style={{ height: "120px", width: "120px" }}
+                              style={{ height: "120px", width: "120px" ,marginTop:'20px'}}
+                              className="image-hover-scale"
                               alt="Fashion"
                             />
                           </a>
@@ -209,12 +216,13 @@ const Home1 = () => {
                    
                    
                       <div className="items-center text-center flex flex-col justify-center">
-                        <h4 className="title text-black">Shuttering & Formwork</h4>
+                        <h4 className="title mb-[20px]">Shuttering & Formwork</h4>
                         <div className="list-item text-center">
-                          <a href="#">
+                          <a href="/Shuttering_formwork">
                             <img
                               src="https://5.imimg.com/data5/SELLER/Default/2023/3/292998998/CN/ZF/FP/101519832/rrp-shuttering-plywood-500x500.jpg"
-                              style={{ height: "120px", width: "120px" }}
+                              style={{ height: "120px", width: "120px",marginTop:'20px' }}
+                              className="image-hover-scale"
                               alt="Fashion"
                             />
                           </a>
@@ -225,12 +233,13 @@ const Home1 = () => {
 
 
                       <div className="items-center text-center flex flex-col justify-center">
-                        <h4 className="title">Roofing & Flooring solutions</h4>
+                        <h4 className="title mb-[20px]">Roofing & Flooring solutions</h4>
                         <div className="list-item text-center">
-                          <a href="#">
+                          <a href="/Roofing_Flooring_Solution">
                             <img
                               src={image7}
-                              style={{ height: "120px", width: "120px" }}
+                              style={{ height: "120px", width: "120px",marginTop:'20px' }}
+                              className="image-hover-scale"
                               alt="Fashion"
                             />
                           </a>
@@ -240,12 +249,13 @@ const Home1 = () => {
                   
                   
                       <div className="items-center text-center flex flex-col justify-center">
-                        <h4 className="title">Construction Blocks</h4>
+                        <h4 className="title mb-[20px]">Construction Blocks</h4>
                         <div className="list-item text-center">
-                          <a href="#">
+                          <a href="/bricks">
                             <img
                               src="https://infinia-new.vercel.app/static/media/adrian-vazquez-casa-en-huerta.707628762b1b4b019eb6.jpg"
-                              style={{ height: "120px", width: "120px" }}
+                              style={{ height: "120px", width: "120px" ,marginTop:'20px'}}
+                              className="image-hover-scale"
                               alt="Fashion"
                             />
                           </a>
@@ -264,10 +274,13 @@ const Home1 = () => {
 
                   </li>
                   <li>
-                    <a href="#">Blogs</a>
+                    <a href="/blogs">Blogs</a>
+                  </li>
+                  <li>
+                    <a href="/events">Media & Events</a>
                   </li>
                  
-  
+{/*   
                   <li className="menu-item-has-children">
                     <a href="#" onClick={() => showSubMenu('Deals')}>Deals <i className="fa fa-angle-down"></i></a>
                     <div className={`sub-menu mega-menu mega-menu-column-1 ${subMenuActive && subMenuTitle === 'Deals' ? 'active' : ''}`}>
@@ -299,9 +312,9 @@ const Home1 = () => {
                         </ul>
                       </div>
                     </div>
-                  </li>
+                  </li> */}
                   <li>
-                    <a href="#">Contact</a>
+                    <a href="/contact">Contact</a>
                   </li>
                 </ul>
               </nav>
@@ -330,6 +343,14 @@ const Home_Container = styled.div`
     overflow-x: hidden;
   }
 
+  .image-hover-scale {
+  transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+}
+
+.image-hover-scale:hover {
+  transform: scale(1.2); /* Scale the image to 120% of its original size */
+}
+
 .shop_outer{
 display: grid;
 gap:30px;
@@ -351,7 +372,7 @@ gap:30px;
     box-sizing: border-box;
   }
   .container {
-    max-width: 1200px;
+    max-width: 1273px;
     margin: auto;
   }
   .row {
@@ -478,7 +499,7 @@ gap:30px;
   }
   .header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item .title {
     font-size: 16px;
-    color: #ea4636;
+    color: #212121;
     font-weight: 500;
     line-height: 1;
     padding: 10px 0;
@@ -504,7 +525,7 @@ gap:30px;
   .header .menu > ul > li .sub-menu > ul > li > a:hover,
   .header .item-right a:hover,
   .header .menu > ul > li:hover > a {
-    color: #ea4636;
+    color: #D08E42;
   }
   /* banner section */
   .banner-section {

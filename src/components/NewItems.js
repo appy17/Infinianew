@@ -15,7 +15,7 @@ const NewItems = () => {
           {/* text */}
           <div className="flex md:flex-col items-baseline gap-x-6 mb-6 lg:mb-0  lg:w-[20%] 
           ">
-          <h2 className="title max-w-[245px] ssm:ml-6 ">{title}</h2>
+          <h2 className="text-gray-100 font-extrabold text-4xl mb-4 max-w-[245px] ssm:ml-6 ">{title}</h2>
           <p className="max-w-[245px] lg:mb-12 " style={{color: 'white'}}>{subtitle}</p>
           <div className="hidden lg:flex items-center border-2 p-2 ml-2 bg-orange-500 rounded-md">
             <a className=" border-primary lg:items-center font-medium transition-all" href="#">{link}</a>

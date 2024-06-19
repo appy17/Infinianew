@@ -69,11 +69,11 @@ const Address = () => {
     </div>
 
   </div>
-  <div className='sm:mb-4 w-full mt-6 flex flex-col md:flex-row md:items-center md:gap-10  md:border-r md:mb-5 text-center  items-center  justify-center '>
+  <div className='sm:mb-4 w-full mt-6 flex flex-col md:flex-row md:items-center md:gap-10  md:border-r md:mb-5 text-center  items-center  justify-center ' style={{marginBottom:'100px'}}>
   {stats.map((item, index) => {
     return (
       <div key={index} className='relative sm:mb-1'>
-        <a href={item.link} className=' text-gray-500 text-lg odd:border-r lg:even:last:border-none p5-5 pr-5   border-r-zinc-300 hover:text-teal-900'>{item.text}</a>
+        <a href={item.link} className=' text-gray-500 text-lg odd:border-r lg:even:last:border-none p5-5 pr-5   border-r-zinc-300 hover:text-teal-900 '>{item.text}</a>
       </div>
     );
   })}
