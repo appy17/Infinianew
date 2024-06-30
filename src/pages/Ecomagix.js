@@ -36,7 +36,7 @@ function Ecomagix() {
   console.log(location)
 
 return (
-  <div>
+  <div className='sm:overflow-hidden'>
       {location.pathname !== "/ecomagix" && (
         <div className="bg-white con-bg">
           <div className='flex items-center w-auto text-center door'>
