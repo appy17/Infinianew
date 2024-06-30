@@ -47,8 +47,8 @@ function Skyace() {
               resistance, making it suitable for outdoor applications. <br></br>
               3. Low Maintenance: Requires less maintenance than traditional wood; no
               need for painting, staining, or sealing. <br></br>
-              4. Environmental Impact: Can be made from recycled materials, reducing environmental impact.
-              Customization: Can be molded into various shapes and sizes and can
+              4. Environmental Impact: Can be made from recycled materials, reducing environmental impact.<br></br>
+              5.Customization: Can be molded into various shapes and sizes and can
               include color additives for aesthetics.
             </p>
 
