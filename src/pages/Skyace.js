@@ -36,10 +36,7 @@ function Skyace() {
               Skyace
             </h2>
             <p className="mt-4 text-gray-500">
-              Wood polymer composites (WPCs) are materials made from a
-              combination of wood fibers or wood flour and thermoplastic
-              polymers. These composites are used in a variety of applications,
-              including structural lumber, due to their advantageous properties.
+            Skyace offers premium weatherproof furniture that is resistant to rot, termites, and fire. Our minimalist yet chic designs are crafted with sustainability in mind, using mostly recycled and recyclable materials.
             </p>
 
             <h3 className="">Properties</h3>

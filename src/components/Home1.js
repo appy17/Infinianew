@@ -143,8 +143,8 @@ const Home1 = () => {
                           <a href="/DoorFrams">
                             <img
                               src="https://5.imimg.com/data5/SELLER/PDFImage/2023/5/307959281/TO/ZD/HQ/101519832/wpc-door-frame-1000x1000.png"
-                              className="image-hover-scale"
-                              style={{ height: "120px", width: "120px", marginTop:'20px' }}
+                              className="image-hover-scale "
+                              style={{ height: "120px", width: "120px", marginTop:'20px', borderRadius:'10px' }}
                               alt="Fashion"
                             /> 
                             </a>
@@ -157,7 +157,7 @@ const Home1 = () => {
                           <a href="/Flyash_Brick_pallets">
                             <img
                               src={image5}
-                              style={{ height: "120px", width: "120px" , marginTop:'20px'}}
+                              style={{ height: "120px", width: "120px" , marginTop:'20px' ,borderRadius:'10px'}}
                               className="image-hover-scale"
                               alt="Fashion"
                             />
@@ -172,7 +172,7 @@ const Home1 = () => {
                           <a href="/Boards_panels">
                             <img
                               src={image8}
-                              style={{ height: "120px", width: "120px" ,marginTop:'20px'}}
+                              style={{ height: "120px", width: "120px" ,marginTop:'20px' ,borderRadius:'10px'}}
                               className="image-hover-scale"
                               alt="Fashion"
                             />
@@ -189,7 +189,7 @@ const Home1 = () => {
                             <a href="/jails">
                               <img
                                 src={image6}
-                                style={{ height: "120px", width: "120px" ,marginTop:'20px'}}
+                                style={{ height: "120px", width: "120px" ,marginTop:'20px',borderRadius:'10px'}}
                                 className="image-hover-scale"
                                 alt="Fashion"
                               />
@@ -205,7 +205,7 @@ const Home1 = () => {
                           <a href="/furniture">
                             <img
                               src="https://5.imimg.com/data5/SELLER/Default/2022/9/FL/IH/QM/101519832/recycle-plastic-sheet-furniture-500x500.jpeg"
-                              style={{ height: "120px", width: "120px" ,marginTop:'20px'}}
+                              style={{ height: "120px", width: "120px" ,marginTop:'20px',borderRadius:'10px'}}
                               className="image-hover-scale"
                               alt="Fashion"
                             />
@@ -221,7 +221,7 @@ const Home1 = () => {
                           <a href="/Shuttering_formwork">
                             <img
                               src="https://5.imimg.com/data5/SELLER/Default/2023/3/292998998/CN/ZF/FP/101519832/rrp-shuttering-plywood-500x500.jpg"
-                              style={{ height: "120px", width: "120px",marginTop:'20px' }}
+                              style={{ height: "120px", width: "120px",marginTop:'20px',borderRadius:'10px' }}
                               className="image-hover-scale"
                               alt="Fashion"
                             />
@@ -238,7 +238,7 @@ const Home1 = () => {
                           <a href="/Roofing_Flooring_Solution">
                             <img
                               src={image7}
-                              style={{ height: "120px", width: "120px",marginTop:'20px' }}
+                              style={{ height: "120px", width: "120px",marginTop:'20px',borderRadius:'10px' }}
                               className="image-hover-scale"
                               alt="Fashion"
                             />
@@ -254,7 +254,7 @@ const Home1 = () => {
                           <a href="/bricks">
                             <img
                               src="https://infinia-new.vercel.app/static/media/adrian-vazquez-casa-en-huerta.707628762b1b4b019eb6.jpg"
-                              style={{ height: "120px", width: "120px" ,marginTop:'20px'}}
+                              style={{ height: "120px", width: "120px" ,marginTop:'20px',borderRadius:'10px'}}
                               className="image-hover-scale"
                               alt="Fashion"
                             />
